@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //如何判断某个数组中是否含有某个元素
+        var arr  =['222','贾坤',23,true];
+
+        //1.方式一 遍历 + if
+        for(var i = o,len =arr.length;i<len;i++){
+            if(arr[i]==='贾坤'){
+                alert('找到了')
+                break
+            }
+        }
+
+        //方式二
+        //arr.indexOf(item) 返回数组元素的索引值。如果为-1没有这个元素
+        var res = arr.indexOf('贾坤')
+        console.log(res)
+    </script>
+</body>
+</html>
