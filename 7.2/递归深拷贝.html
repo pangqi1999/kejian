@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name:'周超',
+            list:[{
+                name:'与非'
+            },{
+                name:'贾坤',
+                say:'这怎么能少了我呢'
+            }]
+        }
+
+        //deepCopy  实现的是数组或者对象深层拷贝
+        function deepCopy(params){
+            // if(paeams instanceof Object){
+
+            // }
+            //如果是数组
+            var res = [];
+            if(Array.isArray(params)){
+               
+                for(var i = 0;i<params.length;i++){
+                    if(params[i]  instanceof Object){
+                        res.push(deepCopy(params[i]))
+                    }else{
+                        res.push(params[i])
+                    }
+                   
+                }
+                return res;
+            }
+
+            
+
+            //如果是对象
+            if(params.constructor === Object){
+                var res = {};
+                for(var x in params){
+                    if(params[x] instanceof Object){
+
+                    }else{
+                        res[x] = params[x]
+                    }
+                   
+                    //res1[x] 代表数组和对象
+                }
+                return res;
+            }
+        }
+        var res = deepCopy(obj)
+        console.log(res)
+       //面试题：考察大家 js基础逻辑问题
+       //赋值 逻辑 递归 if for 方式封装 综合掌握
+       // 如何写余数数据类型相关的判断表达式
+    </script>
+</body>
+</html>

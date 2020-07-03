@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function resverse(params) {
+
+            if (arguments.length > 1) {
+                throw new Error("arguement.length can not gt 1");
+            }
+            if (arguments.length == 0) {
+                throw new Error("param can not undefined");
+            }
+            if (typeof (params) !== 'string') {
+
+                throw new Error(" params must is String");
+            }
+
+            var count = 0;
+            for (var i = 0; i < params.length; i++) {
+                
+            }
+        }
+
+        var arr = [1, 1, 2, 2, 2, 2, 2, ]
+        var set = resverse(arr)
+         //第一步 将数组变成对象，去重处理，得到的元素成为key ，出现次数为value值
+         //第二部 判断对象key和数组里元素是否相等，如果相等count加一
+         //第三部 最大
+    </script>
+
+   
+</body>
+
+</html>

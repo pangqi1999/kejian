@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //变量或者属性key 赋值Js基本类型数据 存的是数据
+        //变量或者属性key 赋值引用类型数据  存的是指针
+        var obj = {
+            name: 'yq',
+            age: 18
+        }
+        var res = {}
+        //xxx.xx.xx 点左边的复制都是对象 ,xx本身类型是【字符串】
+        // for(var x in obj){
+        //     rex[x] = obj[x]
+        // }
+        // console.log(res)
+        function copyObject() {
+            if (arguments.length == 0) {
+                throw new Error('argument.length can is not  zoro')
+
+            }
+            if (arguments.length > 1) {
+                throw new Error('rgument.length can not gt 1')
+            }
+            if (obj.constructor != Object) {
+                throw new Error('type param must be object')
+            }
+            for (var x in copyObject) {
+                res[x] = copyObject[x]
+            }
+
+            var res = {};
+
+            return res;
+        }
+        copyObject({
+            name: '周超',
+            age: 21
+        })
+
+
+        // //Array.from()判断 是否是数组
+
+
+
+        //copy 拷贝数组或者对象
+        function copy(param) {
+            if (arguments.length == 0) {
+                throw new Error('argument.length can is not  zoro')
+
+            }
+            if (arguments.length > 1) {
+                throw new Error('rgument.length can not gt 1')
+            }
+            if(!(param instanceof Object)){
+                throw new Error('type param must be array or object')
+            }
+            if (Array.from(param)) {
+                var res = []
+                for (var i = 0, len = param.length; i < len; i++) {
+                    res.push(param[i])
+                }
+                return res
+            }
+            //如果参数是对象
+            if (obj.constructor != Object) {
+                for (var x in obj) {
+                    rex[x] = obj[x]
+                }
+                return res
+            }
+
+        }
+        var res = copy({
+            name: '菲菲'
+        })
+        var res1 = copy([1, 1, 1])
+        console.log(res)
+        console.log(res)
+    </script>
+</body>
+
+</html>

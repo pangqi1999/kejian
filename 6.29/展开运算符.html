@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [1,2,3,4,5];
+        // //res 中数组内容域 arr中一模一样
+
+        // //...array/object 展开运算符适用于对象和数组
+        // var res = []
+        // //展开对象 用对象接受； 展开数组用数组接受
+        (function(window) {
+    var num = 1;
+    var e = {};
+    function add(num) {
+        return num++;
+    }
+    e.getAddNum = function () {
+        return add();
+    }
+    window.a = e
+} )(window)
+console.log(a.getAddNum());//{'2'}
+console.log(a.getAddNum());//{'2,3'}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    GO{}
+    GO{
+        a:undefined
+    }
+
+
+    GO{
+        testResult()
+    }
+    //执行
+    AO{}
+    AO{}形参提升
+    AO{
+        b:undefined
+        a:undefined
+        c:undefined
+    }
+    形参实参同意
+    函数提升
+    <!-- 
+        预编译
+        1.创建GO
+        2.全局var 声明的变量提升，并并赋值undefined
+        --注意：省略var的变量 作用是复制 没有变量提升
+        3.函数声明提升，并辅助函数引用
+            解析执行全局代码
+
+
+        当有函数执行时候； 变异函数方法体 局部作用域
+        1.创建AO
+        2：提升形参 并赋值undefined
+        3.
+     -->
+
+     <!-- 1. es6没有预编译
+          2，es5之前每个作用域都需要预编译
+          3. 同一个作用域 一定先预编译后执行 。 
+    -->
+
+    <!--  -->
+</body>
+</html>
