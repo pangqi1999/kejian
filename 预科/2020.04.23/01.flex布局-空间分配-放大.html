@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局-空间分配-放大</title>
+</head>
+<style>
+    body,html{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        display: flex;
+        font-size: 60px;
+    }
+    div{
+        border: 1px solid red;
+    }
+    div:nth-child(1){
+        /* flex-basis 设置项目的伸缩基准(占据主轴方向多大空间)) */
+        flex-basis: 200px;
+        /* flex-grow 设置元素的放大比例，默认值为0，将剩余空间按照比例划分给每一个元素 */
+        flex-grow: 2;
+    }
+    div:nth-child(2){
+        flex-basis: 300px;
+        flex-grow: 3;
+    }
+    div:nth-child(3){
+        flex-basis: 150px;
+        flex-grow: 1;
+    }
+    div:nth-child(4){
+        flex-basis: 220px;
+        flex-grow: 4;
+    }
+</style>
+<body>
+    <div>春</div>
+    <div>夏</div>
+    <div>秋</div>
+    <div>冬</div>
+</body>
+</html>

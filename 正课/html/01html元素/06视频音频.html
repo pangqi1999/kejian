@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        资源：地址，根据地址查找资源
+        视频隐藏 conttrol 播放进图条
+        currentTime  返回当前歌曲播放的事件：[必须用js操作]
+        currentUrl  返回当前视频或者音频的地址[必须用js操作]
+        contros  视频音频的控制软件
+        source  播放多个音乐：需要结合JS 完成歌曲切换 或视频切换
+
+        audio video 有很多内置属性函数：缺啥找啥
+     -->
+    <audio controls>
+        <source src="http://mp32.9ku.com/upload/128/2018/02/08/875595.mp3">
+        <source src="./新建文件夹/Dow-Dow.mp4">
+    </audio>
+    <audio src="http://mp3.9ku.com/m4a/212762.m4a" controls></audio>
+    <!-- 仅仅支持音频 -->
+    <audio controls>
+        <source src="新建文件夹/Dow-Dow.mp4">
+    </audio>
+    <!-- 视频 -->
+    <video style="width: 300px;" src="新建文件夹/Dow-Dow.mp4" controls></video>
+</body>
+
+</html>

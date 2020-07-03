@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #bac{
+        width: 200px;
+        height: 200px;
+        /* 
+        background 背景属性
+        no-repeat 图篇不平铺(一张不平铺成多张)
+         */
+        background: red;
+        /* 
+        background-image: url()    导入背景图片，可以导入多张图片，用逗号隔开
+            注意：
+                1.如果没有使用background-image 设置背景图片大小，默认为原始大小
+                2.图片小于背景 默认为[平铺效果]
+                3.默认起始位置为左上角
+         */
+         /*
+        background-repeat   多张图片，用逗号隔开
+        设置背景图片是否平铺
+        默认平铺
+        no-image 不平铺
+        repeat-x  x轴平铺
+        repeat-y  y轴平铺
+          */
+          /* 
+          设置背景图片大小
+        background-size     多张图片，用逗号隔开
+            有俩值
+            值一  图片宽度是为容器的宽度百分几
+            值二  图片高度是为容器的高度百分几
+        背景图片宽度 = 容器宽度 * 值一
+        背景图片高度 = 容器高度 * 值二
+           */
+        /* 
+        设置背景图片的位置
+        background-position     多张图片，用逗号隔开 
+        有俩值
+            值一    设置背景图片在容器中水平方向移动位置  大于0，往右走；小于0，往左走
+            值二    设置背景图片在容器中竖直方向移动位置  大于0，往右下；小于0，往左上
+        背景图片位置 = (容器宽度 - 图片宽度) * 值一
+                      (容器高度度 - 图片高度度) * 值二
+         */
+        background-image: url('../01CSS规范/img/1.png'),url("../01CSS规范/img/10.png");
+        background-repeat: no-repeat,no-repeat;
+        background-size: 10% 10% ,20% 20%;
+        background-position: 30% 50%,20% 10%;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- 
+        背景属性为复合属性： background
+        注意：只要是复合属性都可以合并在一起写值
+              所有的复合属性都可以由多个值  值与值之间用  空格 隔开
+              只要在浏览器 styles 中  看到三角号的属性 都是复合属性
+     -->
+     <div id="bac"></div>
+     <!-- <img src="../01CSS规范/img/10.png" alt=""> -->
+</body>
+</html>

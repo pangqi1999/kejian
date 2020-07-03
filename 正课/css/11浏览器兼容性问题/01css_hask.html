@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+    <!-- 只是判断是否是IE浏览器，只有在IE浏览器中才能解析下面标签p -->
+    <!-- 以下不是注释，就是只有的语法规则 -->
+<body>
+    <!--[if IE]> 
+        <p class='test'>你在非IE中将看不到我的身影</p> 
+        <div class='box'></div>
+    <![endif]-->
+
+    <!--[if IE]> 
+        <style> 
+            .test{color:red;} 
+             @media screen and (min-width: 480px) {
+            body{
+                background-color: red;
+            }
+        }
+        </style> 
+    <![endif]-->
+
+
+    <!--[if lt IE 9]> 
+        <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script> 
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script> 
+    <![endif]-->
+
+    <!--[if IE]>
+	    这段文字只在IE浏览器显示
+    <![endif]-->
+</body>
+    <!--
+        html5shiv 是一个针对 IE 浏览器的 HTML5 JavaScript 补丁，目的是让 IE 识别并支持 HTML5 元素。 
+        respond.js,对前端第三方技术的补丁
+
+        如果小于ie9浏览器，才能拿导入库
+        if ite IE 9     小于等于IE9
+        if gt  IE 9     大于IE9
+        if gte  IE 9    大于等于IE9
+        if ! IE 9       非IE浏览器
+        if IE           支持IE浏览器
+
+        语法
+        <-- if 条件>
+            需要解析的内容
+        <! endIf -*2> 
+
+        IE补丁:
+         @media  IE9 
+
+        
+     -->
+     <!-- 
+        学习 css hack目的： 了解即可  不要求使用
+        1.知道语法
+        2.万一遇到只有的代码，可以看懂，并且可以修改
+        3.万一遇到低版本IE，6，7，8，兼容性问题，css hack是解决兼容性问题的方案(单不一定有效)
+
+        注意：只是补丁 不是创造
+      -->
+</html>

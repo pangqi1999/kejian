@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        position:relative;
+        top:0;
+        left:0;
+        /* animation 设置动画样式，想要显示动画jj最少要设置动画的名字和时间 */
+        /* animation : move 2s;*/
+        /* 设置动画样式 动画的名字 动画单词执行的时间 相邻22个帧直接的动画速度
+        动画的延迟时间 动画的播放次数 动画的执行方向 动画结束时，是否保留结束时的样式  */
+        /* animation: name duration timing-function delay
+        iteration-count direction fill-mode; */
+        /* 动画的延迟时间可以为负数，宝石动画提前多久开始执行  负多少时间就从多少秒开始执行*/
+        /* linear匀速 */
+        /* lifinite无限播放，动画执行一次就写1 */
+        /* normal默认正常播放，alternate动画应该轮流反向播放 */
+        /* none不保留结束时的样式，both保留 */
+
+        animation: move 2s linear 0s 1 normal both;
+
+    }
+    @keyframes move{
+        /* 0%{
+            top:0;
+            left:0;
+        }
+        25%{
+            top:0;
+            left: 400px;
+            background-color: aqua;
+        }
+        50%{
+            top: 400px;
+            left: 400px;
+            background-color: greenyellow;
+        }
+        75%{
+            top: 400px;
+            left: 0;
+            background-color: tomato;
+        } 
+        100%{
+            top: 0;
+            left: 0;
+            background-color: pink;
+         } */
+        from{
+           top: 0;
+           left: 0;
+        }
+        to{
+            top: 300px;
+            left: 1110px;
+            background-color: green;
+            transform: rotate(360deg);
+            border: 5px solid red;
+            width: 300px;
+            height: 300px;
+            box-shadow: 2px 2px 10px 5px blue;
+        }
+
+        
+    }
+    .box:hover{
+        /* running运动 paused停止 */
+        animation-play-state:paused ;
+    }
+</style>
+<body>
+    <!-- 关键帧动画 hi可以控制每一帧的样式动态 -->
+    <div class="box">
+
+    </div>
+</body>
+</html>

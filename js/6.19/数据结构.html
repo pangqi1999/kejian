@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组中放的会死相同的数据类型： 要么都是数组 对象或者字符串
+        // 对象中存放的是不同的数据类型结构
+
+        //在js 中轮播图存在方式
+        var swipers = [
+            'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d158f243b54d5ec68dd2ac72bd24555d.jpg?w=632&h=340',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg',
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg',
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg'
+        ]
+
+        var t =[
+            {
+                title:'精选',
+                name:'为你推荐'
+            },
+            {
+                title:'进口',
+                name:'为你推荐'
+            },
+            {
+                title:'优惠',
+                name:'为你推荐'
+            },
+            {
+                title:'新品',
+                name:'为你推荐'
+            }
+        ]
+
+        var list = [
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            },
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            },
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            },
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            },
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            },
+            {
+                img:'',
+                title:'',
+                price:'',
+                number:''
+            }
+        ]
+
+        var nav = {
+           
+            swipers:[
+            'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d158f243b54d5ec68dd2ac72bd24555d.jpg?w=632&h=340',
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg',
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg',
+            'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg'
+        ],
+
+       t:[
+            {
+                title:'精选',
+                name:'为你推荐'
+            },
+            {
+                title:'进口',
+                name:'为你推荐'
+            },
+            {
+                title:'优惠',
+                name:'为你推荐'
+            },
+            {
+                title:'新品',
+                name:'为你推荐'
+            }
+        ]    
+    }
+
+    var bottom = {
+        buy:[
+            {
+                title:'限时抢购',
+                time:'',
+                text:'',
+                list:[
+                    
+                ]
+            }
+        ]
+    }
+
+    
+        
+           
+           swipers:[
+           'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d158f243b54d5ec68dd2ac72bd24555d.jpg?w=632&h=340',
+           'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3314189121,1022414755&fm=26&gp=0.jpg',
+           'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg',
+           'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3574127451,3300961108&fm=26&gp=0.jpg'
+       ]
+   
+    nav :{
+        t :[
+            {
+                pic:'',
+                title:'精选',
+                name:'为你推荐'
+            },
+            {
+                pic:'',
+                title:'进口',
+                name:'为你推荐'
+            },
+            {
+                pic:'',
+                title:'优惠',
+                name:'为你推荐'
+            },
+            {
+                pic:'',
+                title:'新品',
+                name:'为你推荐'
+            }
+        ]
+    }
+
+   teacher : {
+        titele:'title',
+        sec:[
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            },
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            },
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            },
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            },
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            },
+            {
+                pic:'',
+                name:'',
+                prodect:''
+            }
+
+        ]
+           
+    }
+
+     card : [
+        {
+            _card:{
+                name:'',
+                lip:''
+            },
+            title:'',
+            price:''
+        },
+        {
+            _card:{
+                name:'',
+                lip:''
+            },
+            title:'',
+            price:''
+        },
+        {
+            _card:{
+                name:'',
+                lip:''
+            },
+            title:'',
+            price:''
+        },
+        {
+            _card:{
+                name:'',
+                lip:''
+            },
+            title:'',
+            price:''
+        }
+    ]
+
+     activity :  {
+        title:'',
+        product:[
+           {
+                img:'',
+                tiele_name:'',
+                status:'',
+                number:''
+            },
+            {
+                img:'',
+                tiele_name:'',
+                status:'',
+                number:''
+            },
+            {
+                img:'',
+                tiele_name:'',
+                status:'',
+                number:''
+            },
+            {
+                img:'',
+                tiele_name:'',
+                status:'',
+                number:''
+            }
+
+        ]
+    }
+
+    
+</script>
+</body>
+</html>

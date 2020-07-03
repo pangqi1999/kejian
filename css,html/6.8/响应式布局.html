@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    nav{
+        height: 45px;
+        background-color: #000;
+    }
+    li{
+        /* display: inline-block; */
+        list-style: none;
+        height: 45px;
+        margin-left: 50px;
+        text-align: center;
+        float: left;
+    }
+    a{
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        line-height: 45px;
+        color:#fff;
+        text-decoration: none;
+    }
+    .box{
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        background-color: red;
+    }
+    .main{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 1300px;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+        background-color: aqua;
+        margin-top: 10px;
+
+        
+
+    }
+    .clearFix::after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        zoom:1;
+    }
+    /* 移动端 */
+    @media screen and (max-width:768px){
+        nav{
+            padding-left: 0;
+        }
+        ul{
+            padding-left: 50px;
+            width: 100%;
+            background-color: #000;
+        }
+        li{
+            /* display: block; */
+            width: 100%;
+            display: none;
+            /* height: 
+            45px; */
+        }
+        
+        .icon{
+            display: block;
+        }
+        ul:hover>li{
+            display: block;
+        }
+        ul:hover>li:nth-child{
+
+        }
+
+        
+    }
+</style>
+<body>
+<!-- /* 相对单位
+        一个网站 一个代码 一个布局
+        % rem em vh vm
+
+        媒体查询
+        一个网站：两套代码 两个布局
+        1：两套代码
+        2:查询条件
+            -以pc端样式为主 需要兼容移动端 (默认样式)
+            查询条件 最大宽度 max-width
+            -以 移动端为主的样式 PC端为辅的
+                查询条件 为最小宽度 min-width
+        第二套样式：要以第一套为基础 */ -->
+        <!-- 
+               1 如何解决H5兼容性问题
+
+                 2   BFC   
+                    
+                 3   CSS如何垂直居中？如何清除伪类？
+
+                  4  如何解决外边距塌陷问题
+                    给父元素设置border 或者 设置over-flow:hidden
+
+                   5 div插入图片有间隙：怎么解决？
+                    display:block;
+                    给父元素设置font-size:0;
+         -->
+
+ <nav>
+     <li >
+        <a href="#" class="icon"></a>
+     </li>
+     <li><a href="#">首页</a></li>
+     <li><a href="#">详情</a></li>
+     <li><a href="#">aa</a></li>
+ </nav>
+ <div class="main">
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+ </div>
+</body>
+</html>

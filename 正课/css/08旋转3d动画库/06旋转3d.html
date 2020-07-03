@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 1200px;
+
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* transform: rotate(45deg); */
+        }
+        .x{
+            transform: rotateX(80deg);
+        }
+        .y{
+            transform: rotateY(80deg);
+        }
+        .z{
+            transform: rotateZ(80deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box y">1</div>
+    <div class="box x">2</div>
+    <div class="box z">3</div>
+</body>
+</html>

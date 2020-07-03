@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   ul,ol{
+       list-style: none;
+   }
+   html,body{
+       
+       width: 100%;
+       height: 100%;
+   }
+  
+
+   .title{
+       position: relative;
+       width: 375px;
+       height: 44px;
+       font-weight: 400;
+       margin-left: 20px;
+       font-size: 16px;
+       color: #1E1E1E;
+   }
+   
+   .title-text{
+       text-align: start;
+       height: 44px;
+       line-height: 44px;
+   }
+   .title-icount{
+       /* border-width: 0px; */
+       position: absolute;
+       left: 305px;
+       top: 74px;
+       width: 90px;
+       height: 32px;
+       
+   }
+   .title-extend {
+       display: inline-block;
+       position: absolute;
+       right: 50px;
+       top: -65px;
+       width: 90px;
+       height: 32px;
+       border-width: 1px;
+       border-style: solid;
+       border-color: rgba(242, 242, 242, 1);
+       border-radius: 32px;
+   }
+   .share{
+       display: inline-block;
+       position:absolute;
+       right: 51px;
+       top: 3px;
+       
+   }
+   .out{
+       display: inline-block;
+       position:absolute;
+       right: 6px;
+       top: 0px;
+       
+   }
+   .hr{
+       display: inline-block;
+       position: absolute;
+       left: 46px;
+       top: 4px;
+       width: 2px;
+       height: 21px;
+       background-color:rgba(242, 242, 242, 1);
+   }
+   .title-logo,.title-text{
+       float: left;
+       
+   }
+   .title-text{
+       margin-left: 30px;
+   }
+   .title-logo{
+    margin-top: 13px;
+   }
+   .main{
+    width: 335px;
+    border-width: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px 0 0 0;
+   }
+   .card{
+    width: 335px;
+    height: 173px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    background: linear-gradient(89deg, rgba(102, 153, 255, 1) 0%, rgba(102, 153, 255, 1) 0%, rgba(102, 51, 255, 1) 100%, rgba(102, 51, 255, 1) 100%);
+   }
+   .card-name{
+    font-family: '思源黑体 Bold', '思源黑体';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+   }
+   .card-item{
+    font-family: '思源黑体';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+   }
+   .price{
+    font-family: '思源黑体 Bold', '思源黑体';
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+   }
+   .dw{
+       margin-left: -10px;
+    font-family: '思源黑体';
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+   }
+   .invitation{
+       margin-top: 10px;
+       text-align: center;
+   }
+   .invitation div{
+       margin-top: 10px;
+   }
+   .invitation-name{
+       font-size: 14px;
+       font-family:'思源黑体 Bold', '思源黑体';
+       font-weight:700;
+       color: #333;
+   }
+   .tips{
+    font-family:'思源黑体';
+    font-weight:400;
+    color:#999999;
+    font-size: 12px;
+   }
+   
+    .invitation-number{
+        margin-left: 35%;
+        width: 113px;
+        height: 40px;
+        background: linear-gradient(225deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 0%, rgba(255, 153, 0, 1) 100%,
+        rgba(255, 153, 0, 1) 100%);
+        border: none;
+        border-radius: 5px;
+        line-height: 40px;
+        box-shadow: 0px 2px 15px rgba(255, 102, 0, 0.47843137254902);
+    }
+    .record{
+        display: flex;
+        justify-content: start;
+    }
+    
+  .msg-con{
+    display: flex;
+        justify-content:space-between;
+  }
+   .msg-text{
+    height: 32px;
+    width: 263px;
+       float: left;
+    font-family: '思源黑体';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #333;
+
+   }
+   .msg-date{
+       width: 70px;
+       float: left;
+       margin-left: 10px;
+    font-family: '思源黑体';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #ccc;
+   }
+   .msg div{
+       margin-top: 10px;
+   }
+   
+</style>
+<body>
+    <div class="title">
+        <a href="logo.html">
+            <div class="title-logo">
+                <img src="./image/u874.png" alt="">
+            </div>
+        </a>
+        
+        <div class="title-text">邀请有奖</div>
+        <div class="title-icount">
+            <div class="title-extend">
+                <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                <img src="/image/u202.png" alt="" class="hr">
+            </div>
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="card">
+            <div class="card-name">邀请好友 &nbsp 得无门槛优惠券</div>
+            <div class="card-item">每邀请1位新用户注册非翔教育会员并购买任意课程可得</div>
+            <div class="price">50
+                <span class="dw">元</span>
+            </div>
+            <div class="card-item">无门槛优惠券</div>
+        </div>
+        <div class="invitation">
+            <div class="invitation-name">我的邀请码</div>
+            <div class="tips">
+                （长按复制发送给好友，好友注册时填写）
+            </div>
+            <div class="invitation-number">45269633</div>
+        </div>
+        <div class="record">
+            <div class="record-img">
+                <img src="./image/u3953.png" alt="">
+            </div>
+            <div class="record-text">奖励记录（3）</div>
+        </div>
+        <div class="msg">
+        
+            <div class="msg-con">
+                <div class="msg-text">亲爱的李明[非翔教育万圣节活动]<br>报名成功，请按时参加哦~</div>
+                <div class="msg-date">2019-01-16</div>
+            </div>
+            <div class="msg-image">
+                <img src="./image/u3957.png" alt="">
+            </div>
+        </div>
+        <div class="msg">
+        
+            <div class="msg-con">
+                <div class="msg-text">亲爱的李明[非翔教育万圣节活动]<br>报名成功，请按时参加哦~</div>
+                <div class="msg-date">2019-01-16</div>
+            </div>
+            <div class="msg-image">
+                <img src="./image/u3957.png" alt="">
+            </div>
+        </div>
+        <div class="msg">
+        
+            <div class="msg-con">
+                <div class="msg-text">亲爱的李明[非翔教育万圣节活动]<br>报名成功，请按时参加哦~</div>
+                <div class="msg-date">2019-01-16</div>
+            </div>
+            <div class="msg-image">
+                <img src="./image/u3957.png" alt="">
+            </div>
+        </div>
+        <div class="msg">
+        
+            <div class="msg-con">
+                <div class="msg-text">亲爱的李明[非翔教育万圣节活动]<br>报名成功，请按时参加哦~</div>
+                <div class="msg-date">2019-01-16</div>
+            </div>
+          
+        </div>
+       
+    </div>
+    
+    
+</body>
+</html>

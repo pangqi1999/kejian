@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* *{
+        margin: 0;
+        padding: 0 ;
+        } */
+    .fixedBac{
+        height: 100%;
+        background-image: url("../01CSS规范/img/1.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /* 固定背景图片 */
+        /* background-position: fixed;
+                                scorll 默认值            
+         */
+
+        background-attachment: fixed;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- 
+        多张背景图片层级关系
+        1.url  越靠前，级别越高
+
+     -->
+     <!-- 
+        css  排错方法：
+        1.保障html没有[写错]
+        2.如果元素是对的，没有样式
+            ——>  保证[选择器]选中了选中当前元素
+            ————>  取到元素  查看  styles (styles中展示当前元素的样式)
+            ——————>  属性是否被解读 然后在进行调试
+        3.针对第三方资源导致的问题
+            ————>  无效果，不起作用  ===>  资源路径错误
+            ————>  资源： 文件  图片  视频  音频 等
+        
+      -->
+      <!-- 固定背景图片 ： 背景不动，子元素滚动 -->
+      <div class="fixedBac">
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+        <p>我是内容</p>
+      </div>
+      <div class="scrollBac">
+          <div class="box"></div>
+      </div>
+     
+</body>
+</html>

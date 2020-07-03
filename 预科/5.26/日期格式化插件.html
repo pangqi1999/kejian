@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="./moment-with-locales.js"></script>
+</head>
+<body>
+    <script>
+        // moment.locale('zh-cn')
+        // document.write(moment().format('MMMM Do YYYY, h:mm:ss a'))
+
+        var d1 = new Date('2020-5-25 16:26:53 ');
+        // console.log(d1);
+
+         var d2 = new Date('2017-08-13 07:36:17');
+       
+       
+        //  var t = Date.now(d1);
+        //  var s = Date.now(d2);
+        console.log(d1.getTime());
+        console.log(d2.getTime());
+         console.log((d1-d2)/1000);
+    </script>
+</body>
+</html>

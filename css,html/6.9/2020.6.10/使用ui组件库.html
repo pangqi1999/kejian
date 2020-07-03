@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <SCript src="./bootstrap/js/bootstrap.js"></SCript>
+</head> 
+<style>
+    .wraper{
+        width: 80%;
+        height: 50px;
+        background-color: red;
+        position:absolute;
+
+    }
+    .box{
+       
+        height: 150px;
+        background-color: aqua;
+        margin: 10px;
+    }
+    form{
+        width: 600px;
+        border: 1px solid #999;
+        
+    }
+  
+    .form-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    .size{
+        width: 80%;
+        background-color: green;
+        border-radius: 8px;
+    }
+</style>
+<body>
+    <!-- 
+        所有的ui 组件库
+        1.导入资源文件 css js 文件
+        2.看着官网 知道每个类名是干什么的 ：每个属性的作用是什么
+        3.用啥找啥
+
+        当ui 组件的样式不能完全满足需求的时候：
+        1没有样式==》自己写
+        2；有样式只能满足一部分需要修改
+         2.1 找到内部到底是哪一个类名的样式
+         2.2 自己写一个选择器用权重 覆盖样式
+         2.3 补刀万不得已 不要修改源码，源码
+     -->
+     <!-- <div class="container wraper"> -->
+         <!-- text-left/center/right 文本对齐方式 -->
+         <!-- text-tranfrom：lowercate/uppercase/capitalize 小写/大写/首字母大写 -->
+         <!-- <div class="box col-md-3  col-xs-12"></div>
+         <div class="box col-md-3  col-xs-12"></div>
+         <div class="box col-md-3  col-xs-12"></div>
+         <div class="box col-md-1  col-xs-12"></div>
+         <div class="box col-md-1  col-xs-12"></div>
+         <div class="box col-md-1  col-xs-12"></div>
+     </div> -->
+     <!-- 栅格系统
+    1默认将每一个容器等分为12份
+    2；.col-xx 区分显示器
+    3；.col-xx-3 设置子元素 在12 分中占几
+    总结：。col-xx-ss 表示在某个显示 子元素占据12粉中的几份
+    作用：给 子元素设置宽度
+
+    怎么用：
+    1：确定在什么端实现是什么布局：pc端
+    2：确定一行派几个（n）2.3.4.6.1
+    3.设置子元素宽度 12、你注意拉开子元素距离 不能用Margin padding
+    4:n 为特殊值 不能被12整除， 不要用栅格系统-->
+ 
+     <form action="">
+         <div class="form-group">
+             <label for="">姓名</label>
+             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+         </div>
+         <div class="form-group">
+            <label for="">密码</label>
+            <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <button type="submit" class="btn btn-default" class="size">提交</button>
+     </form>
+</body>
+</html>

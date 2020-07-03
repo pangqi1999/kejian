@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组对象</title>
+</head>
+<body>
+    <script>
+        // 如何创建一个数组
+        // 方式一：使用自变量
+        var arr = [1,2,3,4,true,false,'q','w',['e','r']]
+        console.log(arr.length)//9
+        // length获取数组的长度
+
+        // 方式二：使用Array
+        // 参数是数组的长度(初始化长度)赋值超过超过这个长度时，长度会更改
+        var arr1 = new Array(5)
+        arr1[0] = 'hello'
+        arr1[1] = '3'
+        arr1[2] = 3
+        arr1[3] = true
+        arr1[4] = [6,7]
+        console.log(arr1)
+
+
+        var arr2 = [[1,2],['w','e']]//二维数组
+        console.log(arr2[0][1])//2
+
+        var arr3 = [[1,2,['w','e']],['c',3]]//三维数组
+        console.log(arr3[0][2][1])//e
+
+        // 方式三
+        var arr4 = new Array(1,2,3,4,5,6,9,8,7)
+        console.log(arr4)
+
+        // 数组的操作：添加，删除，修改，循环，查询
+        var arr5= ['a','b','c',1,2]
+        console.log(arr5)
+        arr5.push('v',6,'m')//push往数组的末尾添加元素
+        console.log(arr5)
+        arr5.unshift('n',7)//unshift往数组的开头添加元素
+        console.log(arr5)
+
+        var n = arr5.pop()//pop在数组的末尾删除，一次只能删除一个，并且返回一个新的元素(被删除的元素)
+        // arr5.pop()
+        console.log(n)//m
+        console.log(arr5)
+
+        var m = arr5.shift()//shift在数组的开头删除，一次只能删除一个，并且返回一个新的元素(被删除的元素)
+        console.log(m)//n
+        console.log(arr5)
+
+        // 队列：先进先出
+        // 堆栈：后进先出
+
+        // push和shift可以构成一个队列
+        // unshift和pop可以构成一个队列
+
+        // push和pop可以构成一个栈
+        // unshift和shift可以构成一个栈
+
+        console.log(arr5[50])//若超出范围会得到undefined
+
+        var arr6 =[1,2,3,4,5,6]
+        console.log(arr6.reverse())//reverse()反转数组本身，倒着排序
+        console.log(arr6.sort())//sort()数组排序，默认按升序排列；返回排序后的数组； sort()默认会将数组中的每一项转换为字符串再按照字符串Unicode码点进行排列
+
+        var p1={
+            name:'qwer',
+            age:5
+        }
+        var p2={
+            name:'wer',
+            age:4
+        }
+        var p3={
+            name:'asdf',
+            age:2
+        }
+        var p4={
+            name:'sfd',
+            age:1
+        }
+        var p5={
+            name:'wangsan',
+            age:8
+        }
+
+        var arr7 = [p1,p2,p3,p4,p5]
+        console.log(arr7)
+
+        arr7.sort(function(a,b){
+            // console.log(a.age + 'aaa')//4aaa 2aaa 1aaa 8aaa
+            // console.log(b.age + 'bbb')//5bbb 4bbb 2bbb 1bbb
+            // a-b大于0(从小到大)正序
+            // a-b小于0(从大到小)倒序
+            // a-b等于0相对位置不变
+            return a.age - b.age == 0
+        })
+        console.log(arr7)
+
+        var arr8 = [1,2,3,'a','b','c']
+        // arr8.splice(3)//删除索引位及之后所有的参数
+        // arr8.splice(3,2)//第二个参数是删除的个数
+        // arr8.splice(3,2,'v','w','d')//第三个及后面的参数都会插入到数组当中去(插入在删除的地方)
+        console.log(arr8)
+
+        var arr9 = arr8.concat([7,'s',8],4,'r')//concat既可以连接数组，也可以连接值
+        console.log(arr9)
+
+        var arr10 =['你好','你们好','大家好']
+        console.log(arr10)
+        // 连接元素并返回一个字符串(即把数组转化成字符串)
+        console.log(arr10.join())
+        console.log(arr10.join(''))//把逗号替换成空字符
+        console.log(arr10.join('-'))//把逗号替换成-
+        console.log(arr10.join(null))//把逗号替换成null
+        console.log(arr10.join(undefined))//不做改变
+        console.log(arr10.join('0'))////把逗号替换成0
+
+
+        var arr11 = [1,2,'d','m',3,'a','m','c']
+        console.log(arr11)
+        // slice截取数组
+        console.log(arr11.slice(2))//从已有数组返回选定元素，第一个参数是开始位置，会保留
+        console.log(arr11.slice(2,4))//第二个参数是结束时的位置，会被切掉(不保留)
+        console.log(arr11.slice(-4,-2))
+        // 如果是负数时，从数组尾部开始算起
+        // -1是指最后一个元素，-2是指倒数第二个元素
+        // 值为负数时可以看做字符串的长度减去负的值(得到的是索引)
+        console.log(arr11.slice(-2,-4))//如果第二个参数小于第一个参数，那么就会得到一个 空数组
+        console.log(arr11.slice())//不传任何参数相当于数组复制
+
+        console.log(arr11.indexOf('m'))//从前往后查找元素第一次出现的位置，并返回索引值，如果找不到就返回-1
+        console.log(arr11.lastIndexOf('m'))//倒着找，找到第一个停止
+        
+        // 取出数组中的每一个值
+        for(var i=0;i<arr11.length;i++){
+            var element = arr11[i]
+            console.log(element)
+        }
+        
+        // forEach是数组自带的循环方法：参数是一个回调
+            //  回调函数中的三个参数
+                    //  1.element表示数组中的元素
+                    //  2.index表示数组中的索引
+                    //  3.arr 表示数组本身
+        arr11.forEach(function(element,index,arr){
+            console.log(`元素值:${element},索引值:${index},数组本身:${arr}`)
+        })
+        
+        // es6的箭头函数
+        arr11.forEach((element,index,arr)=>{
+            console.log(`元素值:${element},索引值:${index},数组本身:${arr}`)
+        })
+
+        // 查找
+        var arr12 = [1,2,3,'cc','dd',4,5,'cc']
+        // find()寻找满足判断条件的第一个元素，找到返回这个元素，找不到返回undefined
+        var newArray=arr12.find((ele,index,arr)=>{
+            return ele =='cc'
+        })
+        console.log(newArray)//cc
+
+        // findIndex()寻找满足判断条件的第一个元素，找到返回这个元素的索引值，找不到返回-1
+        var newArray1 = arr12.findIndex(function(ele){
+            return ele == 'cc'
+        })
+        console.log(newArray1)//3
+
+    </script>
+</body>
+</html>

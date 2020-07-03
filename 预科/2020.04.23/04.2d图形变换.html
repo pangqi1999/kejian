@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2d图形变换</title>
+</head>
+<style>
+    body,html{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        overflow: hidden;
+        background-color: #eee;
+    }
+    div{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        font-size: 30px;
+        background-color: #fff;
+        border: 2px solid #000;
+    }
+    /* 2D图形变换：是指在二维平面上对图形进行平移，缩放和旋转等一系列的操作 */
+    .d1:active{
+        /* translate()平移 */
+        /* 2个值分别对应x轴和y轴 */
+        /* 正值：x轴往右，y轴往下 */
+        /* 负值：x轴往左，y轴往上 */
+        /* 值可以为具体的多少px，也可以为% */
+        /* transform: translate(200px,200px); */
+        /* 如果只有一个值，对应x轴，y轴默认为0 */
+        transform: translate(100px);
+    }
+
+    .d2:active{
+        /* scale()缩放 */
+        /* 2个值分别对应x轴和y轴 */
+        transform: scale(0.5,2);
+        /* transform-origin基点，默认值50% 50% */
+        transform-origin:-50% 150%;
+    }
+
+    .d3:active{
+        /* rotate()旋转 单位deg表示度 */
+        /* 正值表示顺时针，负值表示逆时针 */
+        transform:rotate(-30deg);
+        /* 基点 */
+        transform-origin:50% 50%;
+    }
+    .d4{
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #000;
+    }
+    /* .d4:hover{
+        transform:rotate(180deg);
+        transform-origin:50% 75%;
+    } */
+</style>
+<body>
+    <div class="d1">平移</div>
+    <div class="d2">缩放</div>
+    <div class="d3">旋转</div>
+    <!-- <div class="d4"></div> -->
+</body>
+</html>

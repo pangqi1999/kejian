@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            background-color: red;
+            font-size: 5em;
+        }
+        .next{
+            width: 1em;
+            height: 1em;
+            background-color: green;
+        }
+        article{
+            font-size: 5em;
+        }
+        b{
+            display: inline-block;
+            width: 4em;
+            height: 2em;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        单位
+        绝对单位：尺寸固定不变的单位：px  cm  m
+        相对单位：大小由参考元素决定，一般是相对父元素
+            百分比      相对父元素
+            em          需要先设置font-size  它的值，为参考
+                默认    1em = 16px      1em = font-size的值
+                如果右font-size那么，其他属性中的 1em = font-size的值
+                通常用于设置文字大小，参考：font-size
+
+            vw          视图窗口宽度
+                最大宽度为 100vw =  视图窗口宽度
+            vh          视图窗口高度
+                最大宽度为 100vh =  视图窗口高度
+                注意：尽量不要使用
+            rem         根元素html  1rem = 16px     由html的font-size决定
+
+            rpx         微信小程序中的
+     -->
+
+     <span>
+         我是测试em单位
+     </span>
+     <div class="next"></div>
+     <!-- 父子关系：父元素中的font-size 可以继承 -->
+     <article>
+         我是文章
+         <b></b>
+     </article>
+</body>
+</html>

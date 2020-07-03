@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>number</title>
+</head>
+<body>
+    <script>
+        var n = 2
+        var n1 = Number('你')
+        var n2 = Number(2)
+        var n3 = Number('2019年')
+
+        console.log(n)//2
+        console.log(typeof n)//number
+
+        console.log(n1)//NaN  Not a Number不是一个数字
+        console.log(typeof n1)//number
+
+        console.log(n2)//2
+        console.log(typeof n2)//number
+
+        console.log(n3)//NaN
+        console.log(typeof n3)//number
+        // Number()把参数转换成数字，值转换不成功，返回NaN
+
+        console.log(Number.MAX_VALUE)
+        // 表示最大值
+        console.log(Number.MIN_VALUE)
+        // 表示最小值
+
+        console.log(typeof Number(3).toString())//string
+        // 把数字转换成字符串
+
+        console.log(typeof Number('3.1415926').toFixed(2))//3.14  string
+        // toFixed()可以把number四舍五入到指定小数位数的数字，返回的是字符串的数值
+
+        console.log(0.000001/0)//Infinity 正无穷大(任何数除以0都得到Infinity)
+        
+
+        // isNaN检查其参数是不是非数字值 是非数字值，返回true  不是返回false 
+        console.log(isNaN(1))//false  不是NaN
+        console.log(isNaN('1'))//false  不是NaN
+        console.log(isNaN('中文'))//true 是NaN
+        console.log(isNaN('NaN'))//true 是NaN
+        //number函数无法将字符串转换成数字，所以它返回NaN
+        //如果传入的参数是NaN 返回true，如果不是，返回false
+        
+        // isInteger()用来判断给定参数是否为整数，如果是返回true，如果不是，返回false
+        console.log(Number.isInteger(3))//true
+        console.log(Number.isInteger(3.2))//false
+        console.log(Number.isInteger(100*(0.1+0.2)))//false,计算机会造成小误差，内部造成
+        console.log(100*(0.1+0.2))//30.000000000000004
+        console.log(Number.isInteger(NaN))//false
+        console.log(Number.isInteger(Infinity))//false
+
+
+        var num = 123.4567890
+        console.log(num.toExponential(3))//toExponential() 方法可把对象的值转换成指数计数法。参数规定指数计算法中的小数位数，是0~20之间的值  
+        //1.235e+2  e+2就是指10^2
+
+        console.log(num.toPrecision(5))//数字格式化指定长度 //123.46
+
+
+
+
+    </script>
+</body>
+</html>

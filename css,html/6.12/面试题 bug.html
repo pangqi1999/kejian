@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav{
+        width: 200px;
+        height: 300px;
+        margin-bottom: 30px;
+        background-color: aqua;
+        /* display: inline-block; */
+       
+    }
+    .banner{
+        width: 200px;
+        height: 300px;
+        margin-top: 20px;
+       background-color: bisque;
+    }
+</style>
+<body>
+    
+    <!-- margin合并Bug 
+        1.给其中一个设置display: inline-block;
+    -->
+
+    <!-- h5兼容性问题 
+        标签问题全用div
+        适配问题用响应式布局
+    -->
+    <!-- 2 BFC 
+            块级格式化上下文
+            用到float浮动布局和弹性布局display-flex是会创建Bfc
+            会将具有这些属性的元素设置display值为inline-block
+    
+    -->
+
+    <!-- 3.CSS如何垂直居中？如何清除伪类？
+        通过line-height实现CSS垂直居中。设置子元素的line-height值等于父元素的height，
+        这种方法适用于子元素为单行文本的情况。
+
+        未知父元素高度通过transform实现CSS垂直居中。先给父元素position:relative，
+        再给子元素position:absolute，通过translateY(-50%)即可定位到垂直居中的位置。
+     
+        已知父元素高度通过transform实现CSS垂直居中。
+        给子元素的position:relative，再通过translateY即可定位到垂直居中的位置。
+
+        通过display:flex实现CSS垂直居中的方法是给父元素display:flex;而子
+        元素align-self:center;
+
+
+        通过vertical-align:middle实现CSS垂直居中是最常使用的方法，但是有一点
+        需要格外注意，vertical生效的前提是元素的display：inline-block。
+
+          清除伪类  .clearfix:before,.clearfix:after{
+                    content: "";
+                    display: table;
+            }
+            .clearfix:after{
+                clear: both;
+            }
+    -->
+
+
+<!-- 清除浮动 
+      .clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear:both;
+        visibility: hidden;
+    }
+    .clearfix{
+        *zoom: 1;/*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+    }
+
+
+    4 如何解决外边距塌陷问题
+    给父元素设置border 或者 设置over-flow:hidden
+
+    5 div插入图片有间隙：怎么解决？
+    display:block; -->
+
+    
+</body>
+</html>

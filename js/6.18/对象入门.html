@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            对象语法：{key:value,key2:value}
+            1:对象是以key:value 键值对 存在
+            2：所有的key 都是string 类型
+            4：key 不能重复
+            5：不会因为key 报出key is not defined 错误
+            6：key 可以为undefined
+        */ 
+        var obj = {
+            name:"王宇航",
+            age:21,
+            description:'weihfb',
+            arr:[11],
+            bool:true
+        }
+        console.log(obj)
+
+        //如何获取 对象下属性的值
+        var _name = obj.name
+        console.log(_name)
+        
+        var _arr =obj['arr']
+        console.log(_arr)
+    </script>
+</body>
+</html>

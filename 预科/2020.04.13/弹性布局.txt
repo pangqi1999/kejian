@@ -1,0 +1,112 @@
+Flex弹性布局
+Flex是Flexible Box的缩写，意为"弹性布局"
+
+采用Flex布局的元素，称为Flex容器（flex container），简称"容器"。
+它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称"项目"
+
+容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。
+主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；
+交叉轴的开始位置叫做cross start，结束位置叫做cross end
+
+main size  项目在主轴上的空间（尺寸），默认沿主轴从左向右排列
+cross size 项目在交叉轴上空间（尺寸），交叉轴与主轴垂直
+
+默认情况下（不设置项目的flax-base,width,height），弹性布局当中的项目
+main size  主轴的尺寸为内容的大小
+cross size 交叉轴上尺寸尽可能的铺满容器的整个尺寸
+
+1.flex-direction 
+改变主轴方向（主轴默认方向为水平从左向右）
+row（默认值）：主轴为水平方向，起点在左端
+row-reverse：主轴为水平方向，起点在右端
+column：主轴为垂直方向，起点在上沿
+column-reverse：主轴为垂直方向，起点在下沿
+
+2.flex-basis
+设置项目占据主轴上的空间(尺寸) main size
+
+3.flex-grow 
+分配主轴上的剩余空间（值表示一种比例 份数）
+默认为0，（表示不分配）
+如何分配：
+将主轴上剩余空间的大小除以项目flex-grow值的总和，
+得到这个每份的大小，每个项目分配的剩余空间就是flex-grow的值乘以每份的大小
+
+4.flex-shrink
+设置当主轴上的空间不够时，
+项目收缩比例（份数），默认值为1（可以被压缩）
+0表示不被压缩
+当主轴空间不够时，项目让出空间，规则跟flex-grow相反
+值越大，让出的空间越多
+
+5.order 
+定义项目在主轴上的顺序,默认值为0
+按照order的值，越大，越在后面，
+如果order一致，则按照原有顺序排列
+支持负数，负数 < 0（默认值）< 正数
+
+6.justify-content
+定义项目在主轴上的对齐方式 （对齐方式与轴的方向有关，假设主轴为水平从左到右）
+flex-start（默认值）：左对齐
+flex-end：右对齐
+center： 居中
+space-between：两端对齐，项目之间的间隔都相等
+space-around：每个项目两侧的间隔相等，项目之间的间隔比项目与边框的间隔大一倍
+
+7.align-items
+定义项目在交叉轴上对齐方式（对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下）
+flex-start：交叉轴的起点对齐（居上）
+flex-end：交叉轴的终点对齐（距底部）
+center：交叉轴的中点对齐（居中）
+baseline: 项目的第一行文字的基线对齐
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+注意：
+stretch使用前提：如果没有具体指定项目在交叉轴上的尺寸，align-items使用
+默认值stretch，项目在交叉轴上尺寸能占满整个容器的尺寸，否则项目在交叉轴上的
+尺寸为内容的尺寸或者设定的尺寸
+
+8.align-self
+设置某个项目自身在交叉轴上对齐方式，可以覆盖align-items的值
+取值：flex-start center flex-end stretch baseline 作用于align-items相同；
+auto：自动，继承父元素，如果没有父元素，按照stretch来设置
+
+9.flex-wrap 设置项目的换行方式 
+nowrap(默认值): 不换行
+wrap: 换行，第一行在上
+wrap-reverse 换行，第一行在下  
+
+10.align-content
+换行后，交叉轴上的对齐方式,只针对在交叉轴上多行项目，如果项目只有一行，该属性不起作用
+flex-start：交叉轴的起点对齐
+flex-end：交叉轴的终点对齐
+center：交叉轴的中点对齐
+space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度
+
+11. flex-flow 
+flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，
+默认值为row nowrap
+
+12.flex
+flex属性是flex-grow, flex-shrink 和 flex-basis的简写，
+默认值为0 1 auto
+
+
+设置在容器上的属性
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+
+
+设置在项目上的属性
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self

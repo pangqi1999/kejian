@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var teacher = [
+            {name:'范真',dec:'淑女',age:18},
+            {name:'闫岐',dec:'伪淑女',age:17},
+            {name:'金溪镇',dec:'男生',age:37},
+            {name:'管涛',dec:'伪淑女',age:47}
+        ]
+
+
+
+
+        for(var a = 0;a<teacher.length;a++){
+           if(teacher[a].age>=18){
+                document.write(
+                
+                // '<h1>姓名：   '+teacher[a].name+'，描述：   '+teacher[a].dec+'</h1>' 
+                     `<h1>姓名：${teacher[a].name},描述：${teacher[a].dec}</h1>`
+                )
+           }
+            if(teacher[a].age<18){
+                console.log('姓名：'+teacher[a].name+',描述：'+teacher[a].dec)
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>

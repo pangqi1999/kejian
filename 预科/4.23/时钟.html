@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .clock {
+        background-image: url("pic/clock.jpg");
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;}
+
+ .miao{
+     width: 1px;
+     height: 250px;
+     background-color: blue;
+     position: absolute;
+     top:13%;
+     left: 54%;
+     transform-origin: 50% 100%;
+     z-index: 2px;
+     animation: move 60s linear 0s infinite normal both;
+ }
+ .fen{
+    width: 2px;
+     height: 200px;
+     background-color: green;
+     position: absolute;
+     top:22%;
+     left: 54%;
+     transform-origin: 50% 100%;
+     z-index: 2px;
+     animation: move 3600s linear 0s infinite normal both;
+ }
+ .shi{
+    width: 3px;
+     height: 150px;
+     background-color: red;
+     position: absolute;
+     top:30%;
+     left: 54%;
+     transform-origin: 50% 100%;
+     z-index: 2px;
+     animation: move 43200s linear 0s infinite normal both;
+ }
+ @keyframes move{
+    from{
+        transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+ }
+</style>
+
+<body>
+    <div class="clock">
+        <div class="miao"></div>
+        <div class="fen "></div>
+        <div class="shi "></div>
+    </div>
+
+</body>
+
+</html>

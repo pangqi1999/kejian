@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>华为商城</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+nav{
+    background-color: #f9f9f9;
+    position: relative;
+    min-width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 411;
+}
+layout{
+    *zoom: 1;
+    /*定宽居中*/
+    width: 1200px;
+    margin: 0 auto;
+}
+.s-sub{
+    height: 40px;
+    float: left;
+    margin-left: 80px;
+}
+li {
+    font-size: 12px;
+    height: 40px;
+    float: left;
+    padding: 0 8px;
+    position: relative;
+    padding: 0 8px;
+}
+a:hover {
+    color: #ca151d;
+}
+a {
+    color: #a4a4a4;
+}
+nav li:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: #d3d3d3;
+}
+nav li:first-child::before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: #d3d3d3;
+}
+.s-main {
+    height: 40px;
+    float: right;
+    margin-right: -18px;
+    margin-right: 80px;
+}
+</style>
+<body>
+<nav>
+    
+    <div cla0ss="layout">
+        <div class="s-sub">
+            <!-- ul.list-left>li.item -->
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">华为官网</a></li>
+                <li><a href="">荣耀官网</a></li>
+                <li><a href="">花粉俱乐部</a></li>
+                <li><a href="">v码(优购码)</a></li>
+                <li><a href="">企业购</a></li>
+                <li><a href="">Select Region</a></li>
+                
+            </ul>
+        </div>
+        <div class="s-main">
+            <ul>
+                <li><a href="">登录</a><a href="">注册</a></li>
+                <li><a href="">我的订单</a></li>
+                <li><a href="">客户服务</a></li>
+                <li><a href="">网站导航</a></li>
+                <li><a href="">手机版</a></li>
+                <li><a href="">购物车</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

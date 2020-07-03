@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #wraper {
+            width: 500px;
+            height: 300px;
+            background-color: red;
+        }
+
+        #sm {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            /* 
+            padding:内边距
+            值一：上=下=左=右
+            俩值：上=下 左=右
+            三值：上 左=右 下
+            四值：上 右 下 左
+
+            应用：拉开父元素与子元素容器之间距离的时候，会使用padding
+             */
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wraper">
+        <div id="box"></div>
+    </div>
+    <div id="sm"></div>
+</body>
+
+</html>

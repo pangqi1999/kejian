@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //通过 运算符 将操作数进行类型转化
+        // 什么样的运算符 可以将其他类型转化为number 类型？算数运算符
+
+        //练习：哪个操作数发生隐式转化；转化后结果是啥
+        var res = ('gukun' + '11')-true+1
+            res    = 'gukun11'-true+1
+            res     =NaN -1 +1
+            res    = NaN
+
+        var res = undefined + null   
+            res = NaN + 0
+
+        console.log(['1']-2)//-1 
+
+        
+        var res2 = 1 + {}
+             res2   = 1+'[Object,Object]'
+        console.log(res2)
+    </script>
+</body>
+</html>

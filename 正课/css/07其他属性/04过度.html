@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* transition: all 5s; */
+        transition-property: width,background-color;
+        /* 作用的时间 */
+        transition-duration: 2s ,5s;
+        /* 延迟时间 */
+        transition-delay: 1s;
+        /* 
+        设置过度速度
+        linear  匀速
+        ease    慢快慢
+         */
+    }
+    div:hover{
+        background-color: blue;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        过度：显示某个属性[值变化]的过程
+     -->
+     <div></div>
+</body>
+</html>

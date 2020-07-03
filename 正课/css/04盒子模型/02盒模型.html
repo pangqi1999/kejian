@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            height: 0;
+        }
+    .asd{
+        /* border: 100px solid red; */
+        margin: 100px;
+        padding: 100px;
+        box-sizing: border-box;
+        /* line-height: 150px; */
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        盒模型原理：对所有的盒子，在浏览器中所占据的空间进行计算
+        盒子：只要在浏览器中占据位置的元素，都是我们计算的盒子
+            ->inline inline-block block 
+        盒子模型使用什么计算盒子在浏览器中占据的位置
+        width height border margin padding
+
+        盒子分类：边框盒子(IE默认)和 内容盒子(谷歌默认)
+
+        边框盒子在浏览器中占据空间  =   width * height
+        内容盒子在浏览器中占据空间  =   (width + border + padding +margin) * (height + border + padding +margin)
+
+        结论：内容盒子：会变大
+              边框盒子：不会变
+        
+        
+     -->
+     <div style="width: 200px;height: 200px;background-color: yellow;box-sizing: border-box;padding: 10px;margin: 0;"></div>
+     <span class="asd">你好</span><span>asdasd</span>
+     
+</body>
+</html>

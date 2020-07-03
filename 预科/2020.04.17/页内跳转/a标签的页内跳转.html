@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页内跳转</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        height: 40px;
+        width: 100%;
+        background-color: #333;
+        position: fixed;
+    }
+    .container{
+        width: 1226px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .container>a{
+        display: block;
+        width: 25%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #b0b0b0;
+        text-decoration: none;
+        float: left;
+    }
+    p{
+        height: 1000px;
+    }
+    #d1,#d2,#d3,#d4{
+        padding-top: 40px;
+    }
+</style>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#d1">个人简介</a>
+            <a href="#d2">我的朋友</a>
+            <a href="#d3">我的学校</a>
+            <a href="#d4">我的经历</a>
+        </div>
+    </nav>
+    <div id="d1">
+        <h1>个人简介</h1>
+        <p></p>
+    </div>
+    <div id="d2">
+        <h1>我的朋友</h1>
+        <p></p>
+    </div>
+    <div id="d3">
+        <h1>我的学校</h1>
+        <p></p>
+    </div>
+    <div id="d4">
+        <h1>我的经历</h1>
+        <p></p>
+    </div>
+</body>
+</html>

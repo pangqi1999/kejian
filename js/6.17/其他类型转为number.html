@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数据类型之间是可以相互转化的
+        //boolean 转 number
+
+        //显示转化 Number() parseInt parseFloat()
+        //api 接受什么参数 api作用是什么
+        //
+        var x = 0.1;
+        var y = 0.2;
+        console.log(x+y)
+        //注意：不要测试两个个浮点数 （数学）运算结果
+        console.log(x+y==0.3)
+        //不论是二进制还是十六进制，最后展示的都是十进制
+        console.log(0xf)
+
+        //Number  将其他类型的数据转化为数字型，并返回转化结果
+        //-->参数为Js数据 不穿餐默认返回0
+        var res = Number('gunkun');
+        console.log(res)// NaN 非空字符1
+        console.log(Number(''))//0
+        console.log(Number(false))//0
+        console.log(Number(true))//1
+        console.log(Number(null))//0
+        console.log(Number(undefined),'=======')//NaN
+        console.log(Number('1234123'))//1234123
+        console.log(Number('12a341w23'))//NaN
+        console.log(Number([]))//0
+        console.log(Number([12,123]))//NaN
+        console.log(Number({}))//NaN
+        //NaN    其他数据转化数值型 没有匹配数组 那就是NaN
+        //1:任何数根NaN 算数运算都是NaN
+        // 2.任何数根NaN比较 false
+        // 3.NaN 不等于NaN
+        console.log(1+NaN)
+        console.log('aa'+NaN)//aaNaN
+        console.log(NaN===NaN)//false
+
+    </script>
+</body>
+</html>

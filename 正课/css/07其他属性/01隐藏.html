@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        /* 隐藏元素 */
+        .hidden {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            visibility: hidden;
+            /* display: none; */
+        }
+
+        .tab {
+            width: 200px;
+            height: 30px;
+            padding: 5px 10px;
+            background-color: black;
+            color: #f1f1f1;
+        }
+
+        #view {
+            width: 200px;
+            height: 100px;
+            margin-top: 14px;
+            background-color: aqua;
+            /* 初始化样式：为隐藏状态 */
+            display: none;
+        }
+        /* 当鼠标移动到.tab 元素时，触发.tab子元素#view的样式 */
+        .tab:hover>#view {
+            /* 当鼠标移到父元素上时，显示元素#view */
+            display: block;
+        }
+        .box:hover>.xxx{
+            height: 100px;
+        }
+        .xxx{
+            width: 100px;
+            height: 0;
+            background-color: #bfa;
+        }
+        .x{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        css隐藏方式：
+        1.display:none  反： 显示：display：block
+        2.height:0      反： 显示：height：设置高度
+        3.visibility: hidden  效果隐藏，在浏览器中占位置
+        4.删除dom元素，显示的在添加(理论深)
+
+        区别：
+        display:none 是彻底隐藏，子元素也隐藏
+        visibility:hidden 样式隐藏，单占据位置
+        height:0    当前元素隐藏，子元素不隐藏，内容溢出   可以结合overflow:hidden完成隐藏效果
+        
+     -->
+    <div class="wraper">
+        <div class="tab">鼠标放上来有惊喜
+            <div id="view">
+                我是显示隐藏内容
+            </div>
+        </div>
+
+    </div>
+    <div class="hidden"></div>
+    <div class="box">
+        <div class="xxx"></div>
+    </div>
+    <div class="x"></div>
+</body>
+
+</html>

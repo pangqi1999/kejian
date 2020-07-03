@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        overflow: auto;
+        padding: 10px;
+        /* float: left; */
+        margin: 10px;
+        display: inline-block;
+        
+    }
+    /* 隐藏滚动条 */
+    .box::-webkit-scrollbar{
+        display: none;
+    }
+    .warp{
+        height: 200px;
+        white-space: nowrap;
+        width: 30% ;
+        background-color: blue;
+        overflow: auto;
+        /* 注意:对文本类 inline 元素有用的大部分inline-block */
+        
+    }
+    
+    .clear{
+
+        clear:both;
+    }
+
+
+    .list{
+        /* margin-left: 100px; */
+        margin-top: 100px;
+        width: 400px;
+        /* overflow-y:auto; */
+        overflow: auto;
+        display: flex;
+       
+        height: 200px;
+        background-color: blue;
+    }
+    .item{
+       
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+        border: 1px solid yellow;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    /* .list::-webkit-scrollbar{
+        display: none;
+    } */
+</style>
+<body>
+    <div class="box">
+        <p>我是内容01</p>
+        <p>我是内容02</p>
+        <p>我是内容03</p>
+        <p>我是内容04</p>
+        <p>我是内容05</p>
+        <p>我是内容06</p>
+        <p>我是内容07</p>
+        <p>我是内容08</p>
+        <p>我是内容09</p>
+    </div>
+    <div class="clear"></div>
+    <!-- 横向滚动 -->
+    <!-- 父元素定宽 子元素white-space: nowrap; -->
+    <div class="warp ">
+        <div class="box">我是内容01</div>
+        <div class="box">我是内容02</div>
+        <div class="box">我是内容03</div>
+        <div class="box">我是内容04</div>
+        <div class="box">我是内容05</div>
+    </div>
+
+    <!-- 横向滚动方式二
+        子元素定宽 父元素宽度auto overflow-y:auto 
+    -->
+    
+        <div class="list">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+  
+    
+</body>
+</html>

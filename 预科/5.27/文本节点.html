@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li>HTML5</li>
+        <li>Css3</li>
+        <li>PHP</li>
+        <li>Nodejs</li>
+    </ul>
+    <script>
+        var list = document.querySelector('ul')
+        //nodeNmae得到节点类型的名称，是字符串li表示元素节点 #text表示文本节点
+        console.log(list.childNodes[1].nodeName)//li
+        //nodeType得到节点类型的值 数字：1表示标签元素节点，数字：3表示文本节点
+        console.log(list.childNodes[1].nodeType)//1
+
+        for(var i=0;i<list.childNodes.length;i++){
+            var node = list.childNodes[i]
+
+            if(node.nodeType != node.TEXT_NODE){
+                console.log(node)
+
+                var lichirdren = node.childNodes
+
+                console.log(lichirdren[0].nodeName)//#text
+            }
+        }
+        var textNode = list.childNodes[1].childNodes[0]
+        console.log(textNode.substringData(17,10))
+        //substringData:获取指定区域文本 参数1.开始位置 参数2 返回的位置
+        
+    </script>
+</body>
+</html>

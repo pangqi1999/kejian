@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+        color:#333;
+    }
+   
+    ul,ol{
+        list-style: none;
+    }
+    .main{
+       margin: 0 auto;
+    }
+    .title{
+        position: relative;
+        width: 375px;
+        height: 44px;
+        font-weight: 400;
+        
+        font-size: 16px;
+        color: #1E1E1E;
+    }
+    
+    .title-text{
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+    }
+    .title-icount{
+        /* border-width: 0px; */
+        position: absolute;
+        left: 305px;
+        top: 74px;
+        width: 90px;
+        height: 32px;
+        
+    }
+    .title-extend {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: -65px;
+        width: 90px;
+        height: 32px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(242, 242, 242, 1);
+        border-radius: 32px;
+    }
+    .share{
+        display: inline-block;
+        position:absolute;
+        right: 51px;
+        top: 3px;
+        
+    }
+    .out{
+        display: inline-block;
+        position:absolute;
+        right: 6px;
+        top: 0px;
+        
+    }
+    .hr{
+        display: inline-block;
+        position: absolute;
+        left: 46px;
+        top: 4px;
+        width: 2px;
+        height: 21px;
+        background-color:rgba(242, 242, 242, 1);
+    }
+
+    /* 信息 */
+  .msg{
+    height: 76px;
+  }
+  .msg-pic{
+      float: left;
+  }
+  .msg-inf{
+      padding-top: 15px;
+      height: 76px;
+      
+  }
+  .name{
+      
+      font-weight: 700;
+      color: #000;
+  }
+  .phone{
+      /* margin-top: 20px; */
+      font-size: 12px;
+      font-weight: 400;
+      color:#999;
+  }
+  .nav-list{
+      width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        flex-wrap:nowrap ;
+        align-items: center;
+  }
+  .nav-img img{
+      width: 30px;
+      height: 30px;
+  }
+  .nav-name{
+    font-size: 12px;
+      font-weight: 400;
+      color:#999;
+  }
+  h3{
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .inf{
+    margin-top: 10px;
+    width: 335px;
+    height: 77px;
+    background-color:rgba(255, 255, 255, 1);
+    margin-left: 20px;
+    border-radius: 8px;
+    background: inherit;
+    box-shadow: 0px 2px 15px rgba(153, 153, 153, 0.349019607843137);
+ 
+  }
+  .inf-item{
+      float: left;
+      width: 60px;
+      height: 80px;
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+  .inf-img{
+      margin-left: 10px;
+      position: relative;
+  }
+  .inf-icon{
+      width: 16px;
+      height: 16px;
+      background-image: url("./image/u993.png");
+      position: absolute;
+      right: 18px;
+      top: -5px;
+      
+      text-align: center;
+      color: #FFF;
+    font-size: 12px;
+  }
+  .msg-number{
+    width: 16px;
+    height: 16px;
+    background-image: url("./image/u993.png");
+    color: #FFF;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 10px;
+    position: relative;
+    
+  }
+  .set{
+      margin-top: 30px;
+      margin-left: 20px;
+      margin-right: 10px;
+  }
+  .set-item{
+      height: 40px;
+  }
+  .set-icon,.set-msg{
+    float: left;
+  }
+
+  .set-count,.msg-number{
+      float: right;
+  }
+  html,body,iframe{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    <div class="title">
+        <div class="title-text">我的</div>
+        <div class="title-icount">
+            <div class="title-extend">
+                <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                <img src="/image/u202.png" alt="" class="hr">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="msg">
+        <div class="msg-pic">
+            <img src="./image/u3174.png" alt="">
+        </div>
+        <div class="msg-inf">
+            <div class="name">小小少年</div>
+            <div class="phone">188****8766</div>
+        </div>
+    </div>
+
+    
+        <ul class="nav-list">
+           
+            <a href="积分.html">
+                <li>
+                    <div class="nav-number">285</div>
+                    <div class="nav-name">积分</div>
+                </li>
+            </a>
+                
+            
+            <a href="coupon.html">
+                <li>
+                    
+                        <div class="nav-number">&nbsp 3</div>
+                        <div class="nav-name">优惠券</div>
+                   
+                    
+                </li>
+            </a>
+            
+            
+            <a href="collect.html">
+                <li>
+                    <div class="nav-number">&nbsp 25</div>
+                    <div class="nav-name">收藏</div>
+                </li>
+            </a>
+                
+            
+            <li>
+                <div class="nav-number nav-img">
+                    <img src="./image/u3179.png" alt="">
+                </div>
+                <div class="nav-name">Lv7</div>
+            </li>
+        </ul>
+    
+        <h3>我的课程</h4>
+
+        <ul class="inf">
+            <a href="pay.html">
+                <li class="inf-item">
+                    <div class="inf-img">
+                        <img src="./image/u865.png" alt="">
+                        <div class="inf-icon">1</div>
+                    </div>
+                    
+                    <div>待支付</div>
+                </li>
+            </a>
+            <a href="doing.html">
+                <li class="inf-item">
+                    <div class="inf-img">
+                        <img src="./image/u996.png" alt="">
+                        <div class="inf-icon">2</div>
+                    </div>
+                    
+                    <div>学习中</div>
+                </li>
+            </a>
+            <a href="over.html">
+                <li class="inf-item">
+                    <div class="inf-img">
+                        <img src="./image/u996.png" alt="">
+                        <div class="inf-icon">4</div>
+                    </div>
+                    
+                    <div>已结束</div>
+                </li>
+            </a>
+            <a href="all.html">
+                <li class="inf-item">
+                    <div class="inf-img">
+                        <img src="./image/u996.png" alt="">
+                        
+                    </div>
+                    
+                    <div>全部</div>
+                </li>
+            </a>
+            
+        </ul>
+
+        <ul class="set">
+            <a href="myactivity.html">
+                <li class="set-item">
+                    <div class="set-icon">
+                        <img src="./image/u3200.png" alt="">
+                    </div>
+                    <div class="set-msg">我的活动</div>
+                    <div class="set-count">
+                        <img src="./image/u3202.png" alt="">
+                    </div>
+                </li>
+            </a>
+            <a href="mymsg.html">
+                <li class="set-item">
+                    <div class="set-icon">
+                        <img src="./image/u3204.png" alt="">
+                    </div>
+                    <div class="set-msg">我的消息</div>
+                    
+                    <div class="set-count">
+                        <img src="./image/u3202.png" alt="">
+                    </div>
+                    <div class="msg-number">2</div>
+                </li>
+            </a>
+            <a href="invitation.html">
+                <li class="set-item">
+                    <div class="set-icon">
+                        <img src="./image/u3208.png" alt="">
+                    </div>
+                    <div class="set-msg">邀请有奖</div>
+                    <div class="set-count">
+                        <img src="./image/u3202.png" alt="">
+                    </div>
+                </li>
+            </a>
+            
+            <a href="aboutus.html">
+                <li class="set-item">
+                    <div class="set-icon">
+                        <img src="./image/perm_contact_calendar_u3212.png" alt="">
+                    </div>
+                    <div class="set-msg">关于我们</div>
+                    <div class="set-count">
+                        <img src="./image/u3202.png" alt="">
+                    </div>
+                </li>
+            </a>
+            
+            <a href="update.html">
+                <li class="set-item">
+                    <div class="set-icon">
+                        <img src="./image/u3216.png" alt="">
+                    </div>
+                    <div class="set-msg">修改手机</div>
+                    <div class="set-count">
+                        <img src="./image/u3202.png" alt="">
+                    </div>
+                </li>
+            </a>
+            
+        </ul>
+       
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #424242;
+            font-size: 14px;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        .navTop {
+            width: 100%;
+            height: 45px;
+            background-color: #f3f3f3;
+        }
+
+        .navTop>nav {
+            width: 90%;
+            height: 45px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            display: inline-block;
+            height: 45px;
+            /* 设置行高 可以让文字对齐，通常小于当前父容器高度 */
+            line-height: 45px;
+            padding-right: 10px;
+        }
+        .locationNav{
+            display: inline-block;
+        }
+        nav ul{
+            /* 行内块如果不设置宽高，有内容撑开 */
+            display: inline-block;
+            margin-left: 60%;
+        }
+        .main_header{
+            width: 90%;
+            height: 200px;
+            background-color: red;
+            margin: 0 auto ;
+            margin: -10px auto 0;
+            /* z-index 只对position有用 */
+        }
+        .list{
+            width: 90%;
+            height: 200px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navTop">
+
+            <nav>
+                <div class="locationNav">
+                    <span>南京</span>
+                </div>
+                <ul>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                    <li><a href="#">优享购</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main_header"></div>
+        <div class="list"></div>
+    </main>
+</body>
+
+</html>

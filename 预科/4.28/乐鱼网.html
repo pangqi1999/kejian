@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/favicon1.png" type="image/png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <title >设计师兼职招聘平台|乐鱼网</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul,li{
+        list-style: none;
+    }
+    nav{
+        height: 40px;
+        background-color: #fafafa;
+    }
+    .navbar-nav{
+        position: relative;
+    }
+   
+    .navbar .nav>li {
+    float: left;
+    position: relative;
+    display: block;
+}
+    .divider-vertical {
+    position: absolute;
+    height: 40px;
+    margin: 0 9px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #f2f2f2;
+}
+.parallax{
+    margin-top: -20px;
+    height: 463px;
+    background-image: url("image/promo-bg.jpg");
+}
+h1.sourehan {
+    font-size: 76px;
+    color: #fff;
+    margin-top: 100px;
+    font-family: SourceHanSansSC-ExtraLight,Lato,Helvetica Neue,Arial,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+h3 {
+    margin-top: 0px;
+    margin-bottom: 5pc;
+    color: rgba(255, 255, 255, 0.7);
+}
+#video-start img {
+    position: static;
+    width: 30px;
+    box-shadow: none;
+    transform-origin: 50% 150%;
+    margin: 0px 20px 0px 0px;
+    animation: 4s linear 0s infinite normal none running wiggle;
+}
+.section-block{
+    text-align: center;
+}
+.decorate-line {
+    width: 5pc;
+    height: 5px;
+    background-color: rgb(170, 178, 189);
+    margin: 40px auto;
+}
+.partner{
+    /* margin-top: -50px; */
+    height: 132px;
+    margin: 4rem 0px;
+}
+.col-xs-4{
+    float: left;
+    width: 195px;
+    margin-top: 30px;
+}
+
+.btn{
+    height: 30px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #5bb75b;
+    padding: 4px 12px;
+    background-image: linear-gradient(to bottom,#62c462,#51a351);
+}
+.btn:hover{
+    color: #23527c;
+}
+.btn-1{
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #006dcc;
+    margin-right: 20px;
+    background-image: linear-gradient(to bottom,#08c,#04c);
+}
+#underneath {
+   
+    position: relative;
+    background-color: rgb(241, 245, 247);
+}
+.section-block {
+   
+    color: rgb(67, 74, 84);
+    text-align: center;
+    overflow: hidden;
+    padding: 6rem 15px;
+}
+
+#underneath .grid-intro .grid-icon {
+    position: relative;
+    display: flex;
+    width: 90pt;
+    height: 90pt;
+    background-color: rgb(223, 236, 240);
+    box-shadow: rgba(223, 236, 240, 0.5) 0px 0px 0px 10px;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+   
+    align-items: center;
+    margin: 20px auto 60px;
+    border-radius: 100%;
+    
+}
+.row{
+    width: 650px;
+    margin: 20px auto 10px;
+}
+#icon-svg-std{
+    background-image: url("image/tech-03.svg");
+}
+#icon-svg-manage{
+    background-image: url("image/favicon1.png");
+}
+.fwb-pay-step {
+    margin-top: 45px;
+}
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+img {
+    
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+  
+}
+.fwb-step-txt {
+    clear: both;
+    padding-bottom: 52px;
+    position: relative;
+    top: -5px;
+    overflow: hidden;
+    height: 164px;
+}
+.fwb-step-txt dl.first {
+   
+    margin-bottom: 0px;
+}
+.fwb-step-txt dl {
+    float: left;
+    width: 135px;
+ 
+    margin-top: 0px;
+}
+.fwb-step-txt dt {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fwb-step-txt .fwb-step-dd-txt {
+    height: 60px;
+}
+.fwb-step-txt dd {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+.fwb-step-txt dl.second {
+    margin-left: 87px;
+}
+#underneath {
+    position: relative;
+    background-color: rgb(241, 245, 247);
+}
+.clear{
+    clear: both;
+}
+.section-block .text-muted {
+    color: rgb(170, 178, 189);
+}
+.fwb-floor-03-step {
+    text-align: center;
+    overflow: hidden;
+    margin: 20px 0px 30px;
+}
+.fwb-floor-03-step dl {
+    display: inline-block;
+    width: 324px;
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.fwb-floor-03-step dt {
+    text-align: center;
+    font-size: 17px;
+    width: 215px;
+  
+    position: relative;
+    font-weight: normal;
+    border-width: 2px;
+    border-style: solid;
+   
+    border-image: initial;
+    padding: 10px 0px;
+    margin: 0px auto 27px;
+}
+.fwb-floor-03-step .fwb-yi dt {
+    color: rgb(51, 51, 51);
+    border-color: rgb(80, 193, 233);
+}
+/* .fwb-floor-last .fwb-yi dt{
+    
+    color: rgb(51, 51, 51);
+    border-color: rgb(80, 193, 233);
+} */
+
+.fwb-floor-03-step dt em {
+    position: absolute;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    left: 92px;
+    top: 45px;
+    border-width: 12px;
+  
+    border-style: solid;
+}
+.fwb-floor-03-step .fwb-yi dt em {
+    border-color: rgb(80, 193, 233) transparent transparent;
+}
+em {
+    font-style: italic;
+}
+.fwb-floor-03-step dt em i {
+    position: absolute;
+    left: -16px;
+    top: -19px;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 16px;
+    border-color: rgb(255, 255, 255) transparent transparent;
+    border-style: solid;
+}
+.fwb-floor-03-step .fwb-yi i {
+    background-position: 0px -1394px;
+}
+.fwb-floor-03-step dd .icon {
+    margin-bottom: 10px;
+}
+.fwb-floor-03-step dd i {
+    display: inline-block;
+    width: 59px;
+    height: 61px;
+    clear: both;
+    background: url("image/untitled.png") no-repeat;
+}
+.fwb-floor-03-step dd .bold {
+    margin-bottom: 3px;
+}
+.fwb-floor-03-step .fwb-yi dd .bold strong {
+    color: rgb(80, 193, 233);
+    font-size: 20px;
+   
+    clear: both;
+}
+.fwb-floor-03-step dd .desc {
+    font-size: 13px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+.fwb-floor-last {
+    margin-bottom: 60px;
+}
+#footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: rgb(96, 104, 115);
+}
+.row-fluid{
+    height: 110px;
+}
+.span3{
+    float: left;
+    margin-left: 20px;
+}
+#footer h4 {
+    color: #dedede;
+    margin-left: 2em;
+}
+.span12{
+    height: 30px;
+}
+.span6{
+    width: 131px;
+    float: left;
+}
+#footer a {
+    color: #ffffff;
+}
+.footer0 {
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    color: #666;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+}
+.footer0 li {
+    display: inline;
+    padding: 5px 10px;
+}
+li {
+    line-height: 20px;
+}
+.footer0 li a {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer0 .lianjie {
+    margin-bottom: 10px;
+}
+.ljbt {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer0 .lianjie a {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer0 .copy0 {
+    margin-bottom: 10px;
+    color: #999999;
+    font-size: 14px;
+}
+</style>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">乐鱼网</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="divider-vertical"></li>
+                        <li><a href="#">技术兼职</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#">招聘需求</a></li>
+                        <li class="divider-vertical"></li>
+                        
+                        <!-- <li >
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">班级成员<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    <!-- <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form> -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="parallax">
+        <div class="container-fluid">
+            <div class="container">
+                <h1 class="sourehan text-center animated fadeInDown">预约互联网坐班兼职工程师</h1>
+               <h3 class="text-center animated fadeInDown">
+                   <span id="video-start">
+                       <img src="http://www.leyu.net/file/yi/images/play.svg" alt="">
+                    预约知名互联网公司的产品、美工、前端、后端等技术人员到您的团队坐班兼职。
+                   </span>
+               </h3>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section-block" id="product-features">
+        <div class="container-fluid">
+            <div class="container">
+                <h2>人才来源</h2>
+                <p class="text-muted">乐鱼网兼职技术人员来自各大互联网公司，普遍具有多年工作经验，平台严格把控人才入口，确保工作质量和效率。</p>
+                <div class="decorate-line"></div>
+                <div class="partner ">
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_baidu.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_alibaba.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_tengxun.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_wangyi.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_jingdong.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_sina.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_360.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_souhu.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_xiaomi.jpg" alt=""></div>
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <img src="http://www.leyu.net/file/yi/images/i_suning.jpg" alt=""></div>
+                </div>
+                <button class="btn btn-default btn-1" type="submit">浏览技术人才</button>
+                <button class="btn btn-default" type="submit">发布招聘需求</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="section-block" id="underneath">
+        <div class="container-fluid">
+            <div class="container">
+                <h2>快速到班</h2>
+                <p class="text-muted">简化预约流程，为有需求的团队节省预约时间，
+                    极大限度的满足快速到班的需求，兼职时间灵活，双方可自由约定。
+                </p>
+                <div class="decorate-line"></div>
+                <div class="grid-intro" id="grid-intro" >
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="grid-icon">
+                                <div id="icon-svg-std"></div>
+                            </div>
+                            <p> 急速沟通 </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="grid-icon">
+                                <div id="icon-svg-manage">
+                                    
+                                </div>
+                            </div>
+                            <p> 公司坐班 </p>
+                        </div>
+                        <button class="btn btn-default btn-1" type="submit">发布招聘需求</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="section-block" id="customer">
+        <div class="container-fluid">
+            <div class="container">
+               <h2>担保交易</h2>
+               <p class="text-muted">薪酬先支付到乐鱼网，确认完工后，再支付给人才。按需支付，未工作时间无忧退款。如发生纠纷，乐鱼网介入调查仲裁保证服务满意度。</p>
+               <div class="decorate-line"></div>
+               <div class="grid">
+                   <div class="fwb-pay-step">
+                       <img src="http://www.leyu.net/file/yi/images/stepi.png" alt="">
+                       <div class="fwb-step-txt">
+                           <dl class="first" style="margin-left: 230px;">
+                               <dt>托管雇佣金</dt>
+                               <dd class="fwb-step-dd-txt">
+                                   先支付薪酬到乐鱼网,
+                                   <br>
+                                   确认完工，满意后再付款
+                               </dd>
+                           </dl>
+                           <dl class="second">
+                               <dt>签订合同</dt>
+                               <dd class="fwb-step-dd-txt">
+                                   官方提供第三方交易
+                                   <br>
+                                   协议保障双方权益
+                               </dd>
+                           </dl>
+                           <dl class="fourth" style="margin-left: 110px;">
+                               <dt>托管雇佣金</dt>
+                               <dd class="fwb-step-dd-txt">雇主对兼职工作进行验收</dd>
+                           </dl>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block" id="underneath">
+        <div class="container-fluid">
+            <div class="container">
+                <h2>兼职保障</h2>
+                <p class="text-muted">兼职就选乐鱼网，交易有保障，乐鱼网为您解决交易六大难题，解决您的后顾之忧。</p>
+                <div class="decorate-line"></div>
+                <div class="banner-bottom-grids">
+                    <div class="col-md-4 banner-bottom-grid red">
+                        <img src="http://www.leyu.net/file/yi/images/productivity.png" alt="">
+                        <p class="text-muted" style="text-align:center;padding:20px 0px;">
+                            乐鱼网对需求严格筛选和沟通后再做推荐，保护个人隐私。双方签订兼职合同，技术兼职不必担心需求变化。</p>
+                    </div>
+                    <div class="col-md-4 banner-bottom-grid ">
+                        <img src="http://www.leyu.net/file/yi/images/clarity.png" alt="">
+                        <p class="text-muted" style="text-align:center;padding:20px 0px;">
+                            技术兼职直接和雇主沟通，充分了解所要兼职的内容，线上交易乐鱼网严格把控交易环节，保障兼职权益。 </p>
+                    </div>
+                    <div class="col-md-4 banner-bottom-grid green">
+                        <img src="http://www.leyu.net/file/yi/images/peace2.png" alt="">
+                        <p class="text-muted" style="text-align:center;padding:20px 0px;">
+                            乐鱼网担保交易，先支付后工作，保证劳动回报。坐班时间双方约定，弹性工作。</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <button class="btn btn-default btn-1" type="submit" id="denglu">登录技术简介</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block" id="customer">
+        <div class="container-fluid">
+            <div class="container">
+                <h2>雇主保障</h2>
+                <p class="text-muted">多项雇主权利保障措施，保证金赔付，极大程度上保证兼职效果，平台交易更放心。</p>
+                <div class="decorate-line"></div>
+                <div class="grid">
+                    <div class="fwb-floor-03-step">
+                        <dl class="fwb-yi">
+                            <dt>怕技术水平不过关？<em><i></i></em></dt>
+                            <dd>
+                                <div  class="icon"><i></i></div>
+                                <div class="bold"><strong>1小时试用</strong></div>
+                                <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                            </dd>
+                          
+                        </dl>
+                        <dl class="fwb-yi">
+                            <dt>怕技术水平不过关？<em><i></i></em></dt>
+                            <dd>
+                                <div  class="icon"><i></i></div>
+                                <div class="bold"><strong>1小时试用</strong></div>
+                                <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                            </dd>
+                        </dl>
+                        <dl class="fwb-yi">
+                            <dt>怕技术水平不过关？<em><i></i></em></dt>
+                            <dd>
+                                <div  class="icon"><i></i></div>
+                                <div class="bold"><strong>1小时试用</strong></div>
+                                <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="fwb-floor-03-step fwb-floor-last">
+                    <dl class="fwb-yi">
+                        <dt>怕技术水平不过关？<em><i></i></em></dt>
+                        <dd>
+                            <div  class="icon"><i></i></div>
+                            <div class="bold"><strong>1小时试用</strong></div>
+                            <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                        </dd>
+                    </dl>
+                    <dl class="fwb-yi">
+                        <dt>怕技术水平不过关？<em><i></i></em></dt>
+                        <dd>
+                            <div  class="icon"><i></i></div>
+                            <div class="bold"><strong>1小时试用</strong></div>
+                            <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                        </dd>
+                    </dl>
+                    <dl class="fwb-yi">
+                        <dt>怕技术水平不过关？<em><i></i></em></dt>
+                        <dd>
+                            <div  class="icon"><i></i></div>
+                            <div class="bold"><strong>1小时试用</strong></div>
+                            <div class="desc">先到班1小时试用<br>不满意可无条件退款</div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <h4 class="span12">新手指南</h4>
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">注册新用户</a>
+                            </li>
+                            <li class="span6">
+                                <a href="#">雇主入门</a>
+                            </li>
+                        </div>
+                       
+                            
+                        
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">技术兼职入门</a>
+                            </li>
+                            <li class="span6">
+                                <a href="#">规则中心</a>
+                            </li>
+                        </div>
+                        
+                           
+                        
+                    </div>
+
+                    <div class="span3">
+                        <h4 class="span12">我是雇主</h4>
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">发布招聘需求</a>
+                            </li>
+                            <li class="span6">
+                                <a href="#">挑选技术兼职</a>
+                            </li>
+                        </div>
+                        
+                            
+                        
+                        
+                    </div>
+
+                    
+
+                    <div class="span3">
+                        <h4 class="span12">我是技术兼职</h4>
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">发布简历</a>
+                            </li>
+                            <li class="span6">
+                                <a href="#">投递职位</a>
+                            </li>
+                        </div>
+                      
+                            
+                       
+                        
+                    </div>
+
+                    <div class="span3">
+                        <h4 class="span12">交易保障</h4>
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">乐鱼担保交易</a>
+                            </li>
+                            <li class="span6">
+                                <a href="#">雇主保障</a>
+                            </li>
+                        </div>
+                        
+                           
+                       
+                        <div class="span12">
+                            <li class="span6">
+                                <a href="#">乐鱼担保交易</a>
+                            </li>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer0">
+        <div class="container-fluid">
+            <div class="container">
+               <ul>
+                   <li><a href="#">关于我们</a></li>
+                   <li><a href="#">企业文化</a></li>
+                   <li><a href="#">联系方式</a></li>
+                   <li><a href="#">使用协议</a></li>
+                   <li><a href="#">网站地图</a></li>
+                   <li><a href="#">友情链接</a></li>
+                   <li><a href="#">网站留言</a></li>
+               </ul>
+               <div class="lianjie">
+                <span class="ljbt">友情链接：</span>
+                <a href="#">山东钢结构</a>
+                <a href="#">钢结构厂房钢结构</a>
+                <a href="#">钢结构</a>
+               </div>
+               <div class="copy0"> ©2016 乐鱼网 All Rights Reserved 鲁ICP备15008460号</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>

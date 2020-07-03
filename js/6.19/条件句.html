@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        border: 1px solid green;
+        padding: 5px;
+        margin: 3px;
+        display: inline-block;
+    }
+</style>
+<body>
+    
+    <script>
+//         for(i=0;i<100;i++){
+// 	if(i%2==0){
+       
+//         document.write('偶为:'+i)
+
+        
+// 	}else{
+// 		document.write('奇数为:'+i)
+       
+// 	}
+// }
+//             var sum=0;
+//             var g = i % 10;
+//             大于9的时候取出十位数字
+//             if (i >= 10) {
+//                 var s = parseInt(i / 10);
+//             }
+
+            //取出个位数字
+           
+            //用逻辑与列出所有情况进行判断
+//             for (var i = 1; i < 100; i++) {
+//                 if(i == 7 || i % 7 == 0 || g == 7 || s == 7){sum+=i;}
+                
+//             }
+            
+
+
+// console.log(sum)
+
+
+for (var i=1;i<=9;i++){
+        for (var j=1; j<=i;j++) {
+          document.write("<span>"+i + " * " + j +" = "+i*j+"</span> ") ;
+        }
+        document.write("<br/>");
+}
+	// system("pause");
+
+
+         //条件句
+    /*
+        满足条件，条件表达值为true 执行相应代码块。 不满足条件，表达式为false
+        执行下个。
+        if(条件表达式){代码块1}else if(条件表达式){代码块2}else{代码块3}
+        
+        注意：同步代码；程序一旦执行过后不会存在，特殊的为函数。
+        程序执行的起点：刚启动页面。
+    */
+
+    //入门
+    // if(true){
+    //     console.log('执行了if')
+    // }else{
+    //     console.log('执行了else')
+    // }
+
+    //什么时候用if else
+    //在一件事（业务）,只能有一个结果，不同情况选结果不同。
+    // 业务：项目 情况：表达式  结果：效果
+
+    //什么时候 if else
+    //只有2个情况两个结果 
+
+    //什么时候用 If elseif else
+    //多个情况 多个结果
+
+    //接受用户输入的内容
+        // var str = prompt('请测试你的智商');
+        // var res = str.charCodeAt();
+        // if(res>40000){
+        //     alert('你的智商好高啊')
+        // }else if(30000<res<40000){
+        //     alert('你的智商一版啊')
+        // }
+    </script>
+   
+</body>
+</html>

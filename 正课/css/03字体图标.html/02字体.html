@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('../assetes/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+            src: url('../assetes/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../assetes/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../assetes/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../assetes/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../assetes/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .fa {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .fa-glass:before {
+            content: "\f000";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        为什么没能实现图标
+        因为这里的图标库依赖的是由 二进制 编写的特殊字符,导入文件,并使用
+     -->
+    <div class="fa fa-glass"></div>
+</body>
+
+</html>

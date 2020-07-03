@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(_name)//undefined
+        var _name = 'yanqi'
+        var age = '27'
+        var dec = '养天地之正气'
+        console.log(_name,age,dec)//闫岐
+
+        //默认var 声明的变量 提升到 你看不到的最顶端
+        //声明提升 赋值不提升
+
+        //数据已声明未赋值 结果为undefined
+
+        //总结变量的使用规则
+        //第一：整个文件中查看有没有var 变量：
+        //----》 没有 xxx is not defined
+        //有 使用时往上找看他距离他最近的一次赋值
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   ul,ol{
+       list-style: none;
+   }
+   html,body{
+       
+       width: 100%;
+       height: 100%;
+   }
+  
+
+   .title{
+       position: relative;
+       width: 375px;
+       height: 44px;
+       font-weight: 400;
+       margin-left: 20px;
+       font-size: 16px;
+       color: #1E1E1E;
+   }
+   
+   .title-text{
+       text-align: start;
+       height: 44px;
+       line-height: 44px;
+   }
+   .title-icount{
+       /* border-width: 0px; */
+       position: absolute;
+       left: 305px;
+       top: 74px;
+       width: 90px;
+       height: 32px;
+       
+   }
+   .title-extend {
+       display: inline-block;
+       position: absolute;
+       right: 50px;
+       top: -65px;
+       width: 90px;
+       height: 32px;
+       border-width: 1px;
+       border-style: solid;
+       border-color: rgba(242, 242, 242, 1);
+       border-radius: 32px;
+   }
+   .share{
+       display: inline-block;
+       position:absolute;
+       right: 51px;
+       top: 3px;
+       
+   }
+   .out{
+       display: inline-block;
+       position:absolute;
+       right: 6px;
+       top: 0px;
+       
+   }
+   .hr{
+       display: inline-block;
+       position: absolute;
+       left: 46px;
+       top: 4px;
+       width: 2px;
+       height: 21px;
+       background-color:rgba(242, 242, 242, 1);
+   }
+   .title-logo,.title-text{
+       float: left;
+       
+   }
+   .title-text{
+       margin-left: 30px;
+   }
+   .title-logo{
+       margin-top: 13px;
+   }
+.one{
+    padding-top: 10px;
+}
+   .order{
+       position: relative;
+       width: 337px;
+       height: 188px;
+       margin: 0 auto;
+       background-color: rgba(255, 255, 255, 1);
+      margin-top: 10px;
+       border-radius: 8px;
+       padding-top: 10px;
+   }
+   .order-msg{
+       height: 16px;
+       margin-left: 10px;
+       
+   }
+   .msg-left{
+       float: left;
+        font-size: 12px;
+        color: #999;
+        font-weight: 400;
+   }
+   .msg-right{
+       float: right;
+        font-size: 12px;
+        color: #2f78ff;
+        font-weight: 700;
+   }
+   .order-project{
+       padding-top: 10px;
+      height: 70px;
+      margin-left: 10px;
+   }
+   .card{
+       float: left;
+       width: 87px;
+        height: 64px;
+        line-height: 64px;
+       background-color: #cc66ff;
+       font-size: 12px;
+       border-radius: 4px;
+        color: #fff;
+        font-weight: 400;
+   }
+   .project-msg{
+       float: left;
+       margin-left: 10px;
+       margin-top: 10px;
+   }
+   .project-name{
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+   }
+   .project-price{
+       margin-top: 10px;
+        font-size: 14px;
+        color: #efb336;
+        font-weight: 700;
+   }
+  .main{
+      margin-top: 40px;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .tips{
+      height: 30px;
+       
+        font-size: 12px;
+        color: #999;
+        font-weight: 400;
+   }
+   .main-price{
+       position: absolute;
+       right: 0;
+       top: 95;
+       height: 30px;
+      
+   }
+   .price{
+        font-size: 14px;
+        color: #f00;
+        font-weight: 700;
+   }
+   .order-submit{
+      height: 28px;
+      margin-left: 10px;
+   }
+  
+   .righnow{
+       margin-top: 30px;
+       float: right;
+    width: 74px;
+    height: 28px;
+    background: inherit;
+    background-color: rgba(47, 120, 255, 1);
+    border: none;
+    border-radius: 4px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+}
+</style>
+<body>
+    <div class="title">
+        <a href="logo.html">
+            <div class="title-logo">
+                <img src="./image/u874.png" alt="">
+            </div>
+        </a>
+        <div class="title-text">我的优惠券</div>
+        <div class="title-icount">
+            <div class="title-extend">
+                <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                <img src="/image/u202.png" alt="" class="hr">
+            </div>
+            
+        </div>
+    </div>
+    <div style="width: 375px;height: 472px;background-color: rgba(242, 242, 242, 0.498039215686275);" class="one">
+        <div class="order">
+            <div class="order-msg">
+                <div class="msg-left">订单号：12157774555&nbsp&nbsp2017-10-15&nbsp  10:15</div>
+                <div class="msg-right">学习中</div>
+            </div>
+            <div class="order-project">
+                <div class="card">幼儿英语入门</div>
+                <div class="project-msg">
+                    <div class="project-name">幼儿英语入门课程</div>
+                    <div class="project-price">￥2999.00/10课时</div>
+                </div>
+            </div>
+            <div class="main-price">
+                <span>实付</span><span class="price">￥2799.00</span>
+            </div>
+            <div class="order-submit">
+                <div class="righnow">评价课程</div>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order-msg">
+                <div class="msg-left">订单号：12157774555&nbsp&nbsp2017-10-15&nbsp  10:15</div>
+                <div class="msg-right">学习中</div>
+            </div>
+            <div class="order-project">
+                <div class="card">幼儿英语入门</div>
+                <div class="project-msg">
+                    <div class="project-name">幼儿英语入门课程</div>
+                    <div class="project-price">￥2999.00/10课时</div>
+                </div>
+            </div>
+            <div class="main-price">
+                <span>实付</span><span class="price">￥2799.00</span>
+            </div>
+            <div class="order-submit">
+                <div class="righnow">评价课程</div>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order-msg">
+                <div class="msg-left">订单号：12157774555&nbsp&nbsp2017-10-15&nbsp  10:15</div>
+                <div class="msg-right">学习中</div>
+            </div>
+            <div class="order-project">
+                <div class="card">幼儿英语入门</div>
+                <div class="project-msg">
+                    <div class="project-name">幼儿英语入门课程</div>
+                    <div class="project-price">￥2999.00/10课时</div>
+                </div>
+            </div>
+           
+            <div class="main-price">
+                <span>实付</span><span class="price">￥2799.00</span>
+            </div>
+            <div class="order-submit">
+                <div class="righnow">评价课程</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="(max-width:800px)" href="./媒体查询.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 1300px;
+        margin: 0 auto;
+        border: 1px solid blue;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item{
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        margin: 10px;
+    }
+    /* 当前设备宽度小于等于1200px */
+    /* @media利用css判断设备类型和设备宽度 */
+    /* screen手机和电脑只能设备 */
+    /* @media screen and (max-width:1200px) {
+        .item{
+            background-color: red;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        .item{
+            background-color: green;
+        }
+    }
+    @media screen and (min-width:600px) and ( max-width:1200px){
+        .item{
+            background-color: pink;
+        } */
+    /* not:否定条件，用来对媒体查询条件取反 */
+    
+    /* @media not screen and (min-width:600px) and ( max-width:1200px){
+        .item{
+            background-color: pink;
+        } */
+        /* orientation判断横屏或者竖屏 */
+        /* portrait竖屏 */
+        /* landscape横屏 */
+    @media screen and (orientation:portrait){
+        .item::after{
+            content: "现在是竖屏";
+            font-size: 30px;
+        }
+    }
+    @media screen and (orientation:landscape){
+        .item::after{
+            content: "现在是横屏";
+            font-size: 30px;
+        }
+    }
+</style>
+<body>
+    <!-- 媒体查询 根据不同类型的设备宽度，显示不同的样式 -->
+    <section class="box">
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+        <di class="item"></di>
+    </section>
+</body>
+</html>

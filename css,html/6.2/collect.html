@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    html,body{
+        
+        width: 100%;
+        height: 100%;
+    }
+   
+    .container{
+        width: 350px;
+        margin: 0 auto;
+    }
+    .title{
+        position: relative;
+        width: 375px;
+        height: 44px;
+        font-weight: 400;
+        
+        font-size: 16px;
+        color: #1E1E1E;
+    }
+    
+    .title-text{
+        text-align: start;
+        height: 44px;
+        line-height: 44px;
+    }
+    .title-icount{
+        /* border-width: 0px; */
+        position: absolute;
+        left: 305px;
+        top: 74px;
+        width: 90px;
+        height: 32px;
+        
+    }
+    .title-extend {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: -65px;
+        width: 90px;
+        height: 32px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(242, 242, 242, 1);
+        border-radius: 32px;
+    }
+    .share{
+        display: inline-block;
+        position:absolute;
+        right: 51px;
+        top: 3px;
+        
+    }
+    .out{
+        display: inline-block;
+        position:absolute;
+        right: 6px;
+        top: 0px;
+        
+    }
+    .hr{
+        display: inline-block;
+        position: absolute;
+        left: 46px;
+        top: 4px;
+        width: 2px;
+        height: 21px;
+        background-color:rgba(242, 242, 242, 1);
+    }
+    .title-logo,.title-text{
+        float: left;
+        
+    }
+    .title-text{
+        margin-left: 30px;
+    }
+    .title-logo{
+        margin-top: 13px;
+    }
+    .course-list
+    {
+        margin-top: 10px;
+        width: 100%;
+        
+    }
+    .course-item{
+        width: 100%;
+      
+    }
+    .course{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        flex-wrap:nowrap ;
+        align-items: center;
+       
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 30px;
+       
+    }
+    .card{
+        height: 78px;
+        padding-top: 20px;
+        border-radius: 6px;
+        width: 145px;
+    }
+    /* .course-right{
+        width: 80%;
+    } */
+    .englich{
+       /* margin-left: 10px; */
+        background-color: rgba(204, 102, 255, 1);
+        position: relative;
+        box-shadow: 0px 2px 15px rgba(204, 102, 255, 0.498039215686275);
+    }
+    .math{
+        margin-top: 10px;
+        background-color: rgba(0, 153, 255, 1);
+        position: relative;
+        box-shadow: 0px 2px 15px rgba(0, 153, 255, 0.498039215686275);
+    }
+    .chemistry{
+        background-color: rgba(255, 102, 102, 1);
+        box-shadow: 0px 2px 15px rgba(255, 102, 102, 0.498039215686275);
+        position: relative;
+    }
+    .physics{
+        background-color: rgba(0, 204, 204, 1);
+        box-shadow: 0px 2px 15px rgba(0, 204, 204, 0.498039215686275);
+        position: relative;
+    }
+    .card-name{
+        
+        font-size: 14px;
+        color: #fff;
+    }
+    .card-number{
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.66);
+    }
+   
+    .card-pic img{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 31px;
+    }
+    .card-background{
+        position: absolute;
+        right: -7px;
+        top: -27px;
+        width: 52px;
+        height: 51px;
+    }
+    .course-price{
+        display: flex;
+        flex-direction: row;
+        justify-content:start;
+        flex-wrap:nowrap ;
+        align-items: center;
+    }
+    .course-icon{
+        width: 14px;
+        height: 14px;
+    }
+    .price-number{
+        margin-left: 10px;
+    }
+   .course-name{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+   }
+   .price-number{
+       font-size: 12px;
+       font-weight: 700;
+       color:#efb336;
+   }
+   .price-number{
+       font-size: 12px;
+       color:#999999;
+   }
+   .course-right{
+       margin-right: -10px;
+   }
+  .contaniner{
+      margin: 0 auto;
+  }
+   .search{
+       width: 80%;
+       height: 40px;
+       line-height: 40px;
+       background-color: #f9f9f9;
+       border-radius:30px ;
+       text-align: center;
+       color: #999;
+       position: relative;
+   }
+   .search-icon{
+       position: absolute;
+       left: 56px;
+       top: 4px;
+   }
+   nav{
+       margin-left: 0px;
+       position: relative;
+       display: flex;
+       justify-content: space-around;
+
+   }
+   .nav-img{
+       position: absolute;
+       left: 190px;
+       top: 0;
+   }
+</style>
+<body>
+    <div class="container">
+        <div class="title">
+            <a href="logo.html">
+                <div class="title-logo">
+                    <img src="./image/u874.png" alt="">
+                </div>
+            </a>
+            <div class="title-text">我的积分</div>
+            <div class="title-icount">
+                <div class="title-extend">
+                    <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                    <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                    <img src="/image/u202.png" alt="" class="hr">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="object">热门课程</div>
+        <div class="hot">教育头条</div>
+        <div class="nav-img">
+            <img src="./image/u1031.png" alt="">
+        </div>
+    </nav>
+    <div class="course-list">
+       
+        <div class="course-item">
+            <div class="course">
+                <div class="card englich">
+                    <div class="card-name">幼儿英语入门</div>
+                    <div class="card-number">外教一对一辅导</div>
+                    <div class="card-pic">
+                        <img src="./image/u118.png" alt="">
+                    </div>
+                    <div class="card-background">
+                        <img src="./image/u115.png" alt="">
+                    </div>
+                </div>
+                <div class="course-right">
+                    <div class="course-name">幼儿英语入门课程</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">2999.00</p>
+                        <div class="price-number">323人正在学</div>
+                    </div>
+                </div>
+            </div>
+            <div class="course">
+                <div class="card math">
+                    <div class="card-name">小学奥数辅导</div>
+                    <div class="card-number">外教一对一辅导</div>
+                    <div class="card-pic">
+                        <img src="./image/u118.png" alt="">
+                    </div>
+                    <div class="card-background">
+                        <img src="./image/u115.png" alt="">
+                    </div>
+                </div>
+                <div class="course-right">
+                    <div class="course-name">小学奥数辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">3699.00</p>
+                        <div class="price-number">323人正在学</div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="course course-bottom">
+                <div class="card chemistry">
+                    <div class="card-name">中学化学辅导</div>
+                    <div class="card-number">高等教师小班教学</div>
+                    <div class="card-pic">
+                        <img src="./image/u118.png" alt="">
+                    </div>
+                    <div class="card-background">
+                        <img src="./image/u115.png" alt="">
+                    </div>
+                </div>
+                <div class="course-right">
+                    <div class="course-name">中学化学辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">1599.00</p>
+                        <div class="price-number">323人正在学</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="course course-bottom">
+                <div class="card physics">
+                    <div class="card-name">中学物理辅导</div>
+                    <div class="card-number">高等教师小班教学</div>
+                    <div class="card-pic">
+                        <img src="./image/u118.png" alt="">
+                    </div>
+                    <div class="card-background">
+                        <img src="./image/u115.png" alt="">
+                    </div>
+                </div>
+                <div class="course-right">
+                    <div class="course-name">中学物理辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">1599.00</p>
+                        <div class="price-number">323人正在学</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+</html>

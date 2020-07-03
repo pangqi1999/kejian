@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        color: #000000;
+        font-size: 16px;
+    }
+    html,body{
+        height: 100%;
+       
+    }
+    .clearFix::after{
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        zoom:1;
+    }
+    nav ul{
+        background-color: #000;
+    }
+    nav li{
+        float: left;
+    }
+    nav a{
+        display: inline-block;
+        padding: 20px 10px;
+        margin: 0 5px;
+        color:#fff;
+    }
+    ul{
+        padding-left: 50px;
+    }
+    ul>div{
+        padding-top: 15px;
+        float: left;
+        display: none;
+        width: 100%;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        background-color: aqua;
+        display: inline-block;
+      
+    }
+/*  写移动端
+    pc为默认样式
+    能清空尽量清空 不能清空 用权重覆盖
+    用相同的选择器覆盖样式
+
+*/
+    @media screen and (max-width:768px){
+        ul>div{
+            display: block;
+
+        }
+        ul>li{
+
+            float: none;
+            display: none;
+        }
+        ul:hover>li{
+            display: block;
+        }
+        
+    }
+</style>
+<body>
+    <nav>
+        <ul class="clearFix">
+            <div>
+                <span href="#" class="icon"></span>
+             </div>
+             <li><a href="#">首页</a></li>
+             <li><a href="#">详情</a></li>
+             <li><a href="#">我的</a></li>
+            
+        </ul>
+        
+    </nav>
+    <main></main>
+</body>
+</html>

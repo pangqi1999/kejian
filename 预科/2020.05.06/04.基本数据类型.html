@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本数据类型</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // js的5种基本数据类型：数字类型number，字符串类型string，布尔类型boolean，null，undefined。
+
+    // null 表示"没有对象"，即此处不应该有值。
+
+    // undefined表示"缺少值"，即此处应该有一个值，但是还没有定义。
+
+    // 数字类型number:可以进行四则运算，可以表示正数，负数，也可以表示小数；
+    var num = 2;
+    var num1 = -2;
+    var num2 = 2.34
+    console.log(num2)
+
+    var sum = num + num2
+    var sum2 = num * num1
+    var sum3 = num2 - num1
+    var sum4 = num / num1
+    console.log(sum4)
+
+
+    // 字符串类型string：它是用来记录一段文本的，比如人的姓名，地址等等
+    // 怎么声明一个字符串：直接在字符串的两边加上双引号；
+    // 字符串加任何东西都等于字符串类型
+    var str = "我叫管涛"
+    console.log(str)
+
+    var a = "123"
+    var b = 456
+    var c = a + b  //字符串加任何类型，加号都表示为"拼接符"，表示把2端内容拼接到一起
+    console.log(c)
+
+    var d = 1 + "2" + 3
+    console.log(d) //123
+
+    var e = 1 + 2 + "3"
+    console.log(e) //33
+
+    var f = "1" + 2 + 3
+    console.log(f) //123
+
+
+    // 布尔类型boolean：用于记录一个值，它的值有2中情况：真或者假，也就是true或者false
+
+    // 比例人的性别：是否为男生
+    var isMen = true;
+    console.log(isMen);
+    var hasChild = false;
+    console.log(hasChild);
+
+
+</script>

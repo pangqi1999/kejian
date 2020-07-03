@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = ''
+        var res = typeof data === 'number' 
+        var res9 = data.constructor == Number
+        console.log(res)
+
+        var res1 = typeof data === 'string' 
+        console.log(res1)
+
+        var res2 = typeof data === 'boolean' 
+        console.log(res2)
+
+        var res3 = typeof data === 'undefined'
+        console.log(res3)
+
+        var res4 = typeof data === 'null' 
+        console.log(res4)
+
+//判断一定是不是数组
+        var res7 = Array.isArray(data)
+        var res8 = data.constructor == Array
+        console.log(data instanceof Array)
+
+        var res5 = data.constructor == Object
+        console.log(res5)
+
+        var res6 = typeof data === 'function'
+        console.log(res6)
+
+        //如何判断一个变量不是Number类型
+
+        var res10 = data.constructor == Number || data.constructor == String
+    
+        //如何让变量是数组或者对象
+        var res11 = data instanceof Object
+        var res12 = data.constructor == Object || data.constructor == Array
+
+        var a;
+        var b;
+        var c;
+
+        // a不能是number 并且b必须是数组 或者c是字符串
+        var res13 = typeof a != 'number'&&b.constructor == Array || c.constructor == String
+    
+    </script>
+</body>
+</html>

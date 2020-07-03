@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,2,3,4,4,5,6];
+
+        var res = []//保证res中数据不是重复的 
+
+        var flag = false //表示res中是否有这个数据
+        for(var i = 0;i<arr.length;i++){
+            //让arr中每一项与res中比较，然后填加不重复的数据
+           for(var j = 0; j<=res.length;j++){
+                // if(arr[i]!==res[j]){
+                //     res.push(arr[i])
+                // }
+
+               if(arr[i]==res[j]){
+                   flag =true;
+                   break;
+               }else{
+                   flag=false;
+                }
+            }
+           if(!flag){
+                    //res 中有没这个数据 所以不需要添加
+                    res.push(arr[i]) 
+                }
+        //    res.push(arr[i])
+        }
+        console.log(res)
+
+
+        // var res = []
+
+        // for(var i = 0;i<=arr.length;i++){
+        //     if(res.indexOf[arr[i]]===-1){
+        //         res.push(arr[i])
+        //     }
+        // }
+        // console.log(res)
+    </script>
+</body>
+</html>

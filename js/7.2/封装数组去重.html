@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var arr = [1,1,1,2,3,3,3]
+
+        var res = []
+        // for(var i = 0;i<= arr.length;i++){
+        //     if(res.indexOf[arr[i]]===-1){
+        //         res.push(arr[i])
+        //     }
+        // }
+        // console.log(res)
+
+        for(var i = 0,len = arr.length;i<len;i++){
+
+        }
+     
+     function arrDuplicate(){
+         //代码规范 错误优先原则
+         //先验证长度在验证类型arguments 不能大于 1 。大于1代表参数不不止接受一个数组。
+        
+        if(!Array.isArray(arr)){
+            //跑出错误有阻止下面面代码执行的作用
+            throw new Error('params must is Array')
+        }
+
+        //只有正确下面才会执行
+        var res = []
+
+        return res
+     }
+     arrDuplicate([1,1,123,,33,4,4,6])
+    </script>
+</body>
+</html>

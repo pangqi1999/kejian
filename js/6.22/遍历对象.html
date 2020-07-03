@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for in
+        var obj = {
+            name:'yq',
+            age:19,
+            dec:'aaaaaaaa'
+        }
+        //获取对象中每一个key 和 value
+        for( var x in obj){
+            console.log(x)// x 赋值为对象中的key
+            console.log(obj[x])
+        }
+        //不能用obj.x
+        var student = [
+        {name:'liuyoucai',age:21}
+        ]
+            
+     
+        for(var w in student[0]){
+            console.log(w)
+            
+        }
+        for(var x in student[0]){
+           
+            console.log(x)
+        }
+        // for(var r = student.w in student){
+        //     console.log(r)
+        // }
+    </script>
+</body>
+</html>

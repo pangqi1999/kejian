@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+        写css 样式另一个思路
+        注意：如果有全局有关，可以提前设置css样式，或者封装ui组件库
+        1.每个选择器都相当于一套简单的样式，本质上与html是独立，html
+        是使用选择器来实现效果。
+        2.首先写好通用样式，放在一个[公共的样式文件中]
+                                清空元素默认样式
+                                常见的布局
+        3.争对特殊的样式或者独立的样式可以单独写
+            ————> 建议：参考ui库，写自己的库(哪怕相似度90%)                        
+
+        */
+        /* 
+        关系选择器
+        父子选择器:                 父元素 > 子元素
+        子孙关系:                   祖籍元素 子孙元素
+        相邻兄弟选择器:              大哥元素 + 二哥元素                                       
+        普通兄弟:                   兄弟元素 ~ 兄弟元素
+
+        */
+        .box>.boxChild {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        /* 选中 #wraper 下所有的 div 元素 */
+        .chick {
+            width: 150px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        /* 
+        伪类选择器
+        css3 新增  存在兼容性问题
+        ie8以下  火狐低版本  不兼容
+
+        鼠标移动的元素：hover{
+            这里写移动后的元素样式
+        }
+         */
+        .chick:hover {
+            border-radius: 50%;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: red;
+        }
+
+        a {
+            color: #000;
+        }
+        .context::after{
+            content: '我是after';
+        }
+        .context::before{
+            content: '我是befor';
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wraper">
+        <div class="box">
+            <div class="boxChild"></div>
+        </div>
+    </div>
+    <div class="chick"></div>
+    <a href="#">冲击波</a>
+    <div class="context">我是内容</div>
+</body>
+
+</html>

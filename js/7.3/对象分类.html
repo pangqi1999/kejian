@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //对象分类(js 是面向对象的角度 )
+        //函数对象
+        function foo(){} 
+        var bar =  new Function() 
+        var foo1 = function(){}
+        //普通对象：原型对象，构造对象...
+        var obj  =new Object();
+        var f = new foo()
+
+        // 函数对象有prtotype ------>函数对象的原型对象
+        // 普通对象没有prototype 只有 _proto_ 属性 -------->普通对象的原形对象
+        // Function的原型对象为函数对象，这个函数对象没有prototype
+        // 函数对象的原型对象是个普通对象
+
+        // Function与function的区别
+        // 1.function的构造函数是Function
+        // 2.function的原型对象为普通对象，Function的原型对象是函数对象，这个函数对象没有prototype
+        
+        
+        // 构造函数foo的原型对象与new实例对象f的原型对象关系
+        // f是foo创建的
+        // 2个指针相同
+        console.log(foo.prototype===f._proto);
+    </script>
+</body>
+</html>

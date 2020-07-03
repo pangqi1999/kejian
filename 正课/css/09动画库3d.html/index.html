@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../zc-animation.css">
+    <style>
+        body {
+            text-align: center;
+            padding: 200px 0; 
+        }
+        
+        h2 {
+            display: inline-block;
+            margin: 0;
+            color: #f35626;
+            background-image: linear-gradient(92deg, #f35626 0%, #feab3a 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* 
+        动画分析过程
+        1.分析动画运动轨迹
+        2.想一下那些css 属性可以实现注意的效果
+        3.根据轨迹变化，进行百分比划分(不一定是等分)
+            划分方式，找到几个特殊的[峰值]，在峰值和峰值之间进行区分
+            
+        4.在每个不同的百分比区间更改属性的值
+        5.如果是渐进式，值越来越小，直到回到最初的状态
+
+        动画运动轨迹
+        常用的： 平移  旋转   拉伸   显示隐藏： 透明度
+        */
+    </style>
+</head>
+
+<body>
+    <h1>展示自己的动画样式</h1>
+    <h2 class="zc-animation bounce infinite">Bounce弹跳动画</h2>
+    <br>
+    <h2 class="zc-animation flash delay-2s slower infinite">Flash闪烁动画</h2>
+    <br>
+    <h2 class="zc-animation flasher infinite">Flasher3频动画</h2>
+    <br>
+    <h2 class="zc-animation pules infinite ">pules缩放</h2>
+    <br>
+    <h2 class="zc-animation pulesFont infinite">pules缩放</h2>
+    <br>
+    <h2 class="zc-animation rubberBand infinite">rubberBand拉伸</h2>
+    <br>
+    <h2 class="zc-animation shake infinite">shake平移</h2>
+    <br>
+    <h2 class="zc-animation swing  infinite">swing摇摆</h2>
+    <br> 
+    <h2 class="zc-animation graduallyPut  infinite">graduallyPut摇摆缩放</h2>
+    <br> 
+    <h2 class="zc-animation turnTable  infinite">turnTable摇晃转盘</h2>
+    <br> 
+    <h2 class="zc-animation jello  infinite ">jello拉伸</h2>
+    <br> 
+    <h2 class="zc-animation lightenOutleft  infinite ">lightenOutleft闪现</h2>
+    <br> 
+    <h2 class="zc-animation lightenOutright  infinite ">lightenOutright闪现</h2>
+    <br> 
+    <h2 class="zc-animation lightenOutcenter  infinite ">lightenOutcenter闪现</h2>
+    <br> 
+    <h2 style="width: 200px;height: 200px" class="zc-animation inauguration  infinite ">inauguration开幕式</h2>
+    <br> 
+    <h2 style="width: 200px;height: 200px" class="zc-animation inaugurationTop  infinite ">inauguration开幕式</h2>
+    <br> 
+    <h2 style="width: 200px;height: 200px" class="zc-animation inaugurationBottom  infinite ">inauguration开幕式</h2>
+    <br> 
+    <h2 class="zc-animation heartBeat  infinite faster ">heartBeat心跳</h2>
+    <br> 
+    <h2 class="zc-animation bounceInLeft  infinite  ">bounceInLeft左侧弹跳</h2>
+    <br> 
+    <h2 class="zc-animation bounceInRight  infinite  ">bounceInRight右侧弹跳</h2>
+    <br> 
+    <h2 class="zc-animation bounceInTop  infinite  ">bounceInTop上面弹跳</h2>
+    <br> 
+    <h2 class="zc-animation bounceInBottom  infinite  ">bounceInBottom下面弹跳</h2>
+    <br> 
+    <h2 class="zc-animation bounceIn  infinite  ">bounceIn内部弹跳</h2>
+    <br>
+    <h2 class="zc-animation fadeIn infinite">fadeIn淡入</h2>
+    <br>
+    <h2 class="zc-animation fadeInDown infinite">fadeInDown淡入往下</h2>
+    <br>
+    <h2 class="zc-animation fadeInDownBig infinite">fadeInDownBig淡入往下距离增大</h2>
+    <br>
+    <h2 class="zc-animation fadeInLeft infinite">fadeInLeft从左侧淡入</h2>
+    <br>
+    <h2 class="zc-animation fadeInLeftBig infinite">fadeInLeftBigt淡入从左往右的距离变大</h2>
+    <br>
+    <h2 class="zc-animation fadeInRight infinite">fadeInRight从右侧淡入</h2>
+    <br>
+    <h2 class="zc-animation fadeInRightBig infinite">fadeInRightBig淡入从右往左的距离变大</h2>
+    <br>
+    <h2 class="zc-animation fadeInUp infinite">fadeInUp淡入往上</h2>
+    <br>
+    <h2 class="zc-animation fadeInUpBig infinite">fadeInUpBig淡入往上距离变大</h2>
+    <br>
+    <h2 class="zc-animation bounceOut ">bounceOut外部弹出</h2>
+    <br>
+    <h2 class="zc-animation bounceOutDown fast">bounceOut下弹出</h2>
+    <br>
+    <h2 class="zc-animation bounceOutTop fast">bounceOutTop上弹出</h2>
+    <br>
+    <h2 class="zc-animation bounceOutLeft fast">bounceOutLeft左弹出</h2>
+    <br>
+    <h2 class="zc-animation bounceOutRight fast">bounceOutRight右弹出</h2>
+    <br>
+    <h2 class="zc-animation fadeOut ">fadeOut渐隐</h2>
+    <br>
+    <h2 class="zc-animation fadeOutDown ">fadeOutDown下渐隐</h2>
+    <br>
+    <h2 class="zc-animation fadeOutDownBig ">fadeOutDownBig</h2>
+    <br>
+    <h2 class="zc-animation fadeOutLeft ">fadeOutLeft左渐隐</h2>
+    <br>
+    <h2 class="zc-animation fadeOutLeftBig ">fadeOutLeftBig</h2>
+    <br>
+    <h2 class="zc-animation fadeOutRight ">fadeOutRight右渐隐</h2>
+    <br>
+    <h2 class="zc-animation fadeOutRightBig ">fadeOutRightBig</h2>
+    <br>
+    <h2 class="zc-animation fadeOutUp ">fadeOutUp上渐隐</h2>
+    <br>
+    <h2 class="zc-animation fadeOutUpBig ">fadeOutUpBig</h2>
+    <br>
+    <h2 class="zc-animation flip ">flip翻转翻转翻转翻转翻转</h2>
+    <br>
+    <h2 class="zc-animation flipX ">flipX  X轴翻转</h2>
+    <br>
+    <h2 class="zc-animation flipOutX ">flipOutX</h2>
+    <br>
+    <h2 class="zc-animation flipOutY ">flipOutY</h2>    
+</html>
+
+</body>
+
+</html>

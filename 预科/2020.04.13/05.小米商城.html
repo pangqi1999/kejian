@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icon/font_pm8k8ok7a0e/iconfont.css">
+    <link rel="stylesheet" href="icon2/font_5l87khmhxu4/iconfont.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+
+    .container {
+        width: 1226px;
+        margin: 0 auto;
+
+    }
+
+    body {
+        font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        color: #333;
+    }
+
+    /* 导航栏 */
+    .nav_top {
+        height: 40px;
+        background-color: #333;
+    }
+
+    /* 头部 */
+    .header_top {
+        height: 100px;
+
+
+    }
+
+    .header_logo {
+
+        /* color: #fff; */
+        width: 62px;
+        height: 55px;
+        margin: 22px 0 0 0;
+        
+    }
+    .header_logo>img{
+        width: 55px;
+        height: 55px;
+        background-color: #FF6700;
+    }
+   
+
+    .header_nav {
+        width: 1110px;
+        height: 88px;
+        font-size: 16px;
+        padding: 12px 0 0 30px;
+    }
+
+    .header_logo,
+    .list {
+        float: left;
+    }
+
+    .list {
+        width: 850px;
+        height: 100px;
+        line-height: 100px;
+        padding: 12px 0 0 30px;
+        box-sizing: border-box;
+    }
+
+    .list>li {
+        float: left;
+
+    }
+
+    .kong {
+        width: 142px;
+        height: 88px;
+        padding: 0 15px 0 0;
+        box-sizing: border-box;
+        
+    }
+
+    .list>li>a {
+        font-size: 16px;
+        color: #333;
+        padding: 26px 10px 38px;
+    }
+
+   
+
+    .headr_search {
+        float: right;
+        width: 296px;
+        height: 50px;
+        margin: 25px 0 0 0;
+        position: relative;
+    }
+
+    input {
+        width: 223px;
+        height: 48px;
+        padding: 0 10px;
+        border: 1px solid #b0b0b0;
+        box-sizing: border-box;
+    }
+
+    .text_phone {
+        position: absolute;
+        top: 14px;
+        right: 62px;
+    }
+
+    .text_phone>a {
+        font-size: 12px;
+        color: #757575;
+        background: #eee;
+        margin-left: 5px;
+
+    }
+
+    button {
+        width: 52px;
+        height: 50px;
+        padding: 1px 6px;
+        border: 1px solid #e0e0e0;
+        background-color: #fff;
+        position: absolute;
+        border-left-color: transparent;
+    }
+
+    .icon-fangdajing {
+        font-size: 24px;
+        color: #616161;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    /* 触发样式 */
+    .list a:hover{
+        color: #FF6700;
+    }
+    .text_phone>a:hover{
+        color: #fff;
+        background-color:#FF6700;
+    }
+    button:hover{
+        background-color:#FF6700;
+    }
+    button .icon-fangdajing:hover{
+        color: #fff;
+       
+    }
+    .section_list>li:hover{
+        background-color:#FF6700;
+    }
+
+     /* lunbo */
+     .section_lunbo {
+        height: 460px;
+        background-image: url("pic/e52c3e98602b90f198ec316dce253cba.webp");
+    }
+
+    .section_list {
+        padding: 20px 0;
+        height: 420px;
+        width: 234px;
+        background-color: rgba(105, 101, 101, 0.6);
+    }
+    .section_list>li{
+        height: 42px;
+        line-height: 42px;
+        font-size: 14px;
+        padding: 0 0 0 30px;
+    }
+    .icon-xiangyou {
+        font-size: 24px;
+        color: #616161;
+        font-weight: 700;
+        line-height: 42px;
+        float: right;
+        margin-right: 15px;
+    }
+
+
+</style>
+
+<body>
+    <div class="container nav_top"></div>
+
+
+    <div class="container header_top">
+        <div class="header_logo">
+            <img src="pic/mi-logo.png" alt="">
+        </div>
+
+
+
+        <ul class="list">
+            <li class="kong"></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">Redmi 红米</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">笔记本</a></li>
+            <li><a href="#">家电</a></li>
+            <li><a href="#">路由器</a></li>
+            <li><a href="#">智能硬件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+
+
+
+
+        <div class="headr_search">
+            <input type="text">
+            <span class="text_phone">
+                <a href="#">小米10</a>
+                <a href="#">Redmi K30 Pro</a>
+            </span>
+            <button><span class="iconfont icon-fangdajing"></span></button>
+        </div>
+    </div>
+
+    <div class="container section_lunbo">
+        <div class="section_left"></div>
+        <ul class="section_list">
+            <li>手机 电话卡<em class="iconfont icon-xiangyou"></em></li>
+            <li>电视 盒子<em class="iconfont icon-xiangyou"></em></li>
+            <li>笔记本 显示器 平板<em class="iconfont icon-xiangyou"></em></li>
+            <li>加电 插线板<em class="iconfont icon-xiangyou"></em></li>
+            <li>出行 穿戴<em class="iconfont icon-xiangyou"></em></li>
+            <li>智能 路由器<em class="iconfont icon-xiangyou"></em></li>
+            <li>电源 配件<em class="iconfont icon-xiangyou"></em></li>
+            <li>健康 儿童<em class="iconfont icon-xiangyou"></em></li>
+            <li>耳机 音箱<em class="iconfont icon-xiangyou"></em></li>
+            <li>生活 箱包<em class="iconfont icon-xiangyou"></em></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+        外边距塌陷：
+        上下俩个相邻盒子之间外边距，取[值较大的]  而不是相邻外边距之和
+         */
+    .next{
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        margin-bottom: 20px;
+    }
+    .pre{
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="next"></div>
+    <div class="pre"></div>
+</body>
+</html>

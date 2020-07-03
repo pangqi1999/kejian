@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wraper{
+            /* 改变设置元素属性
+            inlink  行元素
+            inlink-block    行内块
+            bolck   块元素
+             */
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        margin 重叠问题
+        1.块元素
+        2.子元素 margin 和 父元素 margin重叠 ：取[大的]
+        3.有且仅发生在上外边距中
+
+        解决方式：
+        1.将块元素变成行内块
+        
+     -->
+    <div id="wraper">
+        <div id="box"></div>
+    </div>
+</body>
+</html>
+<!-- 
+    补充点:
+    html 元素特点分类
+    inlink 行元素
+        有：span a b strong。。。
+        特点：不能设置宽高，内容多大他多大
+    inlink-block 行内块元素
+        有：img td input button 等
+        特点：可以设置宽高，默认内容多大他多大
+    block 块元素
+        有：header nav div footer section aside form table 
+        ul li ol dl dd dt p h1-h6
+        特点：默认宽度为父元素的宽度100%  高度为0  由子元素撑开
+    
+
+
+ -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css伪类和伪元素</title>
+</head>
+<style>
+    a{
+        font-size: 50px;
+    }
+    /* 未触发的链接的伪类 */
+    a:link{
+        color: red;
+    }
+    /* 触发后的链接的伪类 */
+    a:visited{
+        color: pink;
+    }
+    /* 鼠标悬停出发的伪类 */
+    a:hover{
+        color: springgreen;
+    }
+    /* 鼠标按下时触发，松开时消失的伪类 */
+    a:active{
+        color: yellow;
+    }
+    /* 顺序 link > visited > hover > active */
+    
+    
+    /* ::before添加内容在元素里面的左侧 */
+    section::before{
+        content: "售价";
+        font-size: 30px;
+        color: red;
+    }
+    /* ::after::after添加内容在元素里面的右侧 */
+    section::after{
+        content: "元";
+        font-size: 20px;
+        color: green;
+    }
+</style>
+<body>
+    <!-- css伪类：就是为元素添加的一部分触发性样式(即满足条件才能生效的样式) -->
+    <!-- css伪类 是 单冒号 -->
+    <a href="https://www.baidu.com">百度</a>
+
+    <!-- 伪元素是 双冒号  -->
+    <section>1999</section>
+</body>
+</html>

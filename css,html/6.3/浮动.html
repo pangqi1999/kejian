@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wraper{
+        width: 300px;
+        height: 350px;
+        background-color: darkgoldenrod;
+    }
+    .size{
+        width: 100px;
+        height: 100px;
+    }
+    .one{
+        background-color: darkgreen;
+    }
+    .two{
+        background-color: darkmagenta;
+    }
+    .three{
+        background-color: darkslategrey;
+    }
+    /* .clear::after{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearFloat{
+        *zoom: 1;
+    } */
+</style>
+<body>
+    <!-- 
+        浮动：
+        元素display 值变为ibline-block
+        移动范围变为 父容器
+        浮动后脱离文档流
+        浮动后占据浮动元素位置
+         
+        清除浮动：可以让元素不脱离文档流；
+        方式一：在最后一个元素后加 空元素 clear:both
+        方式二： 父元素 overFlow:hidden
+        方式三：创建BFC
+
+     -->
+    <div class="wraper">
+        <div class="on size"></div>
+        <div class="two  size"></div>
+        <div class="three size"></div>
+    </div>
+</body>
+</html>

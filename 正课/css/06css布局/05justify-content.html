@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wraper{
+            width: 400px;
+            height: 400px;
+            border: 3px solid red;
+
+            flex-flow: row wrap;
+            /* 
+            justify-content
+            flex-start 从主轴起点开始排列
+            flex-end 从主轴末点开始排列
+            space-between  俩端贴边对齐
+            space-around   子元素左右间距相等(俩端一份，中点俩分)
+            space-evenly   所有子元素之间间距相等(均分)
+             */
+            justify-content:flex-start ;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wraper">
+        <div class="box">00001</div>
+        <div class="box">00002</div>
+        <div class="box">00003</div>
+        <div class="box">00004</div>
+    </div>
+</body>
+</html>

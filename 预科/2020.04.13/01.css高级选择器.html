@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* 选择页面中具有sx属性的div元素 */
+    div[sx]{
+        background-color: greenyellow;
+    }
+    /* 选中具有sx属性值为123的元素 */
+    [sx="123"]{
+        color: darkred;
+    }
+
+    table,table td{
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+    
+    /* 选择元素中的第一个td元素 */
+    td:nth-of-type(1){
+        background-color: yellow;
+    }
+    td:nth-of-type(2){
+        background-color: red;
+    }
+    /* 每一个元素中倒数第一个td标签 */
+    td:nth-last-of-type(1){
+        background-color: blue;
+    }
+    /* 选择第二个及之后的所有的td元素 */
+    td:nth-of-type(n+2){
+        font-size: 30px;
+    }
+    /* 选择所有子元素td中的第一个 */
+    td:first-child{
+        color: aqua;
+    }
+    /* 选择所有子元素td中的第一个 */
+    td:last-child{
+        color: #fff;
+    }
+    /* 选择所有子元素td中的第三个 */
+    td:nth-child(4){
+        /* background-color: green; */
+        border-right-width: 0;
+    }
+    table{
+        border-right-width: 0;
+    }
+</style>
+<body>
+    <div sx>html中属性分为2大类：通用属性和特有属性；比如：id，class，style这些每个标签都有的属性统称为通用属性；src，href这些只有某些标签才有的属性被称为特有属性；宁外html允许自定义属性。</div>
+    <div sx="123">元素的属性按照是否有属性分为：有值属性和无值属性</div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <table>
+        <tr>
+            <td>1111
+                <td>77777</td>
+            </td>
+            <td>2222</td>
+            <td>3333</td>
+            <td>4444</td>
+        </tr>
+        <tr>
+            <td>2211</td>
+            <td>2222</td>
+            <td>2233</td>
+            <td>2244</td>
+        </tr>
+    </table>
+</body>
+</html>

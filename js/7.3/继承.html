@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(null._proto_)//Cannot read property '_proto_' of null
+
+        //原型对象的作用:继承
+        //1：面向对象开发（抽象)
+
+        //继承例子
+        var perso = function(name){
+            this.name = name
+        }
+
+        //函数原型对象 下api原则上；必须指向【构造函数】
+        perso.prototype.getName = function(){
+            return this.name
+        }
+        var zc = new perso('周超');
+        var res = zc.getName();
+        zc.setAge(21)
+        console.log(zc);
+        console.log(res);
+        //继承： 被继承的属性都被继承者直接使用
+
+        //谈谈你对js 原型的认识
+        //原型链 继承。
+    </script>
+</body>
+</html>

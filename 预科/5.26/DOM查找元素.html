@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM查找元素</title>
+</head>
+<body>
+    <button class="button" id="button1"></button>
+    <button class="button" id="button1"></button>
+    <br>
+    <hr>
+    <input type="radio" name="sex" value="1" id="id1">
+    <input type="radio" name="sex" value="2" id="id2">
+    <input type="radio" name="sex" value="3" id="id3">
+    <input type="radio" name="sex" value="4" id="id4">
+    <br>
+    <hr>
+    <a href="https://www.baidu.com " name="a" class="blue-color red-color" 
+    >百度<span>点击这里</span>百度</a>
+    <a href="https://www.baidu.com " name="b" class=" red-color" 
+    >百度1</a>
+    <script>
+        //DOM:document object model 文档对象模型
+        //浏览器在解析html文档时会将整个HTML文档(转换)为一个对象，这个
+        //对象使用document记录
+        //可以在js中直接使用 
+
+        var button = document.getElementById('button1')
+        //getElementById:通过ID获取元素要么是一个，要么为空
+        //如果指定id不存在，会得到null空对象
+        console.log(button)
+        console.log(button.tagName)//获取到的是标签名
+        console.log(button.id)//获取到的是id民
+        console.log(button.tagName)
+
+        var sex = window.document.getElementsByName('sex')[0]
+        console.log(sex)
+        console.log(sex.length)//4
+        console.log(sex.tagName)
+
+        var inputs = document.getElementsByTagName('input')
+        console.log()
+
+        //getElementsByTagName通过标签名
+        console.log(document.all)//获取文档上所有标签的集合
+        
+        console.log(document.anchors)//获取文档上所有的锚点(a标签必须含有name属性)
+        
+        var a= document.getElementsByClassName('blue-color')
+       //getElementsByClassName通过class获取一组标签
+        console.log(a)
+
+        console.log(a[0].innerText)
+        //querySelector获取符合条件的以第一个元素
+        console.log(document.querySelector('input'))
+
+    </script>
+
+</body>
+</html>

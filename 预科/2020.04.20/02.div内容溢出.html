@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>div内容溢出</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 设置文字不换行 */
+        white-space:nowrap;
+        /* 超出部分不可见 */
+        overflow: hidden;
+        /* 用省略号代替超出的那部分文本 */
+        /* text-overflow: ellipsis; */
+        
+        /* overflow: scroll; */
+        /* 设置盒子出现横向滚动条 */
+        overflow-x: scroll;
+        /* overflow-y: scroll; */
+    }
+</style>
+<body>
+    <div class="box">
+        div内容溢出,div内容溢出,div内容溢出,div内容溢出,div内容溢出,div内容溢出,div内容溢出,div内容溢出,div内容溢出
+    </div>
+</body>
+</html>

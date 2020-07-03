@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input:focus{
+        background-color: red;
+    }
+    input[type=checkbox]{
+        outline: none;
+        width:30px;
+
+    }
+</style>
+<body>
+    <!-- 
+        表单类标签：
+        1.所有与[数据]提交，保存有关的，通常都用[表单元素]
+        2.表单元素，有很多默认的事件
+        3.表单元素，有默认样式————>  清空默认样式
+        4.其他元素，使用基本样式，可以实现表单效果
+
+     -->
+    <form action="">
+        <!-- 
+            单行文本输入框：边框
+            点击后——> 获取焦点  边框变色
+            点击其他位子————> [取消焦点]
+
+            value 是 input 的值  表示用户输入的内容
+            placeholder 提示信息
+            
+            type 表示 input的类型
+            type = text 表示单行文本输入
+            type = password 表示输入加密格式
+            type = submit  一个按钮 提交 表示[提交事件]，提交后表单会刷新
+            type = file  上传文件 ————>  上传的是[文件路径]，文件：图片 ，文件 ，音乐 ， 视频 。。。。
+            
+         -->
+        <input type="text" value="你是真你特娘的帅">
+        <input type="text" placeholder="你是真你特娘的帅">
+        <input type="password">
+        <input type="submit" value="你是真你特娘的帅">
+        <button>提交</button>
+        <input type="file">
+        <!-- 基本不用 -->
+        <input type="email" placeholder="请输入邮箱地址">
+         
+    </form>
+    <form action="">
+        <div>
+            <!-- for 绑定input id 可以获取焦点 value表单中的内容
+            dis -->
+            <label for="username">用户名</label>
+            <input type="text" id="username" value="name">
+        </div>
+        <div>
+            <label for="">密&#x3000码</label>
+            <input type="text">
+        </div>
+        <input type="checkbox">
+        <select name="" id="">
+            <option value="1"></option>
+        </select>
+    </form>
+
+</body>
+
+</html>g

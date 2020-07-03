@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 闭包
+        // 什么是闭包？ 闭包的优点 缺点
+        function foo(){
+            var num = 0; 
+            return function(){
+                num++
+                console.log('闭包')
+            }
+        }
+        // 函数中return返回一个函数
+        // 优点：外部函数可以访问内部函数的变量
+        // 缺点；变量不能释放导致内存泄漏
+        // 怎么实现外部访问内部；存a函数指针，实际上还是a访问f00变量
+
+        // foo执行一次；形成一个闭包；闭包之间互不干扰
+        // 因为foo 每次执行胡初始化AO 对象 多个AO 多个地址
+        var bar = function(
+
+        )
+        // console.log(bar)
+    </script>
+    
+</body>
+</html>

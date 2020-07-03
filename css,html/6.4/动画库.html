@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./封装自己的动画库/pq-animate.css">
+    <title>Document</title>
+</head>
+<style>
+h1{
+    width: 300px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: coral;
+    color:#f1f1f1;
+    margin-bottom: 10px;
+    /* 
+    下载文件：导入动画库文件
+    class 基础类： animate_animated
+    具体动画小站 animate_xxx 例入animate_bounce
+     */
+
+}
+@keyframes animate_bounce{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.pq_animated{
+    /* 执行所有的动画 */
+    animation-name:all ;
+    animation-duration: 0.5s;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite;
+    /* 
+    动画执行的熟练：匀速 变速
+    快慢快
+    慢快慢
+    cubic-bazier 速度曲线函数 贝赛尔曲线
+    cubic-bazier (x1,y1,x2,y2)
+    1.看运动曲线可以推出速度是怎么变化的：
+    以45度的匀速直线为标准，角度大于45度 快 小于45度慢
+    2.大概在函数坐标中画条线
+    */
+    
+}
+/* hs bql xybc zrt wm djy oly */
+.animate_bounce{
+animation-name: animate_bounce;
+}
+</style>
+<body>
+    <h1 class="pq_animated animate_bounce">Aniamte</h1>
+</body>
+</html>
+<!-- 
+    属性优先级
+    animation:all/其他  all优先级最低
+    只要属性值为all   all优先级最低
+ -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<style>
+*{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        width: 200px;
+        height: 300px;
+    }
+    .d1{
+        background-color: red;
+    }
+    .d2{
+        background-color: green;
+        /* absolute绝对定位 */
+        /* 元素这只了绝对定位后，会脱离文档流 如果一个元素想相对于她的父元素设置为
+        非静态定位即可，通常设置为相对定位，因为相对定位不会破坏父元素的布局*/
+        /*  */
+        position: absolute;
+        top: 100px;
+        left: 200px;
+    }
+    .d3{
+        background-color: blue;
+    }
+    .d4{
+        background-color: aqua;
+    }
+    section{
+        width: 500px;
+        height: 650px;
+        background-color: #999;
+        position: relative;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="d1"></div>
+        <div class="d2">绝对定位/div>
+        <div class="d3"></div>
+    </section>
+    <div class="d4"></div>
+</body>
+
+</html>

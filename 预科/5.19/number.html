@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var n = 2
+    var n1 = Number('你')
+    var n2 = Number('2')
+    var n3 = Number('2019年')
+    //Number()把参数转换成数字，值转换不成功，返回NaN
+
+    console.log(Number.MAX_VALUE)
+    //表示最大值
+    console.log(Number.MIN_VALUE)
+    //表示最小值
+
+    //toFixed()
+
+    console.log(Number.isNaN(Number(1)))//fslse
+
+    //isInteger()用来判断给定参数是否为整数。如果是返回TRUE
+    //不是返回false
+    console.log(Number.isInteger(3))//true
+    console.log(Number.isInteger(3.2))//false
+    console.log(Number.isInteger(100*(0.1+0.2)))//false,计算机内部会产生小误差
+
+    var num = 123.456789
+    console.log(num.toExponential(3))//规定指数计算法中的小数位数，是0~20之间的值
+//1.235e+2  e+2就是10的平方 1.235*100=123.5 num 4舍5入得到
+
+    console.log(num.toPrecision(5))//数字格式化指定长度
+    //123.46
+
+
+    
+</script>

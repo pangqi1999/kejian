@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局-空间分配-收缩</title>
+</head>
+<style>
+    body,html{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        display: flex;
+        font-size: 60px;
+    }
+    div{
+        border: 1px solid red;
+    }
+    div:nth-child(1){
+        flex-basis: 200px;
+        /* flex-shrink 设置项目收缩比例，如果空间不足，项目所占的空间将缩小，默认值是1，如果设置为0则不会收缩，通过缩放窗口可以观察到，值越大收缩的越厉害 */
+        flex-shrink: 0;
+    }
+    div:nth-child(2){
+        flex-basis: 200px;
+        flex-shrink: 1;
+    }
+    div:nth-child(3){
+        flex-basis: 200px;
+        flex-shrink: 2;
+    }
+    div:nth-child(4){
+        flex-basis: 200px;
+        flex-shrink: 3;
+    }
+</style>
+<body>
+    <div>春</div>
+    <div>夏</div>
+    <div>秋</div>
+    <div>冬</div>
+</body>
+</html>

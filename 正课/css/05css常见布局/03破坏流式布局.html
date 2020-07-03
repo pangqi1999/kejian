@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wraper{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* 
+            相对定位
+            1.相对自身初始位置进行定位
+            2.不脱离文档流，元素特点没有发生变化
+            top：移动后的位子距离初始位置 上边有多少距离 (正下 负上)
+            left：移动后的位子距离初始位置 左边有多少距离 (正右 负左)
+            right：移动后的位子距离初始位置 右边有多少距离 (正左 负右)
+            bottom：移动后的位子距离初始位置 下边有多少距离 (正上 负下)
+            用途：用于微调
+             */
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            /* 
+            绝对定位
+            相对祖籍元素中具有position,且值不为static的元素进行绝对定位
+                如果所有祖籍元素都没有position元素，就相对body进行定位
+            定位后，块元素变成行内块，脱离文档流，原来的位置被其他元素所占据
+
+            如何定位呢？
+            top：[定位元素]距离[相对元素]上面多远
+            left：[定位元素]距离[相对元素]左面多远
+            right：[定位元素]距离[相对元素]右面多远
+            bottom：[定位元素]距离[相对元素]下面多远
+             */
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .test{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wraper">
+        <div class="box"></div>
+        <div class="test"></div>
+    </div>
+</body>
+</html>

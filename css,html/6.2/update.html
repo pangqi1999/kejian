@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    html,body{
+        
+        width: 100%;
+        height: 100%;
+    }
+   
+    .container{
+        width: 350px;
+        margin: 0 auto;
+    }
+    .title{
+        position: relative;
+        width: 375px;
+        height: 44px;
+        font-weight: 400;
+        
+        font-size: 16px;
+        color: #1E1E1E;
+    }
+    
+    .title-text{
+        text-align: start;
+        height: 44px;
+        line-height: 44px;
+    }
+    .title-icount{
+        /* border-width: 0px; */
+        position: absolute;
+        left: 305px;
+        top: 74px;
+        width: 90px;
+        height: 32px;
+        
+    }
+    .title-extend {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: -65px;
+        width: 90px;
+        height: 32px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(242, 242, 242, 1);
+        border-radius: 32px;
+    }
+    .share{
+        display: inline-block;
+        position:absolute;
+        right: 51px;
+        top: 3px;
+        
+    }
+    .out{
+        display: inline-block;
+        position:absolute;
+        right: 6px;
+        top: 0px;
+        
+    }
+    .hr{
+        display: inline-block;
+        position: absolute;
+        left: 46px;
+        top: 4px;
+        width: 2px;
+        height: 21px;
+        background-color:rgba(242, 242, 242, 1);
+    }
+    .title-logo,.title-text{
+        float: left;
+        
+    }
+    .title-text{
+        margin-left: 30px;
+    }
+    .title-logo{
+        margin-top: 13px;
+    }
+
+    h4{
+        margin-top: 27px;
+        margin-left: 10px;
+    }
+    .prove{
+        margin-left: 10px;
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .tips{
+        font-size: 14px;
+        color: rgb(153, 153, 153);
+    }
+    .prove-right{
+        font-size: 12px;
+        color: #2F78FF;
+        margin-right: 40px;
+    }
+    .update-img{
+        width: 326px;
+        height: 2px;
+    }
+    .next{
+        margin-left: 6px;
+        margin-top: 50px;
+        width: 315px;
+        height: 44px;
+        background: inherit;
+        background-color: rgba(47, 120, 255, 1);
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 2px 20px rgba(47, 120, 255, 0.2);
+        color: #fff;
+        line-height: 44px;
+        text-align: center;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="title">
+            <a href="logo.html">
+                <div class="title-logo">
+                    <img src="./image/u874.png" alt="">
+                </div>
+            </a>
+            <div class="title-text">更改手机号</div>
+            <div class="title-icount">
+                <div class="title-extend">
+                    <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                    <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                    <img src="/image/u202.png" alt="" class="hr">
+                </div>
+                
+            </div>
+        </div>
+
+        <h4>您正在更换手机号为188****8766</h4>
+
+        <div class="prove">
+            <div class="tips">请输入验证码</div>
+            <div class="prove-right">获取验证码</div>
+            
+        </div>
+        <div class="update-img">
+            <img src="./image/u2422.png" alt="">
+        </div>
+        <div class="next">下一步</div>
+    </div>
+</body>
+</html>

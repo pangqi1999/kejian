@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+
+        .square {
+            /* 
+            perspective 透视
+            没有透视，就看不到3d效果
+             */
+            position: relative;
+            width: 200px;
+            margin: 300px auto;
+            /* 建立3D空间 */
+            transform-style: preserve-3d;
+            animation: squareRo 3s linear infinite;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            /* 透明度 */
+            opacity: 0.5;
+        }
+
+        .red {
+            /* 前 */
+            background-color: red;
+            transform: translate3d(0, 0, 100px);
+            /* animation: squareRo 3s linear infinite; */
+        }
+
+        .yellow {
+            /* 上 */
+            background-color: yellow;
+            transform: rotateX(90deg) translate3d(0, 0, 100px);
+        }
+
+        .blue {
+            /* 左 */
+            background-color: blue;
+            transform: rotateY(90deg) translate3d(0, 0, -100px);
+
+        }
+
+        .pink {
+            /* 下 */
+            background-color: pink;
+            transform: rotateX(-90deg) translate3d(0, 0, 100px);
+        }
+
+        .green {
+            /* 右 */
+            background-color: green;
+            transform: rotateY(-90deg) translate3d(0, 0, -100px);
+        }
+
+        .orange {
+            /* 后 */
+            background-color: orange;
+            transform: translate3d(0, 0, -100px);
+
+        }
+
+        @keyframes squareRo {
+            form {
+                /* transform-origin: 50% 50% 100px; */
+                transform: rotateX(0) rotateY(0) rotateZ(0)
+            }
+
+            to {
+                /* transform-origin: 50% 50% 100px; */
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        3d旋转，元素绕轴旋转后，x，y，z 轴 也会跟着旋转
+        注意：无论元素怎么转到，  y轴 始终在高度方向上
+                                x轴 始终在宽度上
+                                z轴 始终与x和y轴垂直(你看不见)  
+
+     -->
+
+
+    <div class="square">
+        <div class="box red">00001</div>
+        <div class="box yellow">00002</div>
+        <div class="box pink">00003</div>
+        <div class="box green">00004</div>
+        <div class="box blue">00005</div>
+        <div class="box orange">00006</div>
+    </div>
+</body>
+
+</html>

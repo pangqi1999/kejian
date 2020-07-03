@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- 
+            type = checkbox 选择框
+            用途：将来只要主要可选择的 不论单选多选，只要判断元素的
+            [checked]属性————>  值为true 表示选中  值为false 表示没有选中[js操作]
+
+            checked 属性 表示被选中
+         -->
+        <input type="checkbox" checked>是
+        <input type="checkbox" aria-checked="false">否
+        <input type="checkbox">可能
+
+        <!-- 
+            单选：如何获取被选中的元素：
+            ————>  判断 是否具有seleted属性 或者 seleted 的值是否为true
+         -->
+        <!-- 单选 -->
+        <select name="" id="">
+            <option value="">你好</option>
+            <!-- selected 设置初始化默认被选中的元素 -->
+            <option value="" selected>我好</option>
+            <option value="">大家好</option>
+        </select>
+    </form>
+</body>
+</html>

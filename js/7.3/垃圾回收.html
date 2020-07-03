@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //引用
+        //分类：显示引用和隐式引用
+
+        //显示引用：一个对象访问另一个对象下属性。
+        //隐式引用：一个对象，通过原型对象访问属性
+
+        //对象：GO AO 函数对象 普通对象
+        //引用计数垃圾收集
+        //--》关键看，一个对象是否被其他变量所引用
+        //零引用对象被销毁
+        var o ={
+            a:{
+                b:2
+            },
+        };
+        //两个对象，一个Key 为a 一个key 为b
+        //o 变量 引用 [key为a的对象]所以不会被回收
+        //b没被引用所以被销毁 
+        // cef 鸡尾酒 依克多因(夏三式冬至本) fs(夏物化，冬化学，春物理) 帽子 
+        // 白藜芦醇 (水杨酸酸水+控油抗炎烟酰胺) 
+    </script>
+</body>
+</html>

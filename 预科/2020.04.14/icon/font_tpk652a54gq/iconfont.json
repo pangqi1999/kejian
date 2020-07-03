@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "356438",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "479506",
+      "name": "向右",
+      "font_class": "xiangyou",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    }
+  ]
+}

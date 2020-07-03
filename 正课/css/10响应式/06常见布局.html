@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 90%;
+            margin: 10px auto;
+            padding: 0px 1%;
+            background-color: orange;
+        }
+
+        .clearFloat {
+            clear: both;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .box {
+            width: 23%;
+            height: 300px;
+            background-color: cyan;
+            margin: 1%;
+            float: left;
+        }
+
+        @media screen and (max-width:700px) {
+            .wrap {
+                width: 100%;
+                background-color: orange;
+            }
+
+            .box {
+                width: 48%;
+                height: 150px;
+                background-color: cyan;
+                margin: 5px 1%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">0001</div>
+        <div class="box">0002</div>
+        <div class="box">0003</div>
+        <div class="box">0004</div>
+        <div class="clearFloat"></div>
+    </div>
+</body>
+
+</html>

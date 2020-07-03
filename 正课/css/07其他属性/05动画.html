@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+        定义动画
+        @Keyframes  动画名字{
+            动画过程
+        }
+        动画可定义多个：
+        初始化：一开始，初始化只会执行一次
+        定义动画思路
+        1.确定初始化的样式      ————> form 
+        2.确定变化后的样式      ————> to
+        3.确定如何变化的：变化的过程    ————> form..to..改为0%...100%
+        */
+        @keyframes changeWidth{
+            from{
+                /* 初始化样式 */
+                width: 100px;
+            }to{
+                /* 动画改变样式 */
+                width: 500px;
+            }
+        }
+        @keyframes bac{
+            0%{
+                background-color: powderblue;
+            }
+            10%{
+                background-color: salmon;
+            }
+            20%{
+                background-color: sandybrown;
+            }
+            30%{
+                background-color: skyblue;
+            }
+            40%{
+                background-color: slateblue;
+            }
+            50%{
+                background-color: tomato;
+            }
+            60%{
+                background-color: yellow;
+            }
+            70%{
+                background-color:  yellowgreen;
+            }
+            100%{
+                background-color: purple;
+            }
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: changeWidth 3s linear infinite ,bac 3s linear infinite;
+            /* animation: ; */
+        }
+        .bac{
+            width: 100px;
+            height: 100px;
+            /* 执行 定义的bac动画 */
+            animation-name: bac;
+            /* 执行时间2s */
+            animation-duration: 3s;
+            /* 执行速度 匀速 */
+            animation-timing-function: linear;
+            /* 执行次数 无限次 */
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        动画：
+        1.如何定义动画：定义动画是[未执行]的
+        2.如何执行
+        3.怎么执行，执行时间，执行速度，延迟时间。。。
+
+        注意：动画通常与过度结合使用
+
+     -->
+     <div></div>
+     <div class="bac"></div>
+</body>
+</html>

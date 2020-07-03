@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框和圆角</title>
+</head>
+<style>
+    div{
+        width:200px;
+        height: 200px;
+        /* border设置边框  1px边框线的粗细  边框线的线型为solid单实线 边框线的颜色为#000即黑色 */
+        border:1px solid #000;
+        background-color: pink;
+        /* dotted点状 solid单实线 double双线 dashed虚线 */
+
+        /* 一个值时：四个角都设置 */
+        /* border-radius: 50%; */
+        /* 左上角 */
+        /* border-top-left-radius: 10px; */
+         /* 右上角 */
+        /* border-top-right-radius: 20px; */
+        /* 右下角 */
+        /* border-bottom-right-radius: 30px; */
+         /* 左下角 */
+         /* border-bottom-left-radius: 40px; */
+         
+         /* 第一个值为左上角和右下角，第二个值为右上角和左下角 */
+         /* border-radius: 10px 20px; */
+         
+         /* 第一个值为左上角，第二个值为右上角和左下角，第三个值右下角  */
+         /* border-radius: 10px 30px 60px; */
+         
+         /* 4个值顺时针分别为：左上 右上 右下 左下 */
+         border-radius: 10px 30px 50px 80px;
+    }
+</style>
+<body>
+    <div>
+        圆角，圆角，，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角，圆角
+    </div>
+</body>
+</html>

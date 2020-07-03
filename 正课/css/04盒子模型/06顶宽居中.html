@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 选中html和body */
+        html,
+        body {
+            height: 100%;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            /* 定宽居中 */
+            margin: 0 auto;
+        }
+
+        .wrap {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            /* border: 1px solid black; */
+        }
+
+        .inset {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin: 20px auto;
+        }
+
+        .clearfix::after,
+        .clearfix::before {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* .wrap::before,
+        .wrap::after {
+            content: '';
+            display: table;
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- 
+        定宽居中：
+        只有块元素，才能实现这样的效果
+        子元素在父元素中，水平方向居中
+        1.给当前元素设置固定宽度
+        2.当前元素 左右外边距为自动
+     -->
+    <div class="box"></div>
+    <div class="wrap clearfix">
+        <div class="inset"></div>
+    </div>
+</body>
+
+</html>

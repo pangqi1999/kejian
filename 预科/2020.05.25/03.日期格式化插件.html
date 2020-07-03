@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期格式化插件</title>
+    <script src="./moment-with-locales.js"></script>
+</head>
+<body>
+    <script>
+         var d1 = new Date('1993-3-25 10:13:56');
+         console.log(d1);
+
+
+        moment.locale('zh-cn');
+        document.write(moment().format('MMMM Do YYYY, h:mm:ss a'))//五月 25日 2020, 3:26:31 下午
+
+        document.write('<br>')
+
+        document.write(moment().format('dddd'))//星期一
+
+        document.write('<br>')
+
+        document.write(moment().format("MMM Do YYYY"))//5月 25日 2020
+
+        document.write('<br>')
+
+        document.write(moment().format('YYYY [escaped] YYYY'))//2020 escaped 2020
+        
+        document.write('<br>')
+        
+        document.write(moment().format('lll'))
+    </script>
+</body>
+</html>

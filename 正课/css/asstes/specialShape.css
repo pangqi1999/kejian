@@ -1,0 +1,623 @@
+/* 
+yongcss 实现 40 种特殊样式
+*/
+.icon{
+    display: inline-block;
+    font-size: inherit;
+    /* 浏览器文本优化  auto 自动识别 */
+    text-rendering: auto;
+    /* 防止浏览器中 字体锯齿,使用后字体 看起来更加清晰 舒适 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+/* 正方形 */
+.square{
+    width: 16px;
+    height: 16px;
+    background-color: black;
+}
+/* 圆形 */
+.circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;/* 兼容谷歌 */
+    -moz-border-radius: 50%;/* 兼容火狐 */
+    background-color: black;
+}
+/* 椭圆 */
+.oval{
+    width: 16px;
+    height: 8px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background-color: black;
+}
+/* 向上的三角形 */
+.triangle_up{
+    width: 0;
+    height: 0;
+    border: 0px solid transparent;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-bottom: 16px solid black;
+}
+/* 向下的三角形 */
+.triangle_down{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top: 16px solid black;
+}
+/* 向左的三角形 */
+.triangle_left{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-right: 16px solid black;
+}
+/* 向右的三角形 */
+.triangle_right{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-left: 16px solid black;
+}
+/* 向左上的三角形 */
+.triangle_top_left{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 16px;
+    border-left-width: 0;
+    border-top: 16px solid black;
+}
+/* 向右上的三角形 */
+.triangle_top_right{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 16px;
+    border-right-width: 0;
+    border-top: 16px solid black;
+}
+/* 向左下的三角形 */
+.triangle_bottom_left{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 0;
+    border-right-width: 16px;
+    border-bottom: 16px solid black;
+}
+/* 向右下的三角形 */
+.triangle_bottom_right{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 16px;
+    border-right-width: 0;
+    border-bottom: 16px solid black;
+}
+/* 弯尾箭头 */
+.curvedarrow{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-right: 9px solid black;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+.curvedarrow:after {/* 为了让一个元素为特殊符号,用伪元素选择器实现 */
+    content: "";
+    position: absolute;
+    border: 0 solid transparent;
+    border-top: 3px solid black;
+    border-radius: 20px 0 0 0;
+    top: -12px;
+    left: -9px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+/* 梯形 */
+.trapezoid{
+    border-bottom: 8px solid black;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    height: 0;
+    width: 8px;
+}
+/* 平行四边形 */
+.parallelogram{
+    width: 16px;
+    height: 12px;
+    -webkit-transform: skew(20deg);
+       -moz-transform: skew(20deg);
+         -o-transform: skew(20deg);
+    background: black;
+}
+/* 六角星 */
+.star_six{
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid black;
+    position: relative;
+}
+.star_six:after {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 16px solid black;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -8px;
+}
+/* 五角星 */
+.star_five {
+    margin: 5px 0;
+    position: relative;
+    display: inline-block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right:  10px solid transparent;
+    border-bottom: 7px  solid black;
+    border-left:   10px solid transparent;
+    -moz-transform:    rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform:     rotate(35deg);
+    -o-transform:      rotate(35deg);
+ }
+ .star_five:before {
+    border-bottom: 8px solid black;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -6px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+ }
+ .star_five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 0;
+    left: -10px;
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid black;
+    border-left: 10px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+ }
+/* 五边形 */
+.pentagon{
+    position: relative;
+    width: 12px;
+    border-width: 10px 4px 0;
+    border-style: solid;
+    border-color: black transparent;
+}
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -18px;
+    left: -4px;
+    border-width: 0 10px 8px;
+    border-style: solid;
+    border-color: transparent transparent black;
+}
+/* 六边形 */
+.hexagon{
+    width: 20px;
+    height: 11px;
+    background: black;
+    position: relative;
+}
+.hexagon:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 5px solid black;
+}
+.hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 5px solid black;
+}
+/* 八边形 */
+.octagon {
+    width: 20px;
+    height: 20px;
+    background: black;
+    position: relative;
+}
+.octagon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 6px solid black;
+    border-left: 6px solid #fff;
+    border-right: 6px solid #fff;
+    width: 8px;
+    height: 0;
+}
+.octagon:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 6px solid black;
+    border-left: 6px solid #fff;
+    border-right: 6px solid #fff;
+    width: 8px;
+    height: 0;
+}
+/* 心形 */
+.heart {
+    position: relative;
+    width: 20px;
+    height: 18px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 0;
+    width: 10px;
+    height: 16px;
+    background: black;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+/* 无限符图形 */
+.infinity{
+    position: relative;
+    width: 21px;
+    height: 10px;
+}
+.infinity:before,
+.infinity:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border: 2px solid black;
+    -moz-border-radius: 50px 50px 0 50px;
+         border-radius: 50px 50px 0 50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.infinity:after {
+    left: auto;
+    right: 0;
+    -moz-border-radius: 50px 50px 50px 0;
+         border-radius: 50px 50px 50px 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+/* 菱形 */
+.diamond{
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: black;
+    position: relative;
+    top: -10px;
+}
+.diamond:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: black;
+}
+/* 钻石盾牌 */
+.diamond_shield {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 4px solid black;
+    position: relative;
+    top: -10px;
+}
+.diamond_shield:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 14px solid black;
+}
+/* 狭窄的菱形 */
+.diamond_narrow{
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: 7px solid black;
+    position: relative;
+    top: -5px;
+}
+.diamond_narrow:after {
+    content: '';
+    position: absolute;
+    left: -5px; top: 7px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 7px solid black;
+}
+/* 砖石形 */
+.cut_diamond{
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    border-width: 0 5px 5px 5px;
+    height: 0;
+    width: 10px;
+    position: relative;
+    margin: 4px 0 10px 0;
+}
+.cut_diamond:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-width: 14px 10px 0 10px;
+}
+/* 鸡蛋 */
+.egg {
+    display:inline-block;
+    width: 12px;
+    height: 18px;
+    background-color: black;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+    border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+ }
+/* 吃豆人 */
+.pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 6px solid transparent;
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    border-bottom: 6px solid black;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  /* 聊天框 */
+.talkbubble {
+    width: 12px;
+    height: 8px;
+    background: black;
+    position: relative;
+    -moz-border-radius:    1px;
+    -webkit-border-radius: 1px;
+    border-radius:         1px;
+ }
+.talkbubble:before {
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-right: 2px solid black;
+    border-bottom: 1px solid transparent;
+ }
+ /* 爆炸形状 */
+ .burst_12{
+    background: black;
+    width: 8px;
+    height: 8px;
+    position: relative;
+    text-align: center;
+ }
+ .burst_12:before,.burst_12:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background: black;
+}
+.burst_12:before{
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst_12:after{
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+/* 阴阳八卦 */
+.yin_yang {
+    width: 16px;
+    height: 8px;
+    background: #eee;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px 1px 8px 1px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.yin_yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee;
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 2px;
+    height: 2px;
+}
+.yin_yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: black;
+    border: 3px solid #eee;
+    border-radius:100%;
+    width: 2px;
+    height: 2px;
+}
+/* 搜索 放大镜 */
+/* em表示相对尺寸，其相对于当前对象内文本的font-size（如果当前
+对象内文本的font-size计量单位也是em，则当前对象内文本
+的font-size的参考对象为父元素文本font-size）。使用em可以较好
+的相应设备屏幕尺寸的变化，但是在进行元素设置时都需要知道父元素
+文本的font-size及当前对象内文本的font-size，如有遗漏可能会导
+致错误。' */
+.search{
+    font-size: 1.5em;
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    border: 0.1em solid black;
+    position: relative;
+    border-radius: 0.35em;
+}
+.search::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: black;
+    width: 0.35em;
+    height: 0.08em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+/* facebook-icon */
+.facebook-icon {
+    background: black;
+    text-indent: -99em;
+    width: 9px;
+    height: 11px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    border-bottom: 0;
+  }
+.facebook-icon::before {
+    content: "/20";
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 9px;
+    bottom: -3px;
+    right: -4px;
+    border: 2px solid #eee;
+    border-radius: 2px;
+  }
+.facebook-icon::after {
+    content: "/20";
+    position: absolute;
+    width: 6px;
+    top: 5px;
+    height: 2px;
+    background: #eee;
+    right: 0px;
+  }

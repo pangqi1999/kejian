@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wraper{
+        width: 400px;
+        height: 300px;
+        border: 3px solid red;
+        /* overflow: auto; */
+        display: flex;
+        /* safari 必须添加 */
+        display: -webkit-flex;
+        /* 
+        flex-direction  确定主轴方向，默认水平方向，起点左边
+        row 默认值
+        row-reverse 水平 起点 右边
+        colum 竖直方向 起点上边
+        colum-reverse 竖直方向 起点下边
+         */
+        /* flex-direction: column; */
+        /* 
+        flex-wrap  设置元素是否换行
+        nowrap  默认值 不换行
+        wrap    换行，从主轴起点开始，行间距相等
+        wrap-reverse    首行在下，尾行在上(与wrap首位行位置颠倒)
+         */
+        /* flex-wrap: wrap; */
+
+        /* 
+        flex-flow 是flex-direction 和 flex-wrap 的复合属性
+         */
+        flex-flow: wrap-reverse row-reverse;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: violet;
+        border: 3px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div class="wraper">
+        <div class="box">00001</div>
+        <div class="box">00002</div>
+        <div class="box">00003</div>
+        <div class="box">00004</div>
+    </div>
+</body>
+</html>

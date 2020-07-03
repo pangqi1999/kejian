@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #wraper{
+        background-color: aqua;
+    }
+    .box{
+        background-color: yellow;
+        height: 10px;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        浏览器的默认布局方式————流式布局
+        先从左往右，再从上往下,子元素在父容器内部的默认布局方式。
+        ———— >  所有的容器内部都有[流]
+        —————— >  容器内部 子元素 在[默认流中]，元素都是[默认特点]
+        产生布局流的主要原因，因为元素本身的特点导致的。
+     -->
+
+     <div id="wraper">
+         <p>我是第一个块元素</p>
+         <p>我是第二个块元素</p>
+         <span>我是行</span>
+         <a href="#">我是a标签</a>
+         <span>我是测试空间的</span>
+         <p>第三个p</p>
+         <!-- 浏览器在解析标签时，同时进行布局 -->
+         <span>我是span</span>
+     </div>
+     <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.在js底层,什么数据可以进行运算？
+        //2.为什么会有隐式转化
+
+
+        //只有基本类型的数据才能运算
+        //所有引用类型的数据，需要运算时候；需要转化为基本类型，只能转字符串
+        //所有引用类型数据只能转为字符串。最后再有字符串转其他类西
+        //因为浏览器默认数据就是字符串，所以只能转字符串。
+
+        // alert([1,2,4])
+        alert({
+            name:'jfd',
+            age:12
+        })//[object object]
+
+        alert(function(){
+            //
+        })
+    </script>
+</body>
+</html>

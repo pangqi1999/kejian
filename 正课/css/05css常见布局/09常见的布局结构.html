@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* 清空列表默认样式 */
+        list-style: none;
+        /* 清空文本默认样式 */
+        text-decoration: none;
+    }
+    .margin_conter{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .float_left{
+        float: left;
+    }
+    .float_right{
+        float: right;
+    }
+    .clearFloat{
+        clear: both;
+    }
+    header{
+        width: 90%;
+        height: 45px;
+        background-color: powderblue;
+    }
+    .content{
+        width: 90%;
+        margin: 10px auto;
+        border: 1px solid black;
+
+    }
+    aside{
+        width: 25%;
+        border: 1px solid red;
+        padding: 10px;
+    }
+    li{
+        height: 30px;
+        background-color: #bfa;
+        margin: 10px 0;  
+    }
+    .child_content{
+        /* 低版本IE和火狐 不兼容 */
+        width: calc(75% - 2px);
+        background-color: yellow;
+        height: 232px;
+    }
+    footer{
+        height: 300px;
+        background-color: tomato;
+
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="margin_conter">
+
+        </header>
+        <div class="content">
+            <aside class="float_left">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </aside>
+            <!-- <div class="clearFloat"></div> -->
+            <div class="child_content float_right"></div>
+            <div class="clearFloat"></div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

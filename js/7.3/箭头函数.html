@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //箭头函数没有this 指向
+        //箭头函数中this 仅看【上一层作用域】中的This
+
+        //这就是箭头函数
+        var obj = ()=>{
+            console.log(this)//window
+        }
+        var foo = {
+            obj:obj,
+            bar:bar
+        }
+        var obj = {
+            foo:()=>{
+                console.log(this)
+            }
+        }
+    </script>
+</body>
+</html>

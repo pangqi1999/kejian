@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* 元素选择器 taget 元素*/
+    /* element 元素  elements 一堆元素 */
+    body{
+        margin: 0;
+        background-color: red;
+    }
+    /* #id 选择器 */
+    #wraper{
+        width: 300px;
+        height: 100px;
+        background-color: green;
+    }
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    *{
+        margin: 0;
+        height: 0;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.如何清空默认样式?
+            建议： 创建一个CSS文件  里面写默认样式清空   或者经常使用功能的css
+        2.为什么要清空默认样式?
+            因为html元素有很多的默认样式，如 body margin 为8px  
+                                           p 大小14px 上下外边距12px
+                                           h1-h6 字体大小 字体粗细
+                                           不能满足UI设计，所以清空
+        3.
+     -->
+    <div id="wraper">
+
+
+    </div>
+    <div class="box">
+
+    </div>
+
+    
+</body>
+</html>

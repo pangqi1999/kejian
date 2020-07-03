@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        /* 
+        media   媒体查询关键字
+        and     条件连接符，且
+        or      或
+        not     非
+         */
+        @media screen and (max-width: 320px) {
+            /* 屏幕宽度 小于320px */
+            body {
+                background-color: red;
+            }
+        }
+
+        @media screen and (min-width:321px) and (max-width:499px) {
+            body {
+                background-color: orange;
+            }
+        }
+
+        @media screen and (min-width:500px) and (max-width:700px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        媒体查询：
+        媒体： 电脑  平板 手机  打印机  投影。。。
+        根据尺寸范围进行样式设置
+        只兼容IE10及以上
+
+        相当于：在特定的尺寸中，写了一套样式
+     -->
+</body>
+
+</html>

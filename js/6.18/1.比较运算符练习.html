@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 比较： 大小 相等 具体数字 
+        不同类型才转化 
+        相同类型 不转换
+        NaN 自己不等于自己
+        === ! == 操作数不转换
+        
+    -->
+     <script>
+         console.log(undefined>1)//false
+         console.log(undefined=undefined)//true
+         console.log(NaN === NaN)//false
+         console.log(true > 'true')//1>=NaN  false
+
+         //null 只等于（==）自己和undefined相同
+         console.log(' ' == null)//false
+         console.log(Number(null))
+     </script>
+</body>
+</html>

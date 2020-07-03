@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    tr,td,th{
+        border: 1px solid black;
+       
+    }
+    table{
+        /* 边框线 合一 */
+         border-collapse: collapse;
+    }
+    tr{
+        height: 100px;
+    }
+    td{
+        width: 150px;
+        /* 解决表格响应式Bug */
+        /* 最大宽度 */
+        /* max-width: 150px; */
+        /* 最小宽度 */
+        /* min-width: 150px; */
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        表格：有自适应功能
+        行：设置宽度无效，可设置高度，最小高度，最大高度
+        列：设置高度[无效]：可以设置宽度：最小宽度，最大宽度
+        注意：行 也有高度失效————解决方法，设置最小高度
+            列 宽度可能[失效]————解决方法，设置[最小宽度]
+            所有表格列的东西都写在table里。
+
+            如果丛向滚动表格，用宽度数设置，解决：由于内容过多导致表格分布不均。
+     -->
+     <table>
+         <!-- thead 表头 -->
+         <thead>
+             <tr>
+                 <!-- th 表头标签，有加粗效果 -->
+                 <th>姓名</th>
+                 <th>年龄</th>
+                 <th>班级</th>
+             </tr>
+         </thead>
+         <!-- tbody 表体 -->
+         <tbody>
+             <!-- tr 行    td 列 -->
+             <tr>
+                 <td>0001表格中内容</td>
+                 <td>0002表格中内容</td>
+                 <td>0003表格中内容</td>
+             </tr>
+             <tr>
+                 <td>0001表格中内容</td>
+                 <td>0002表格中内容</td>
+                 <td>0003表格中内容</td>
+             </tr>
+             <tr>
+                 <td>0001表格中内容</td>
+                 <td>0002表格中内容</td>
+                 <td>0003表格中内容</td>
+             </tr>
+       
+         </tbody>
+     </table>
+</body>
+</html>

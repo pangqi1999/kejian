@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ['爱盛开','为范围','娃娃亏负']
+
+        //将数组变成字符
+        //arr.toString() 将数组变为字符串并返回 字符串 
+      var res = arr.toString();
+        console.log(arr)
+        console.log(res)
+
+        //将res字符串 变成数组newArr
+        //split()将字符串进行切割，并返回数组
+        //参数为 被切割字符
+        var newArr = res.split(',');
+        newArr[1] = '渣男'
+        console.log(newArr)
+
+        var str1 = '12+1+@4243+wisan jsaj'
+        var res1 = str1.split("+")
+        console.log(res1)
+
+        //将数组变为字符串 join
+        //arr1.join()将数组变为字符串
+        //---> 参数为替换 ',' 字符的内容
+        //注意： 参数只能替换以为一维数组
+        var arr1 = ['a','c',3,[1,2]]
+        var res3 = arr1.join('')
+        console.log(res3,'---------')
+    </script>
+</body>
+</html>
