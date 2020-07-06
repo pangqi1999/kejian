@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wraper">
+        <div id = "box">
+
+        </div>
+    </div>
+    <script>
+        // 选择器的作用：选中html
+        //用什么存选择器选中结果 ---> 变量
+        //通过html字符串 获取html元素 返回类数组
+        var divs  = document.getElementsByTagName('div')
+        console.log(divs)
+        console.log(divs[1])
+
+        var wrap = document.getElementsByClassName('wraper');
+        warp = warp[0]
+        console.log(wrap)//获取元素对象
+
+        //通过ID获取 id = box 的html元素对象 返回 元素对象
+        var box = document.getElementById('box');
+        console.log(box)
+        //返回元素节点
+        var box = document.getElementById('box');
+        console.log(box1)
+        //querySelectorAll()返回元素节点集合
+        var wraps = document.querySelectorAll('.wraper');
+        console.log(wraps)
+
+        //
+
+    </script>
+</body>
+</html>

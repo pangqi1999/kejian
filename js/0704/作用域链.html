@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //作用域链 scope
+        //执行环境:变量的执行环境 作用域
+        //执行期上下文函数执行创建：也就是函数执行时创建一个局部环境
+
+        //AO 站在预编译角度理解：与局部作用域 执行上下文 一回事
+        //scope作用；连接执行环境：形成作用域链。辅助 执行上下文对象。
+        //socpe值 为数组；存当前环境所有使用变量
+        //0 赋值 自己作用  
+        function max(arr) {
+            var res = arr.sort(function (x, y) {
+                return y - x;
+            });
+            return res[0];
+        }
+        console.log(max([1, 23, 41, 2, 4, 6, 43]));
+    </script>
+</body>
+
+</html>

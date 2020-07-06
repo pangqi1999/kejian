@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="warper">
+        <div id="" class="box">下颚发货</div>
+        <button>oif</button>
+    </div>
+    <script>
+        var warper = document.getElementsByClassName('warper')[0];
+        
+        //点击事件 事件处理函数需要用户触发行为才能执行
+        console.log(warper.innerHTML)
+        console.log(typeof warper.innerHTML)
+        //inenerHTML html 中的内容
+        //给innerHTML 重新辅助
+        warper.innerHtml = "修改后的内容";
+
+        //innerHtml 与InnerText区别
+        //innerHtml赋值为模板字符 InnerText赋值为文本 内容
+        //不论修改哪一个内容：htmlzhongneir 
+
+
+    </script>
+</body>
+</html>
