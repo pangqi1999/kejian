@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        var str  = '日本人，美国人，韩国人';
-        // 将‘人’ 替换为 '狗'
+        // var str  = '日本人，美国人，韩国人';
+        // // 将‘人’ 替换为 '狗'
 
-        // replace(reg,newStr) 替换，返回替换后结果 ；原来的字符没有变化
-        // 将 reg 匹配到的结果 被 new Str 所替换
-        var res = str.replace(/['人']/g,'狗')
-        console.log(res)
-        // var res = '日本狗，美国狗，韩国狗'
-        var str1 = '今天,今天,今明'
-        var res1= str1.replace(/['今']/g,'昨')
-        console.log(res1)
+        // // replace(reg,newStr) 替换，返回替换后结果 ；原来的字符没有变化
+        // // 将 reg 匹配到的结果 被 new Str 所替换
+        // var res = str.replace(/['人']/g,'狗')
+        // console.log(res)
+        // // var res = '日本狗，美国狗，韩国狗'
+        // var str1 = '今天,今天,今明'
+        // var res1= str1.replace(/['今']/g,'昨')
+        // console.log(res1)
+        // var arr = [1, 2, 3, 4, 'ddd']
+        // // 1 将arr 数组变为字符串
+        // var suibian = arr.toString();
+        // var str1 = suibian.replace(/['ddd']/g, 'f')
+        // console.log(str1)
+        
+        var arr = [1,2,3,4,'dd']
+        var arr1 = arr.toString();
+        arr1.replace(/['dd']/g,'F');
+        console.log(arr1);
+
+        
     </script>
 </body>
+
 </html>

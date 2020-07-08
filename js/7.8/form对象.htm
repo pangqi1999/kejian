@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" checked value="你好" name="" id="">
+    <script>
+        //form表单：在任何一个都是特殊 的
+        //h5 默认属性
+        //css 清空样式
+        //js 默认行为 多种数据格式
+        //表单事件：提交 获取焦点 失去焦点 改变 输入
+
+        //在js中用什么方式 知道用户是否勾选
+        var check = document.querySelector('input[type=checkbox]');
+        //check.checked 判断checkbox 是否被勾选 true选中 false美宣
+        console.log(check.checked)
+
+        //如何知到 勾选后:选择的内容是什么呢？
+        console.log(check.value)//1代表：'代表'
+    </script>
+</body>
+</html>

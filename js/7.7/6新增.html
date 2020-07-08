@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html.body{
+        width: 100%;
+        height: 100%;
+        
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input{
+        outline: none;
+        border: 1px solid #ccc;
+        height: 35px;
+        width: 300px;
+        padding-left: 15px;
+        color:#ccc;
+    }
+    .head{
+        width: 500px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+    main{
+        width: 500px;
+        background-color: #fff;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    #add{
+        width: 55px;
+        height: 35px;
+        appearance: none;
+        border: none;
+        outline: none;
+       
+       
+    }
+    .content{
+        padding-left: 20px 45px 20px 45px;
+    }
+</style>
+<body>
+    <main>
+        <div class="head">
+            <input id="ipt" type="text" placeholder="新增内容">
+            <div><button id="add">新增</button></div>
+        </div>
+        <div class="content"><p>谷底反弹</p></div>
+    </main>
+    <script>
+    //     var ipt = document.querySelector('#ipt');
+        
+    //     var btn = document.querySelector('#add');
+    //    var content = document.querySelectorAll('.content')[0];
+    //     console.log(btn)
+    //     btn.onclick = function(){
+    //         //获取input 输入框中用户输入的内容
+    //         var val = ipt.value;
+    //         console.log(val)
+    //         var pNode  = document.createElement('p');
+    //         pNode.innerHTML= val;
+    //         content.appendChild(pNode);
+    //         ipt.value = '';//清空input输入框的内容
+    //     }
+
+    var ipt = document.querySelector('#ipt');
+        
+        var btn = document.querySelector('#add');
+       var content = document.querySelectorAll('.content')[0];
+        console.log(btn)
+        btn.onclick = function(){
+            //获取input 输入框中用户输入的内容
+            var val = ipt.value;
+            console.log(val)
+            var pNode  = document.createElement('p');创建文本节点
+            // 
+            var pTxt = document.createTextNode(val)
+            pNode.appendChild(pTxt);
+            pNode.innerHTML= val;
+            content.appendChild(pNode);
+            ipt.value = '';//清空input输入框的内容
+        }
+        
+    </script>
+</body>
+</html>

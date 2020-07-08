@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        width: 500px;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    input {
+        width: 50px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: seashell;
+    }
+
+    button {
+        width: 50px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: seashell;
+    }
+</style>
+
+<body>
+    <form action="">
+        <div>
+            <!-- <button>红色</button> -->
+            <input type="button" value="红色">
+        </div>
+        <div>
+            <input type="button" value="绿色">
+
+        </div>
+        <div>
+            <input type="button" value="蓝色">
+        </div>
+        <div>
+            <input type="button" value="黄色">
+        </div>
+        <div>
+            <input type="button" value="黑色">
+        </div>
+
+    </form>
+    <button>点我</button>
+    <h2>我要变颜色</h2>
+    <script>
+        var ipts = document.querySelectorAll('form>div>button');
+
+        var checkRadio = null;
+        ipts.onclick = function () {
+            for (var i = 0, len = ipts.length; i < len; i++) {
+                if (ipts[i].checked) {
+
+                    console.log(ipts[i])
+                    checkRadio = ipts[i];
+                    console.log(checkRadio);
+                    // break;
+                }
+            }
+        }
+       
+
+        var val = checkRadio.getAttribute('value')
+        if (val === '红色') {
+            txt.style.color = 'red'
+        } else if (val === '绿色') {
+            txt.style.color = 'green'
+        } else if (val === '蓝色') {
+            txt.style.color = 'green'
+        } else if (val === '黄色') {
+            txt.style.color = 'green'
+        } else {
+            txt.style.color = 'black'
+        }
+    </script>
+</body>
+
+</html>

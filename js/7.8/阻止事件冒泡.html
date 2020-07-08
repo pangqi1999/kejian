@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 500px;
+            height: 500px;
+            background-color: black;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color:seagreen ;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var child = document.querySelector('.child');
+        var box = document.querySelector('.box');
+        var wrap = document.querySelector('.wrap');
+
+        child.addEventListener("click",function(){
+            "click",
+            function(e){
+                // e.stop
+                console.log('chlid');
+                e.targrt.style.background='seagreen';
+            }
+            
+        },false);
+        box.addEventListener("click",function(){
+            "box",
+            function(e){
+                console.log('box')
+                e.targrt.style.background='seagreen';
+            }
+           
+        },false);
+        wrap.addEventListener("click",function(){
+            "wrap",
+            function(e){
+                console.log('wrap')
+                e.targrt.style.background='seagreen';
+            }
+            
+        },false);
+
+        // 捕获行为
+        // child.addEventListener("click",function(){
+        //     console.log('chlid')
+        // },false);
+        // box.addEventListener("click",function(){
+        //     console.log('box')
+        // },false);
+        // wrap.addEventListener("click",function(){
+        //     console.log('wrap')
+        // },false);
+       
+    </script>
+</body>
+</html>

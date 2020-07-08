@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <script>
+        //第一步 选择需要被操作的标签
+        var h1s = document.getElementsByTagName('h1');
+        var h1s1 = h1s[0];
+        var h1s2 = h1s[1];
+        var h1s3 = h1s[2];
+        var h1s4 = h1s[3];
+        var h1s5 = h1s[4];
+        
+
+        //第二步：处理用户行为
+        //处理用户点击第一个H1的时候；h1的反馈
+        // var flag = true;
+        // h1s1.onclick = function(){
+            
+        //     //直接修改样式
+        //     flag ? h1s1.style.color = 'blue':h1s1.style.color = '';
+        //     flag = !flag;
+           
+        // }
+        //为什么产生问题  ---》变量被污染
+        // h1s2.onclick = function(){           
+        //     flag ? h1s2.style.color = 'blue':h1s2.style.color = '';
+        //     flag = !flag;
+        // }
+        // h1s3.onclick = function(){           
+        //     h1s3.style.color = 'blue'
+        // }
+        // h1s4.onclick = function(){           
+        //     h1s4.style.color = 'blue'
+        // }
+        // h1s5.onclick = function(){           
+        //     h1s5.style.color = 'blue'
+        // }
+
+
+        //如何解决flag 变量被污染问题
+     
+        (function(){
+            var flag = true;
+            h1s1.onclick = function(){
+            flag ? h1s1.style.color = 'blue':h1s1.style.color = '';
+            flag = !flag;
+            }
+        })();
+
+        (function(){
+            var flag = true;
+            h1s2.onclick = function(){
+            flag ? h1s2.style.color = 'blue':h1s2.style.color = '';
+            flag = !flag;
+            }
+        })();
+        (function(){
+            var flag = true;
+            h1s3.onclick = function(){
+            flag ? h1s3.style.color = 'blue':h1s3.style.color = '';
+            flag = !flag;
+            }
+        })();
+        (function(){
+            var flag = true;
+            h1s4.onclick = function(){
+            flag ? h1s4.style.color = 'blue':h1s4.style.color = '';
+            flag = !flag;
+            }
+        })();
+        (function(){
+
+            var flag = true;
+            h1s5.onclick = function(){
+            flag ? h1s5.style.color = 'blue':h1s5.style.color = '';
+            flag = !flag;
+            }
+        })();
+      
+      
+    </script>
+</body>
+</html>

@@ -30,6 +30,7 @@
               return null
           }
           if(el.charAt(0)==='.'){  // class 选择器
+
               el = el.substr(1)
               return document.getElementsByClassName(el);
           }else if(el.charAt(0)==='#'){  // id 选择器

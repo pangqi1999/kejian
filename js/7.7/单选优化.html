@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <h1>与非最美。周超最帅。千里一线牵。</h1>
+    <script>
+        //第一个功能
+        //  var h1s = document.getElementsByTagName('h1');
+        //  for(var i = 0,len =h1s.length;i<len;i++){
+        //      console.log(h1s[i])
+            
+        //     h1s[i].onclick = function(){
+        //         //坑:btn[i] 不存在 因为异步，比全局的for还蛮 所以i=5
+        //         // console.log(i,this)
+        //         //找到被点击的元素---》this
+        //         this.style.color = 'blue'
+        //     }
+        //  }
+        //  console.log
+
+         //思路一
+         var  h1s = document.getElementsByTagName("h1");
+         for(var i =0,len=h1s.length;i<len;i++){
+             console.log(i);
+             (function(){
+                 var flag = true;
+                //  var x = i;
+                 h1s[i].onclick = function(){
+                     flag?(th0is.style.color = "blue"):(this.style.color = "")
+                     flag = !flag;
+                 }
+             })();
+             
+         }
+         console.log(i)
+
+
+          //思路二
+          var  h1s = document.getElementsByTagName("h1");
+         for(var i =0,len=h1s.length;i<len;i++){
+             console.log(i);
+             (function(){
+                var flag = true;
+                var x = i;//解决变量污染 i=5
+                 h1s[i].onclick = function(){
+                     flag?(h1s[x].style.color = "blue"):(h1s[x].style.color = "")
+                     flag = !flag;
+                 }
+             })();
+             
+         }
+         console.log(i)
+
+         //思路三
+         var  h1s = document.getElementsByTagName("h1");
+         for(var i =0,len=h1s.length;i<len;i++){
+             
+            
+                h1s[i].flag = true;
+                //给5个h1dom对象；分别添加私有属性i 并赋值不同的初始值；
+                h1s[i].i = i;
+                h1s[i].onclick = function(){
+                    this.flag
+                        ?(h1s[this.i].style.color = "blue")
+                        :(h1s[this.i].style.color = "")
+                    this.flag = !this.flag;
+                };
+               
+                    
+                
+         
+         }
+         console.log(i)
+    </script>
+    </script>
+</body>
+</html>
