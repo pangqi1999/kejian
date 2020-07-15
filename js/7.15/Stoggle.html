@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+</style>
+<body>
+    <button>toggle</button>
+    <!-- 
+        1 box 显示隐藏不确定
+        2 显示隐藏 一定是disolay控制的
+
+     -->
+     <div class="box"></div>
+
+     <script>
+        //  toggle(box);//如果box 显示隐藏 如果因此那么显示
+         var btn = document.querySelector('button');
+         var box = document.querySelector('.box')
+        
+         btn.onclick = function(){
+           toggle(box);
+         }
+         function toggle(el){
+            var none = getComputedStyle(el,null)['display'];
+            if(none==='none'){
+                el.display = 'block';
+
+
+            }else{
+                el.style.display = 'none'
+            }
+         }
+     </script>
+</body>
+</html>

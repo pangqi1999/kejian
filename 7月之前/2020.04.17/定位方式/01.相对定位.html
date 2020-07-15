@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相对定位</title> 
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    .d1{
+        background-color: red;
+    }
+    .d2{
+        background-color: greenyellow;
+        /* position设置元素定位方式，relative相对定位 */
+        /* 元素设置了相对定位后(自身原有的位置保留)，依旧参与在文档流中，参与流式布局，相对定位：相对于自己原本的位置进行定位 */
+        position: relative;
+        top:100px;
+        left: 200px;
+    }
+    .d3{
+        background-color: blueviolet;
+    }
+
+    /* 元素默认的定位方式是静态定位static，静态定位不能设置移动位置 */
+    /* 相对定位:用于元素轻微的位置调整 */
+</style>
+<body>
+    <div class="d1"></div>
+    <div class="d2">相对定位</div>
+    <div class="d3"></div>
+</body>
+</html>

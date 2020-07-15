@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM查找元素</title>
+</head>
+<body>
+    <button class="button" id="button1">按钮1</button>
+    <button class="button" id="button2">按钮2</button>
+    <br>
+    <hr>
+    <!-- input[type="radio" name="sex" value="$"]#id$*4 -->
+    <input type="radio" name="sex" value="1" id="id1">
+    <input type="radio" name="sex" value="2" id="id2">
+    <input type="radio" name="sex" value="3" id="id3">
+    <input type="radio" name="sex" value="4" id="id4">
+    <br>
+    <hr>
+    <a href="https://www.baidu.com" name="a" class="blue-color red-color">百度<span>点击 这里</span>百度</a>
+    <a href="https://www.baidu.com" name="b" class="red-color">百度1</a>
+    <a href="https://www.baidu.com" class="red-color">百度2</a>
+
+    <script>
+        // DOM : document object model 文档对象模型
+        // 浏览器在解析html文档时，会将整个html文档(转换)为一个对象，这个对象使用document来记录
+        // 可以以在js中直接使用
+        
+        var button = document.getElementById('button1')
+        // getElementById：通过id获取元素，要么是一个，要么为空
+        // 如果指定id不存在，会得到null空对象
+        console.log(button)
+        console.log(button.tagName)//获取到的是标签名
+        console.log(button.id)//获取到的是id名
+        console.log(button.className)//获取到的是class类名
+        
+
+        // NodeList 取出标签，变量名[索引]
+        var sex = window.document.getElementsByName('sex')
+        // getElementsByName：查询元素的name属性，返回带有指定名称的对象的集合
+        console.log(sex)//[]
+        console.log(sex.length)//4
+        console.log(sex.tagName)//NodeList节点列表没有tagName
+        console.log(sex[0])//取出索引为0的元素
+        console.log(sex[0].tagName)//INPUT
+        console.log(sex[0].value)//1
+        for(var i = 0;i<sex.length;i++){
+            console.log(sex[i].value)// 1  2  3  4
+        }
+
+        var sex1 = window.document.getElementsByName('sex')[1]
+        console.log(sex1)
+        
+        // HTMLCollection  标签合集
+        var inputs = document.getElementsByTagName('INPUT')
+        // getElementsByTagName:通过标签名(不区分大小写)获取一组标签
+        console.log(inputs)
+        console.log(inputs.length)
+        console.log(inputs.tagName)//undefined
+        console.log(inputs[0])
+        console.log(inputs[0].tagName)
+        console.log(inputs[0].value)
+        for(var i = 0;i<inputs.length;i++){
+            console.log(inputs[i].value)// 1  2  3  4
+        }
+
+        var input1 = document.getElementsByTagName('input')[0]
+        console.log(input1)
+        console.log(input1.name)//获取属性值
+        console.log(input1.getAttribute('name'))//getAttribute()获取属性值
+
+        console.log(document.title)//获取页面标题
+        console.log(document.body)//获取body标签
+        console.log(document.html)//不存在 undefined
+        console.log(document.documentElement)//获取整个html文档
+        console.log(document.all)//获取文档上所有标签的集合
+        console.log(document.all[0])//获取html标签
+        console.log(document.anchors)//获取文档上所有的锚点(a标签必须带有name属性)
+
+        var a = document.getElementsByClassName('blue-color red-color')
+        // getElementsByClassName:通过class获取一组标签，使用任何一个样式都行，不需要全写
+        console.log(a)
+
+        console.log(a[0].innerHTML)//innerHTML获取到标签内部的html，即连同子标签一同显示
+        console.log(a[0].innerText)//innerText获取到标签内部所有的(文本)，即是这个文本在子标签内部，也一样能得到(但不包含html标签)。
+        console.log(a[0].textContent)//textContent获取空格和文本
+        
+        
+        // querySelector 获取所有符合条件的第一个元素
+        console.log(document.querySelector('input'))
+        console.log(document.querySelector('body>button'))
+        console.log(document.querySelector('.button#button1'))
+        console.log(document.querySelector('[value="1"]'))
+
+        // querySelectorAll获取所有符合条件的元素
+        console.log(document.querySelectorAll('input'))
+
+
+        getElementById//通过id获取元素，要么是一个，要么为空
+        getElementsByClassName//通过class获取一组标签，使用任何一个样式都行，不需要全写
+        getElementsByName//通过属性name来获取标签集合
+        getElementsByTagName//通过标签名(不区分大小写)获取一组标签
+
+        querySelector//获取所有符合条件的第一个元素
+        querySelectorAll//获取所有符合条件的元素
+
+        innerHTML//获取到标签内部的html，即连同子标签一同显示
+        innerText//获取到标签内部所有的(文本)，即是这个文本在子标签内部，也一样能得到(但不包含html标签)
+        textContent//获取空格和文本
+
+        // 节点有哪些：
+        // 1.文本节点
+        // 2.元素节点
+        // 3.属性节点
+
+
+    </script>
+</body>
+</html>

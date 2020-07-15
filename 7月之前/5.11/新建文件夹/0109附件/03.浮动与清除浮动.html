@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+       background-color: #999; 
+    }
+    .item1,.item2{
+        width: 200px;
+        height: 200px;
+        /* display: inline-block; */
+        /* float设置元素浮动，left左浮动，right右浮动 */
+        float: left;
+        /* 注意：用到浮动就一定要清理浮动 */
+    }
+    .item1{
+        background-color: red;
+    }
+    .item2{
+        background-color:green;
+    }
+    .other{
+        width: 500px;
+        height: 200px;
+        background-color: yellow;
+    }
+
+    /* 清理浮动方式一 */
+    /* 通过清理浮动让父元素自动获取高度 */
+    /* 优点：代码少，好理解 */
+    /* 缺点：增加了多余的空标签，不建议大量使用 */
+    /* .clear{
+        clear: both;
+    } */
+
+
+    /* 清理浮动方式二 */
+    /* 通过直接给父元素固定高度，来达到清除浮动的效果 */
+    /* 优点：直接明了 */
+    /* 缺点：父元素高度固定，如果浮动元素高度不统一，会影响后面的布局 */
+    /* 建议只在导航栏使用 */
+    /* .box{
+        height: 200px;
+    } */
+
+    /* 清理浮动方式三 */
+    /* 优点：几乎没有缺点，支持大多数主流浏览器，是比较常用的一中清理浮动的方式 */
+    /* 缺点:代码量大，不好记忆 */
+    .box::after{
+        /* 内容 */
+        content: "";
+        /* 把元素转换为块元素 */
+        display: block;
+        height: 0;
+        /* 元素不可见 */
+        visibility: hidden;
+        clear: both;
+    }
+    .box{
+        zoom: 1;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="other"></div>
+</body>
+</html>

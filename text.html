@@ -7,80 +7,132 @@
     <title>Document</title>
 </head>
 <style>
-    form {
-        width: 500px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrap {
+        width: 300px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .control {
+        width: 300px;
         height: 200px;
+        background-color: rosybrown;
+        /* margin: 10px auto; */
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    input {
-        width: 50px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: seashell;
+    .content {
+        width: 300px;
+        height: 200px;
+        /* margin: 0 auto; */
+        line-height: 200px;
+        text-align: center;
+        background-color: salmon;
+        color: seashell;
+        font-size: 20px;
     }
 
-    button {
-        width: 50px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: seashell;
+    .tab{
+        display: none;
     }
+    .show {
+        display: block !important;
+    }
+    
+
+    .control span{
+        width:30px;
+        height: 30px;
+     
+    }
+    span{
+     
+        background:url("./js/7.9/img/xingxing.png");
+        background-position: -5px -5px;
+    }
+   .icon1{
+        background-position: 35px 36px;
+   }
 </style>
 
 <body>
-    <form action="">
-        <div>
-            <!-- <button>红色</button> -->
-            <input type="button" value="红色">
-        </div>
-        <div>
-            <input type="button" value="绿色">
+    <div class="wrap">
+        <div class="control">
+          <span ></span>
+          <span ></span>
+          <span ></span>
+          <span ></span>
+          <span ></span>
 
         </div>
-        <div>
-            <input type="button" value="蓝色">
-        </div>
-        <div>
-            <input type="button" value="黄色">
-        </div>
-        <div>
-            <input type="button" value="黑色">
+        <div class="content">
+            <div class="tab show">非常差</div>
+            <div class="tab">差</div>
+            <div class="tab">一般</div>
+            <div class="tab">好</div>
+            <div class="tab">非常好</div>
         </div>
 
-    </form>
-    <button>点我</button>
-    <h2>我要变颜色</h2>
+    </div>
+
     <script>
-        var ipts = document.querySelectorAll('form>div>button');
+        var control = document.querySelectorAll("span");
+        var tab = document.querySelectorAll(".tab");
+        control = [...control];
+        tab = [...tab];
+        // console.log(control)
+        control.forEach(function (item, index) {
+            var flog = true;
+            item.addEventListener("click", function (e) {
 
-        var checkRadio = null;
-        ipts.onclick = function () {
-            for (var i = 0, len = ipts.length; i < len; i++) {
-                if (ipts[i].checked) {
+                control.forEach(function(item){
+                    item.className='';
+                })
+                tab.forEach(function (item, index) {
+                    item.className = "tab";
+                    // tab[index].className = 'tab';
+                });
 
-                    console.log(ipts[i])
-                    checkRadio = ipts[i];
-                    console.log(checkRadio);
-                    // break;
+                //   this.className = "control-item active";
+                tab[index].className = 'tab show';
+                if(flog){
+                    for(var i=0;i<=index;i++){
+                        control[i].className = "icon1";
+                    }
                 }
-            }
-        }
-       
+                
+            });
+        });
 
-        var val = checkRadio.getAttribute('value')
-        if (val === '红色') {
-            txt.style.color = 'red'
-        } else if (val === '绿色') {
-            txt.style.color = 'green'
-        } else if (val === '蓝色') {
-            txt.style.color = 'green'
-        } else if (val === '黄色') {
-            txt.style.color = 'green'
-        } else {
-            txt.style.color = 'black'
-        }
+
+        //     var index = 0; // 表示当前显示元素索引
+        //   for (var i = 0; i < control.length; i++) {
+        //     // control[i].className = "control-item"; // 错误 ；只能再初始化清空一次
+        //     (function (i) {
+        //       control[i].addEventListener("click", function () {
+        //         // 点击小元素后；更改当前显示元素的索引 index 
+        //         index = i;
+        //         // console.log(i)
+        //         // 每次添加之前都需要清空一次
+        //         for (var j = 0; j < control.length; j++) {
+        //           control[j].className = "control-item";
+        //           tab[j].className = "";
+        //         }
+        //         control[i].className = "control-item item-block";
+
+        //         tab[i].className = "show";
+
+        //       });
+        //     })(i);
+        //   }
     </script>
 </body>
 

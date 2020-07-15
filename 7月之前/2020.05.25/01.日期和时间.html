@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期和时间</title>
+</head>
+<body>
+    <script>
+        // 创建日期对象的方式一：使用new Date()
+        var d = new Date();
+        // 获取的是中国标准时间，会自动更新的日期和时间
+        console.log(d);
+
+        var d1 = new Date('2020-5-25 10:13:56');
+        console.log(d1);
+
+        var d2 = new Date(2020,05,25,10,17,00);
+        console.log(d2);
+
+        // 创建日期对象的方式二：使用构造函数创建Date()
+        var d3 = Date();
+        console.log(d3);
+        
+        // Date.now()产生毫秒数，从1970年1月1日开始到现在的毫秒数
+        // 可以使用毫秒数来生成一个唯一的值来做编号...
+        var t = Date.now();
+        console.log(t);
+        // 把上面的毫秒数转换成时间
+        var d4 = new Date(t);
+        console.log(d4);
+        
+        // getDate()返回一个月中的某一天，取值范围1~31
+        console.log(d.getDate());
+        // 返回一年中的第几个月，取值范围0-11,0表示一月，11表示12月
+        console.log(d.getMonth());//4
+        console.log(d.getMonth() + 1);//5
+        // 返回年份
+        console.log(d.getFullYear());
+        // 得到的值+1900等于现在的年份
+        console.log(d.getYear());
+        // 返回的是一周中的第几天，取值范围0-6,0表示周日，6表示星期六
+        console.log(d.getDay());
+
+
+        // 获取时
+        console.log(d.getHours());
+        // 获取分钟
+        console.log(d.getMinutes());
+        // 返回秒
+        console.log(d.getSeconds());
+        // 返回从1970年1月1日到指定日期的毫秒数
+        console.log(d.getTime());
+
+        // 日期时间的更改
+
+        // 更改日期中的天
+        d.setDate(18);
+        console.log(d)
+        // 更改日期中的月份
+        d.setMonth(6);
+        console.log(d)
+        // 更改日期中的年份
+        d.setFullYear(2021);
+        console.log(d)
+        // 更改日期中的时
+        d.setHours(14);
+        console.log(d)
+        // 更改日期中的分
+        d.setMinutes(0);
+        console.log(d)
+        // 更改日期中的秒
+        d.setSeconds(0);
+        console.log(d)
+        // 更改日期中的毫秒
+        d.setMilliseconds(40);
+        console.log(d)
+
+        console.log(d.toDateString())//把date对象的日期部分转换成字符串，并返回结果
+        console.log(d.toTimeString())//把date对象的时间部分转换成字符串，并返回结果
+        console.log(d.toString())
+    </script>
+</body>
+</html>

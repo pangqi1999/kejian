@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var p = {};
+    p.name = 'wangwu'
+    p.age = 20
+    //怎么删除属性
+    p.age = undefined
+    p.age = null
+    //上面2种方法只能改变属性的值，不能删除属性
+    delete p.age
+    console.log(p)
+    p.show = function(){
+        console.log('123')
+    }
+    delete p.show
+    console.log(p)
+
+    var p1 = {
+        name:'wangwu',
+        age : 40
+    }
+    //包装对象
+    Object.defineProperty(p1,'idMale',{
+        value:false,//属性值
+        //默认采用false无法删除这个属性，true可以删除这个属性
+        configurable:true,
+        writable:true,
+        enumerable:false
+    })
+    //defineProperty为对象定义一个新的属性
+    //第一个参数：要添加的对象名
+    //第二个参数： 要添加的属性名
+    //第三个参数：属性描述对象(关于属性的更多信息)
+                //value:属性值
+                //configurable:是否表示被删除，默认False无法删除
+                //  writable表示属性是否支持改变默认False无法改变
+                //enumerable:属性名是否可以被for...in...列举出来False不可以
+    p1.isMake = 'ccc'
+    //delete p1.isMake
+    console.log(p1)
+
+    for(var k in p1){
+        console.log(k)
+    }
+
+
+    p1.weight = 180;
+    //获取P1的weight属性
+     var weight= Object.getOwnPropertyDescriptor(p1,'weight')
+     console.log(weight)
+
+     //获取一个对象的所有信息
+     var a= Object.getOwnPropertyDescriptor(p1)
+     console.log(a)
+
+     //create()方法创建一个新的对象
+     //使用指定的原型对象和属性创建一个新的对象
+     var p4= Object.create({
+         name:'aa',
+         age:18,
+         fun:function(){
+             return this.name
+         }
+     })
+     console.log(p4)
+
+    //  var p5 ={
+    //      name:'zhangsan',
+    //      age:4
+    //  }
+    //  var p6 ={
+    //      name:'wangwu',
+    //      age:5
+    //  }
+    //  var p5 ={
+    //      name:'wangsi',
+    //      age:6
+    //  }
+     function Person(nameValue,ageValue,isMaleVal){
+        this.name = nameValue
+        this.age = ageValue
+        this.isMake = isMaleVal
+        Object.defineProperty(this,'birthYear',{
+            get:function(){
+                //new Date()从电脑系统自动获取当前日期
+                //getFullYEar()截取日期中的年份
+                var year = new Date().getFullYear()
+                return year - this.age
+            },
+            set:function(value){
+                var year = new Date().getFullYear()
+
+                if(value > year){
+                    alert(`出生日期不能大于` + year)
+                    return
+                }
+                this.age = year -value
+            }
+        })
+     }
+
+     var p7 = new Person('zhangzhang',18,true)
+     console.log(p7.birthYear);//2002
+
+     p7.birthYear = 1991;
+     //执行set方法
+     //将等于号后面的值当做参数传递个SET方法
+     //set方法需要在内部进行出来，计算出新的值
+     console.log(p7.age);
+
+     //一次性扩展多个属性
+     Object.defineProperties(p7,{
+         sex:{
+             value:'男',
+             configurable:true,
+             writable:true,
+             enumerable:true
+         },
+         sex:{
+             value:'女',
+             configurable:true,
+             writable:true,
+             enumerable:true
+         }
+     })
+     console.log(p7)
+
+
+     var p8 ={}
+     var p9 ={name:'asdf'}
+     var p10 ={age:30}
+     var p11 ={sec:'男'}
+     Object.assign(p8,p9,p10,p11)  
+     console.log(p8)//{name:'asdf',age:30,sec:'男'}
+     //assign:用来扩展多个对象
+     //         第一个参数:目标对象(带扩展的对象)
+     //         第一个之后的所有参数：扩展的源对象
+      //         通过复制一个或多个来创建一个新的对象
+
+</script>

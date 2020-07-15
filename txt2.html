@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    
+
+    .wrap {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .block{
+        display: block !important;
+    }
+    .wrap-list{
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+    }
+
+</style>
+
+<body>
+
+    <button class="btn">登录</button>
+    <div class="wrap">
+        <div class="wrap-list">
+            <button>确认</button>
+            <button class="reduce">取消</button>
+        </div>
+    </div>
+
+
+    <script>
+        var wrap = document.querySelector(".wrap");
+        var btn = document.querySelector('.btn');
+        var reduce =  document.querySelector('.reduce')
+                 
+            btn.addEventListener("click", function (e) {
+                  wrap.style.display = 'block'; 
+            });
+            reduce.addEventListener('click',function(e){
+                // wrap.className = 'wrap ';
+                wrap.style.display = 'none';
+            });
+     
+    </script>
+</body>
+
+</html>

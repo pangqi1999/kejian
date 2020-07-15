@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        /* h100p */
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        font-size: 60px;
+        /* 开启弹性布局，元素设置了display:flex之后，会使其子元素的垂直对齐方式失效； */
+        display: flex;
+        /* 1.在弹性布局中，我们把开启弹性布局的元素称之为"容器"，把弹性布局中所有的子元素称之为"项目" 
+           2.弹性布局的容器有2根轴，主轴和交叉轴。主轴和交叉轴。主轴方向默认是水平方向从左往右，交叉轴
+             与主轴垂直，默认方向从上往下；
+           3.弹性布局中项目的尺寸，默认情况下，占据主轴方向的尺寸是内容的大小，占据交叉轴的尺寸是尽量铺满
+             整个容器*/
+
+             /* 改变主轴方向 */
+             /* 默认值，水平方向从左往右 */
+             /* flex-direction:row; */
+             /* 与row相反，水平方向从右往左 */
+             /* flex-direction:row-reverse; */
+             /* 主轴垂直方向，从上到下 */
+              /* flex-direction:column; */
+              /* 与column相反 */
+              /* flex-direction: column-reverse; */
+
+        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+    }
+   
+</style>
+<body>
+    <section>春</section>
+    <section>夏</section>
+    <section>秋</section>
+    <section>冬</section>
+</body>
+</html>

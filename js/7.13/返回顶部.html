@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .box{
+        height: 100px;
+        background-color: red;
+        overflow: auto;
+    } */
+    p {
+        height: 200px;
+    }
+
+    button {
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 0;
+    }
+</style>
+
+<body>
+    
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <p>我是内容</p>
+    <button>返回顶部</button>
+    <script>
+        // var box = document.querySelector('.box')
+        // box.onscroll = function(){
+        //     console.log('滚动了')
+        // }
+
+        //如何初始化滚动条的位置
+        //scrollTo()指定滚动条的位置
+        //参数 对象 top纵向滚动 left横向滚动
+        // window.scrollTo({
+        //     top: 200,
+        // })
+
+        //没有动画效果返回顶部
+        // window.onscroll = function(){
+
+        // }
+        var btn = document.querySelector('button');
+        window.onscroll = function () {
+            var top = document.documentElement.scrollTop;
+            var H = innerHeight;
+            //scrollHeight = off
+            var page = document.documentElement.scrollHeight || document.body.scrollHeight
+            console.log(pageh, H, top)
+            if (top + H >= 1000) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = '';
+            }
+
+        }
+
+        //点击按钮 闪现返回顶部
+        // btn.onclick = function(){
+        //     window.scrollTo({
+        //         top:0
+        //     })
+
+
+        // }
+
+
+        //动画返回顶部
+        btn.onclick = function () {
+            //1.获取当前滚动条位置
+            var timer = setInterval(() => {
+            //2.实现js动画效果
+                top -= 10
+                window.scrollTo({
+                    top: top,
+                });
+                if (top <= 0) {
+                    clearInterval(timer)
+                }
+            }, 16.7);
+
+        };
+    </script>
+</body>
+
+</html>

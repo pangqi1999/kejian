@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字符串</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 创建字符串方式(1)---字面量
+    var str = 'JavaScript'
+    var str1 = "Java'S'cript"
+    // 字符串可以使用单引号，也可以使用双引号
+    // 当混合使用时，外部引号表示字符串类型，内部引号表示字符本身
+    var str2 = "J\"avaScrip\"t"
+    // 在js中\具有特殊功能，它可以将后面的字符以一定的规则转换成一个新的字符串
+    var str3 = 'J"avaScrip"t'
+
+    console.log(str)//JavaScript
+    console.log(str1)//Java'S'cript
+    console.log(str2)//J"avaScrip"t
+    console.log(str3)//J"avaScrip"t
+
+    // alert('天气很热<br>的南京')//天气很热<br>的南京
+    // 空字符
+    // alert('天气很热的\0\0\0南京')//天气很热的   南京
+    // 反斜杠
+    // alert('天气很热的\\\南京')//天气很热的\南京
+    // 换行
+    // alert('天气很热的\n南京')
+    // 回车
+    // alert('天气很热的\r南京')
+    // 垂直制表符
+    // alert('天气很热的\v南京')
+    // 水平制表符
+    // alert('天气很热的\t南京')
+    // 退格
+    // alert('天气很热的\b南京')
+    // 换页
+    // alert('天气很热的\f南京')
+
+    // 字符串中不能直接使用键盘回车，必须经过转译字符
+    var str4 = '南京'+
+               '南京'+
+               '南京'+5
+    console.log(str4)//南京南京南京5
+    // 隐式转换：内部帮你转换，不需要手动，转换失败时一般不会报错
+    // 强制转换：自己通过转换的函数进行转换，例如：parseInt()
+    // 强制转换转换失败，会出现异常
+    
+
+    // var str5 = String(12345)
+    // console.log(str5)//12345
+
+    var str6 = new String(123456)//字符串对象
+    // 字符串对象中取字符[x]得到的是x+1个字符
+    console.log(str6[4]);//5
+    console.log(typeof str6)//object
+    
+    // charAt(x)提取字符串字符，返回的是指定位置的字符(x+1个字符)，如果超出范围的时返回空字符串即''
+    console.log(str6.charAt(3))//4
+
+    // 返回指定位置的字符的unicode编码
+    console.log('我喜欢你'.charCodeAt('0'))
+    console.log('我喜欢你'.charCodeAt('1'))
+    console.log('我喜欢你'.charCodeAt('2'))
+    console.log('我喜欢你'.charCodeAt('3'))
+
+    var php='php',css='css',js='javaScript'
+    console.log(php.concat(css,js))//concat()用于链接多个字符串
+
+    var str7 = '天气很热热的很南京呀'
+    console.log(str7.endsWith('呀'))//endsWith()；用于判断字符串是否以某个(些)字符结尾，是返回true，不是返回false
+    console.log(str7.endsWith('很热',4))//表示字符串超出索引3-1的部分忽略掉
+    console.log(str7.includes('很热'))//includes()：是否包含(),是返回true，否返回false。
+    console.log(str7.indexOf('热'))//indexOf():检索字符串首次出现的位置，返回所在地的索引值
+    console.log(str7.indexOf('热',4))//第二个参数表示:从哪个位置开始(非索引值)
+    console.log(str7.indexOf('它',4))//如果没有找到返回-1
+
+    console.log(str7.lastIndexOf('很'))//lastindexOf()：一个参数时，寻找这个字符最后出现的位置，找不到时返回-1
+    console.log(str7.lastIndexOf('南',3))//2个参数时:果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索，寻找这个字符第一次出现的位置，找不到时返回-1
+    
+
+    console.log('我喜欢你'.charCodeAt('0'))//25105 我
+    console.log('我喜欢她'.charCodeAt('3'))//22905 她
+    var result = '我'.localeCompare('她')
+    // 如果我>她，返回1
+    // 如果我<她，返回-1
+    console.log(result)//1
+
+    console.log('*'.repeat(50))//repeat(n)重复某一字符串n次
+    console.log('**********'.length)//.length:获取字符串的长度
+    
+    var str8 = '天气很热热的天气很南京'
+    console.log(str8.replace('天气','不好'))
+    // replace('天气','不好')：替换第一次出现的字符串，只替换一次，替换时不会改变原字符串，而是生成一个新的字符串，参数2替换参数一。
+    
+    var str8 = '123456789'
+    console.log(str8.slice(3))//456789
+    //slice()截取字符串；参数(索引值)一：开始的位置，在这/个位置之前的全部被切掉
+    console.log(str8.slice(-1))//9
+    console.log(str8.slice(-2))//89
+    console.log(str8.slice(-3))//789
+    // 如果是负数，从最后一个开始算，-1表示最后一个字符
+    //                  参数(索引值)二：结束的位置，包含这个字符以及后续的字符全部切掉
+    console.log(str8.slice(3,7))//4567
+    console.log(str8.slice(-5,-3))//56
+
+
+    var str9 = "南京,江南,苏北,华中,华南"
+    var str10 = str9.split();//如果使用split('')空字符串，每个字符都会被分割成数组
+    //以逗号为分隔符把字符串变成数组
+    var str10 = str9.split(',');
+    //以第一个参数为分割符，以第二个参数为返回的数字的长度
+    var str10 = str9.split(',',3);//["南京","江南","苏北"]
+    console.log(str10);
+
+    console.log(str9.startsWith('南'))//判断字符串是否以某个字开头
+
+    var str11 = '南京天气晴朗，空气清新'
+    console.log(str11.substr(4))
+    console.log(str11.substr(4.3))
+    //substr()截取字符串
+    //第一个参数；开始位置(包含此字符)下标
+    //参数二：截取长度
+
+    console.log(str11.substring(4,7))
+    //substring()第一个参数；开始位置(包含此字符)下标
+    //参数二：结束位置（下标）(不包含此字符)
+
+    console.log(str11.substring(4,7))
+    //r如果7>4，那么就从4的位置开始
+
+    console.log('JAVESCRIPT'.toLowerCase)//把大写转换成小写
+    console.log('javescript'.toUpperCase)//把小写转化成大写 
+
+    console.log('      JAVESCRIPT      HTML     ' + 'c')
+    //去掉前后的空白，不能去掉中级的空白
+    console.log('      JAVESCRIPT      HTML     '.trim() + 'c')
+    //去掉左边的空白
+    console.log('      JAVESCRIPT      HTML     '.trimLeft() + 'c')
+    console.log('    中文空格     '.trim())
+
+    var arr8 = arr8.concat([7,''])
+    //人体自带:辅酶Q10 α生育酚 谷胱甘肽 SOD 硫辛酸 30+之后通过外用补充
+    //肌酸 肌醇 给细胞供能
+    //优秀的抗氧化物:白藜芦醇 阿魏酸(稳定vc) 麦角硫因 艾地苯
+    //易失活:白藜芦醇 谷胱甘肽 sod
+    //分子量大:虾青素(动物来源的比植物来源的效果好) 辅酶Q10
+    //皮肤里的抗氧化循环:维C 维e 硫辛酸 辅酶Q10 酶促
+ 
+    console.log(str11.substr(4.3))
+    console.log(str11.substr(4.3))
+    console.log(str11.substr(null))
+    console.log(str11.substr(4.3))
+    //如果是负数，从数组尾部开始算起
+    //-1是指最后一个元素，-2是指
+    console.log(str11.substr(4.3))
+    console.log(str11.substr(4.3))
+    console.log(str11.substr(null))
+    console.log(str11.substr(4.3))
+       //假设每天照射阳光量为100
+    //第一组：带大渔夫帽  早：15  午：20 晚：15 合：50
+    //第二组：冬季带大渔夫帽 早：10 午：20 晚：5 合：35
+    //第三组：渔夫帽+纯化学防晒 早：3  午：10 晚：15 合：28
+    //第四组: 渔夫帽+物化结合防晒 早：3 午：7 晚：7 合：17
+    //第五组：渔夫帽+纯物理(含氧化锌)防晒 早：6 午：8 晚：6 合：20
+</script>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <script>
+        var box =document.querySelector('.box')
+        // setTimeout(function(){
+        //     ani(box,'width',200,0.5);
+        // },16.7)
+        function getStyle(el, str) {
+            var res;
+            if (el.currentStyle) {
+                res = elcurrentStyle[str];
+            } else {
+                res = getComputedStyle(el, null)[str];
+            }
+            return res;
+        }
+
+        ani(box, "width", 200, 0.5,function(){
+            ani()
+        })
+
+      
+
+        function ani1(el, str, end, time,callback) {
+        var start = getStyle(el, str);//获得对象属性值 (width)
+        start = parseInt(start);//取整
+        console.log(str, start);
+        var s = end - start; // 求过度值
+        time = time * 1000;//单位换算 s-->ms
+        var timer = setInterval(function () {  //js动画都用setInterval
+          //   time/16.7 ----> fun 执行的次数
+          // s / time/16.7   每16.7ms 的值变化量 （平均值 ）
+          start += s / (time / 16.7);   //动画过程 每次移动的距离相加
+          el.style[str] = start + "px"; 
+        }, 16.7); // 浏览器刷新时间是16.7ms
+      }
+
+      if (s > 0) {
+            if (start >= end) {
+              // 出口前；也需要 el 的str 属性赋值 ；
+              // ---> 区分；哪些str 需要px 哪些不需要px
+              str == "opacity" || str === "zIndex"
+                ? (el.style[str] = end)
+                : (el.style[str] = end + "px");
+              clearInterval(timer);
+
+              if(typeof callback === "function"){
+                  
+              }
+            }
+          } else {
+            if (start <= end) {
+              str == "opacity" || str === "zIndex"
+                ? (el.style[str] = end)
+                : (el.style[str] = end + "px");
+              clearInterval(timer);
+              callback();
+            }
+          }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组对象2</title>
+</head>
+<body>
+    <script>
+        var a = 'abnv'
+        // 类数组：1.具有索引属性(数字)
+                // 2.有length属性
+        // 可以迭代对象：可以被循环的对象
+        // 数据使用for...in...循环，依次从中拿去数据进行使用
+        // 这样的过程叫做迭代或者遍历
+        console.log(a)
+        // 从类数组或者可以迭代对象中创建一个新的数组实例
+        var arr = Array.from(a)
+        console.log(arr)
+
+        var meta = document.getElementsByTagName('meta')
+        console.log(meta)
+        var arr1 = Array.from(meta)
+        console.log(arr1)
+        
+        // 被参数(各种类型的参数)转换成数组
+        var arr2 = Array.of(1,2,'a','b',true,false)
+        console.log(arr2)
+
+        // 判断是否为数组
+        console.log(Array.isArray(arr2))//true
+        console.log(Array.isArray(meta))//false
+
+        //toString()把数组转换从字符串
+        var str = arr2.toString()
+        console.log(str)
+
+        var arr3=[1,2,3,4,5,6,7,8,9,10]
+        // every测试数组中的每一个元素(都满足)条件,是则返回true,否则返回false
+        var resuit = arr3.every(function(ele,index,arr){
+            return ele % 2 ==0
+        })
+        console.log(resuit)//false
+        
+        // some测试数组中的每一个元素(有一个满足)条件是则返回true,否则返回false
+        var resuit1 = arr3.some((ele,index,arr)=>{
+            return ele % 2 ==0
+        })
+        console.log(resuit1)//true
+
+        // filter从数组中过滤一部分元素，形成一个新的数组
+        var resuit2 = arr3.filter(function(ele,index,arr){
+            return ele %2 == 0
+        })
+        console.log(resuit2)// [2, 4, 6, 8, 10]
+
+
+        var arr4 = [1,2,3,4,5,6,7,8]
+        var p = {name:'zhangsan'}
+        // map每个数组中的元素都会执行函数并且返回执行后的结果
+        // 形成一个新的数组
+        var resuit3 = arr4.map(function(ele,index,arr){
+            console.log(this)//{name:'zhangsan'}
+            // 求ele的3次幂的值
+            return Math.pow(ele,3)
+        },p)
+        // 第二个函数，执行回调函数时this的指向 {name:'zhangsan'}
+        console.log(resuit3)// [1, 8, 27, 64, 125, 216, 343, 512]
+
+
+        var arr4 = [1,2,3,4,5,6,7,8]
+        var resuit4 = arr4.reduce((acc,value,index,arr)=>{
+            console.log(acc)//5 6 8 11 15 20 26 33 
+            // acc是累加器，如果value有第二个参数，acc第一次执行时等于它(reduce)的第二个参数
+            return acc + value
+        },5)
+        console.log(resuit4)//41
+
+    </script>
+</body>
+</html>

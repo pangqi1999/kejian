@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 100px;
+    height: 400px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #eee;
+    margin: 20px 0;
+}
+nav{
+    /* 固定定位。脱离文档流不再岁页面滚动而
+    滚动。在页面中将没有他的位置，直接参照页面进行定位*/
+    position: fixed;
+    top: 200px;
+    right: 0;
+}
+</style>
+<body>
+    <nav>
+        <div>客服</div>
+        <div>分类</div>
+        <div>售后</div>
+        <div>购物车</div>
+        <div>返回顶部</div>
+    </nav>
+    <!-- P{撑开页面$$$}*100 -->
+</body>
+</html>

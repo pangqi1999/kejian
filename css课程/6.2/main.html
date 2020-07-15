@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    html,body{
+       
+        width: 100%;
+        height: 100%;
+    }
+    html{
+        margin-bottom: 0%;
+    }
+    .main{
+       margin: 0 auto;
+    }
+    .title{
+        position: relative;
+        width: 375px;
+        height: 44px;
+        font-weight: 400;
+        
+        font-size: 16px;
+        color: #1E1E1E;
+    }
+    
+    .title-text{
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+    }
+    .title-icount{
+        /* border-width: 0px; */
+        position: absolute;
+        left: 305px;
+        top: 74px;
+        width: 90px;
+        height: 32px;
+        
+    }
+    .title-extend {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: -65px;
+        width: 90px;
+        height: 32px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(242, 242, 242, 1);
+        border-radius: 32px;
+    }
+    .share{
+        display: inline-block;
+        position:absolute;
+        right: 51px;
+        top: 3px;
+        
+    }
+    .out{
+        display: inline-block;
+        position:absolute;
+        right: 6px;
+        top: 0px;
+        
+    }
+    .hr{
+        display: inline-block;
+        position: absolute;
+        left: 46px;
+        top: 4px;
+        width: 2px;
+        height: 21px;
+        background-color:rgba(242, 242, 242, 1);
+    }
+    .banner{
+        height: 250px;
+    }
+    .bannner-icon{
+        text-align: center;
+    }
+    .bannner-img{
+        text-align: center;
+    }
+    .nav{
+        height: 90px;
+        
+    }
+    .nav-list {
+        height: 88px;
+        display: flex;
+       justify-content: space-around;
+    }
+    
+    
+    .nav-list-icount{
+        width: 80px;
+        height: 80px;
+       background-image: url("./image/u56.png");
+       padding-left: 26px;
+       padding-top: 20px;
+    }
+    .nav-list-icount-1{
+        width: 80px;
+        height: 80px;
+       background-image: url("./image/u60.png");
+       padding-left: 26px;
+       padding-top: 20px;
+    }
+    .nav-list-icount-2{
+        width: 80px;
+        height: 80px;
+       background-image: url("./image/u64.png");
+       padding-left: 26px;
+       padding-top: 20px;
+    }
+    .nav-list-icount-3{
+        width: 80px;
+        height: 80px;
+       background-image: url("./image/u68.png");
+       padding-left: 26px;
+       padding-top: 20px;
+    }
+    .nav-list-text{
+        margin-top: -20px;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .teacher{
+        height: 190px;
+        margin-top: 10px;
+    }
+    .column-name{
+        float: left;
+        margin-left: 10px;
+        width: 72px;
+        height: 50px;
+        font-size: 18px;
+        color: #333;
+        line-height: 50px;
+    }
+    .column{
+        height: 50px;
+    }
+    .right{
+        float: right;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: #999;
+        margin-right: 10px;
+       
+    }
+    .right-icount,.more{
+        float: right;
+    }
+    
+    .right-icount{
+        margin-left: 10px;
+    }
+    .right-icount img{
+        width: 6px;
+        height: 11px;
+    }
+    .teacher-detailed{
+        height: 120px;
+    }
+    .teacher-detailed-list{
+        overflow-y:auto;
+        width: auto;
+        display: flex;
+    }
+    .teacher-detailed-list li{
+        margin-left: 25px;
+    }
+    .teacher-msg{
+        width: 120px;
+        height: 142px;
+        text-align: center;
+        /* border:1px solid #ccc; */
+        /* box-shadow:5px #ccc; */
+    }
+    .teacher-name{
+        margin-top: -20px;
+        color:#5f97ff;
+        font-size: 14px;
+    }
+    .teacher-subject{
+        font-size: 12px;
+    }
+    
+    .top{
+        width: 376px;
+        height: 140px;
+        position: relative;
+    }
+    /* 课程 */
+    .course-list
+    {
+        margin-top: 10px;
+        width: 100%;
+        
+    }
+    .course-item{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .course{
+        
+       
+        width: 40%;
+        border-radius: 6px;
+       
+    }
+    .card{
+        height: 78px;
+        padding-top: 20px;
+        border-radius: 6px;
+    }
+    .englich{
+       
+        background-color: rgba(204, 102, 255, 1);
+        position: relative;
+    }
+    .math{
+        background-color: rgba(0, 153, 255, 1);
+        position: relative;
+    }
+    .chemistry{
+        background-color: rgba(255, 102, 102, 1);
+        position: relative;
+    }
+    .physics{
+        background-color: rgba(0, 204, 204, 1);
+        position: relative;
+    }
+    .card-name{
+        
+        font-size: 14px;
+        color: #fff;
+    }
+    .card-number{
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.66);
+    }
+   
+    .card-pic img{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 31px;
+    }
+    .card-background{
+        position: absolute;
+        right: -7px;
+        top: -27px;
+        width: 52px;
+        height: 51px;
+    }
+    .course-price{
+        display: flex;
+        flex-direction: row;
+        justify-content:start;
+        flex-wrap:nowrap ;
+        align-items: center;
+    }
+    .course-icon{
+        width: 14px;
+        height: 14px;
+    }
+    .price-number{
+        margin-left: 10px;
+    }
+    .course-bottom{
+        margin-top: 10px;
+    }
+    
+    /* 活动 */
+    .activity-detailed{
+        padding-left: 10px;
+        /* padding-top: 10px; */
+    }
+    .activity{
+        height: 400px;
+        margin-bottom: 0;
+        /* margin-top: 80px; */
+    }
+    .activity-state-number{
+        color: #ff0000;
+    }
+    .activity-msg{
+        height: 100px;
+    }
+    .activity-img{
+        float: left;
+    }
+    .text{
+        width: 72%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 5px;
+        /* margin-right: 10px; */
+    }
+    .activity-state{
+        height: 20px;
+        margin-top: 20px;
+    }
+    .hand-state{
+        color: #ff0000;
+        font-weight: 700;
+    }
+    .hand-state{
+        float: left;
+        
+        font-size: 12px;
+    }
+    .activity-number{
+        float: right;
+        
+        font-size: 12px;
+    }
+    .activity-number{
+        margin-left: 10px;
+        font-weight: 400;
+        }
+        
+   
+    /* iframe{
+        height: 0;
+    } */
+</style>
+<body>
+    
+        <div class="title">
+            <div class="title-text">首页</div>
+            <div class="title-icount">
+                <div class="title-extend">
+                    <img src="./image/u204.svg" alt="" class="share" width="23"     height="23">
+                    <img src="./image/u203.svg" alt="" class="out" width="26" height="26" >
+                    <img src="/image/u202.png" alt="" class="hr">
+                </div>
+                
+            </div>
+        </div>
+        <div class="banner">
+            <div class="bannner-img">
+                <img src="./image/u48.png" alt="" width="360" height="210">
+            </div>
+            <div class="bannner-icon">
+                <img src="./image/1_u50.png" alt="">
+                <img src="./image/1_u50.png" alt="">
+                <img src="./image/1_u50.png" alt="">
+                <img src="./image/1_u50.png" alt="">
+                
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li>
+                    <div class="nav-list-icount">
+                       
+                        <img src="./image/u58.png" alt="" class="center">
+                    </div>
+                    <div class="nav-list-text">热门课程</div>
+                </li>
+                <li>
+                    <div class="nav-list-icount-1">
+                        <img src="./image/u62.png" alt="" class="center">
+                    </div>
+                    <div class="nav-list-text">头条教育</div>
+                </li>
+                <li>
+                    <div class="nav-list-icount-2">
+                        <img src="./image/u66.png" alt="" class="center">
+                    </div>
+                    <div class="nav-list-text">非翔活动</div>
+                </li>
+                <li>
+                    <div class="nav-list-icount-3">
+                        <img src="./image/u70.png" alt="" class="center">
+                    </div>
+                    <div class="nav-list-text">咨询教师</div>
+                </li>
+            </ul>
+        </div>
+        <div class="teacher">
+            <div class="column">
+                <div class="column-name">
+                    明星教师
+                </div>
+                <div class="right">
+                    <div class="right-icount">
+                        <img src="./image/u111.png" alt="">
+                    </div>
+                    <div class="more">更多</div>
+                   
+                </div>
+                    
+            </div>
+            <div class="teacher-detailed">
+                <ul class="teacher-detailed-list">
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u81.png" alt="">
+                        </div>
+                        <div class="teacher-name">吴老师</div>
+                        <div class="teacher-subject">小学奥数辅导</div>
+                    </li>
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u86.png" alt="">
+                        </div>
+                        <div class="teacher-name">Jason</div>
+                        <div class="teacher-subject">英语外教</div>
+                    </li>
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u91.png" alt="">
+                        </div>
+                        <div class="teacher-name">刘老师中学</div>
+                        <div class="teacher-subject">化学辅导</div>
+                    </li>
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u81.png" alt="">
+                        </div>
+                        <div class="teacher-name">吴老师</div>
+                        <div class="teacher-subject">小学奥数辅导</div>
+                    </li>
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u86.png" alt="">
+                        </div>
+                        <div class="teacher-name">Jason</div>
+                        <div class="teacher-subject">英语外教</div>
+                    </li>
+                    <li class="teacher-msg">
+                        <div class="teacher-pic">
+                            <img src="./image/u91.png" alt="">
+                        </div>
+                        <div class="teacher-name">刘老师中学</div>
+                        <div class="teacher-subject">化学辅导</div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+        <div class="course-list">
+            <div class="column">
+                <div class="column-name">
+                    热门活动
+                </div>
+                <div class="right">
+                    <div class="right-icount">
+                        <img src="./image/u111.png" alt="">
+                    </div>
+                    <div class="more">更多</div>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course">
+                    <div class="card englich">
+                        <div class="card-name">幼儿英语入门</div>
+                        <div class="card-number">外教一对一辅导</div>
+                        <div class="card-pic">
+                            <img src="./image/u118.png" alt="">
+                        </div>
+                        <div class="card-background">
+                            <img src="./image/u115.png" alt="">
+                        </div>
+                    </div>
+                    <div class="course-name">幼儿英语入门课程</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">2999.00</p>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="card math">
+                        <div class="card-name">小学奥数辅导</div>
+                        <div class="card-number">外教一对一辅导</div>
+                        <div class="card-pic">
+                            <img src="./image/u130.png" alt="">
+                        </div>
+                        <div class="card-background">
+                            <img src="./image/u115.png" alt="">
+                        </div>
+                    </div>
+                    <div class="course-name">小学奥数辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">3699.00</p>
+                    </div>
+                </div>
+                <div class="course course-bottom">
+                    <div class="card chemistry">
+                        <div class="card-name">中学化学辅导</div>
+                        <div class="card-number">高等教师小班教学</div>
+                        <div class="card-pic">
+                            <img src="./image/u136.png" alt="">
+                        </div>
+                        <div class="card-background">
+                            <img src="./image/u115.png" alt="">
+                        </div>
+                    </div>
+                    <div class="course-name">中学化学辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">1599.00</p>
+                    </div>
+                </div>
+                <div class="course course-bottom">
+                    <div class="card physics">
+                        <div class="card-name">中学物理辅导</div>
+                        <div class="card-number">高等教师小班教学</div>
+                        <div class="card-pic">
+                            <img src="./image/u148.png" alt="">
+                        </div>
+                        <div class="card-background">
+                            <img src="./image/u115.png" alt="">
+                        </div>
+                    </div>
+                    <div class="course-name">中学物理辅导</div>
+                    <div class="course-price">
+                        <div class="course-icon">
+                            <img src="./image/u120.png" alt="">
+                        </div>
+                        <p class="price-number">1599.00</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="activity">
+            <div class="column">
+                <div class="column-name">
+                    热门活动
+                </div>
+                <div class="right">
+                    <div class="right-icount">
+                        <img src="./image/u111.png" alt="">
+                    </div>
+                    <div class="more">更多</div>
+                </div>
+            </div>
+
+            <div class="activity-detailed">
+                <div class="activity-msg">
+                    <div class="activity-img">
+                        <img src="./image/u1714.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="activity-name">非翔教育夏令营</div>
+                        <div class="activity-state">
+                            <div class="hand-state">活动报名中</div>
+                            <div class="activity-number">剩余
+                                <span class="activity-state-number">25</span>
+                                个名额</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-msg">
+                    <div class="activity-img">
+                        <img src="./image/u1720.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="activity-name">非翔教育夏令营</div>
+                        <div class="activity-state">
+                            <div class="hand-state">活动报名中</div>
+                            <div class="activity-number">剩余<span class="activity-state-number">25</span>个名额</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-msg">
+                    <div class="activity-img">
+                        <img src="./image/u1726.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="activity-name">非翔教育夏令营</div>
+                        <div class="activity-state">
+                            <div class="hand-state">活动报名中</div>
+                            <div class="activity-number">剩余<span class="activity-state-number">25</span>个名额</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-msg">
+                    <div class="activity-img">
+                        <img src="./image/u1731.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="activity-name">非翔教育夏令营</div>
+                        <div class="activity-state">
+                            <div class="hand-state">活动报名中</div>
+                            <div class="activity-number">剩余<span class="activity-state-number">25</span>个名额</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+</body>
+</html>

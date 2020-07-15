@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        /* 100%视图窗口大小 */
+        width: 100%;
+        /* min-width: 1200px; */
+        height: 100%;
+    }
+
+    .content,
+    .box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box {}
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+1
+    .control {
+        width: 45px;
+        position: fixed;
+        top: 50%;
+        left: 50px;
+        transform: translate(0, -50%);
+        background-color: #ccc;
+    }
+
+    .contro-item {
+        width: 100%;
+        height: 50px;
+        background-color: #ccc;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="control">
+        <div class="contro-item"></div>
+        <div class="contro-item"></div>
+        <div class="contro-item"></div>
+        <div class="contro-item"></div>
+    </div>
+    <script>
+        var btn = document.querySelectorAll('.contro-item');
+        var box = document.querySelectorAll('.box')
+        btn[0].style.color = '#fff'
+        btn[0].style.backgroundColor = "#00000"
+        for (var i = 0; i < btn.length; i++) {
+            (function () {
+                var x = i;
+                //1:点击按钮自身的样式改变
+                btn[x].onclick = function () {
+                    console.log(btn[x])
+                    btn[x].style.color = '#fff'
+                    btn[x].style.backgroundColor = "#00000"
+                    //2点击按你有指定滚动高度
+                    //2.1知道当前点击哪一个 
+                    //2.2之前元素高度和
+                    var top = 0;
+                    for (var j = 0; j < x; j++) {
+                        top += box[j].offsetHeight;
+                    }
+                    //2.3指定滚动条滚到top位置 (没有动画滚动)
+                    window.scrollTo({
+                        top: top
+                    })
+                }
+            })(i)
+        }
+        //2：滚动联动
+        //问题：box 滚动到第几个元素
+        //----》滚动高度； 求当前滚动到哪一个
+        //根据box 滚动第几个元素求 btn到哪一个元素
+        window.onscroll  =function(){
+            //1:求滚动条滚动高度
+            var h = document.documentElement    || document.body.scrollTop;
+            //2.求元素高度
+            var count = Matg.ceil(h/(innerHeight-10));
+            for(var i=0;i<btn.length;i++){
+                btn[i].style.color = "";
+                btn[i].style.background
+            }
+            //3.当前滚动第几个元素
+            btn[count-1].style.color = '#fff'
+            btn[count-1].style.backgroundColor = "#00000"
+
+        }
+    </script>
+</body>
+
+</html>

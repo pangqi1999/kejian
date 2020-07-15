@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex折行</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+    }
+    .s1{
+        width: 600px;
+        height: 800px;
+        border: 1px solid blue;
+
+        display: flex;
+        /*  flex-wrap设置折行  默认值nowrap不折行  wrap折行第一行在上面   wrap-reverse折行第一行在最下面 */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        /* align-content:换行之后，在交叉轴上的对其方式(注意：只针对在交叉轴上的对行文本，如果项目只有一行，该属性不起作用) */
+        
+        align-content: space-between;
+    }
+</style>
+<body>
+    <section class="s1">
+        <!-- div.item{第$个}*15 -->
+        <div class="item">第1个</div>
+        <div class="item">第2个</div>
+        <div class="item">第3个</div>
+        <div class="item">第4个</div>
+        <div class="item">第5个</div>
+        <div class="item">第6个</div>
+        <div class="item">第7个</div>
+        <div class="item">第8个</div>
+        <div class="item">第9个</div>
+        <div class="item">第10个</div>
+        <div class="item">第11个</div>
+        <div class="item">第12个</div>
+        <div class="item">第13个</div>
+        <div class="item">第14个</div>
+        <div class="item">第15个</div>
+    </section>
+</body>
+</html>

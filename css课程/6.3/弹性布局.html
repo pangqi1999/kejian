@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        /* 
+        注意：弹性盒子元素本身特点没有什么变化？
+                1控制子元素  子元素宽度会变小*/
+        display:flex;
+        /* 子元素沿着什么排列 */
+        flex-direction: row;
+        
+        
+        /* 2端留白排列 */
+        justify-content:space-around;
+        
+        
+        /* 2段对齐排列 */
+        justify-content:space-between;
+       
+        /* 换行  默认不换行 挤一挤 */ 
+        flex-wrap: wrap;
+        
+        
+        /* 交叉轴：与主轴垂直 */
+        /* 元素在交叉轴上排列的方式 */
+        align-items: center;
+        
+    }
+    .chlid{
+        width: 100px;
+        height: 100px;
+        border:1px solid red;
+        font-size: 20px;
+
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

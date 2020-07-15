@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrap{
+        width:150px;
+        height: 150px;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .wraper{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        left: 200px;
+        position: relative;
+        
+    }
+</style>
+<body>
+    <div class="wrap"></div>
+    <script>
+        var wrap = document.querySelector('.wrap');
+        wrap.onclick = function(e){
+            //事件对象作用：记录用户触发事件行为位置，时间，元素等信息
+
+            console.log('触发事件位置距离父元素',e.offsetX);
+            console.log('触发事件位置距离浏览器', e.clearX);
+            console.log('触发事件位置距离屏幕',e.screexX);
+
+            //Dom 位置属性
+            //获取 触发事件元素；距离position属性的元素 顶部 和 左边的距离
+            //wraper 是 wrap 的父元素
+            //wrap.offseLeft = wraper的left*wraper的width
+            //wrap.offseTop = wraper的left*wraper的height
+            console.log(wrap.offsetLeft);
+            console.log(wrap.offsetTop);
+        }
+        
+    </script>
+</body>
+</html>

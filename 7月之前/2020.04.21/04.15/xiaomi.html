@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icon/font_u1jfw94qqfn/iconfont.css">
+    <link rel="stylesheet" href="icon2/font_u1jfw94qqfn/iconfont.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        width: 1226px;
+        margin: 0 auto;
+    }
+
+    body {
+        font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        color: #333;
+    }
+
+    /* 导航栏 */
+    nav {
+        height: 40px;
+        background-color: #333;
+    }
+
+    .nav_top {
+        height: 40px;
+        /* background-color: red; */
+    }
+
+    .link_top {
+        font-size: 12px;
+        color: #b0b0b0;
+        line-height: 40px;
+        display: inline;
+    }
+
+    .sep {
+        font-size: 12px;
+        color: #424242;
+        line-height: 40px;
+        font-family: sans-serif;
+        margin: 0 0.3em;
+    }
+
+    .link_top_right {
+        font-size: 12px;
+        color: #b0b0b0;
+        line-height: 40px;
+        padding: 0 5px;
+        float: left;
+    }
+
+    .sep_two {
+        font-size: 12px;
+        color: #424242;
+        line-height: 40px;
+
+        float: left;
+    }
+
+    .nav_right {
+        height: 40px;
+
+    }
+
+    .nav_shopping,
+    .nav_right {
+        float: right;
+    }
+
+    .nav_shopping {
+        position: relative;
+        width: 120px;
+        height: 40px;
+        color: #b0b0b0;
+        background-color: #424242;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        margin-left: 15px;
+    }
+
+    .icon-gouwuche {
+        margin-right: 4px;
+        font-size: 20px;
+        line-height: 20px;
+        vertical-align: -3px;
+
+    }
+
+    /* xiala */
+    .xiala {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        z-index: 31;
+        width: 316px;
+        height: 100px;
+        color: #424242;
+        background: #fff;
+        display: none;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+    }
+
+    .link_top:hover {
+        color: #fff;
+    }
+
+    .nav_shopping:hover {
+        color: #ff6700;
+    }
+
+    .nav_shopping:hover .xiala {
+        display: block;
+    }
+
+    .appcode {
+        position: absolute;
+        top: 26px;
+        left: 40%;
+        width: 124px;
+        height: 150px;
+        background: #fff;
+        margin-left: -55px;
+        box-shadow: 0 1px 5px #aaa;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+        line-height: 1;
+        overflow: hidden;
+        display: none;
+    }
+
+    .appcode>img {
+        width: 90px;
+        height: 90px;
+        margin: 18px 17px 12px;
+    }
+
+    .app {
+        position: relative;
+    }
+
+    .app:hover .appcode {
+        display: block;
+    }
+
+    .sanjiaoxing {
+        display: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-bottom: 7px solid #fff;
+        top: 19px;
+        left: 26.7%;
+    }
+
+    .app:hover .sanjiaoxing {
+        display: block;
+    }
+
+
+
+    /* 头部 */
+    .header_top {
+        height: 100px;
+
+    }
+
+    .logo {
+        width: 62px;
+        height: 55px;
+        margin-top: 22px;
+    }
+
+    .logo>img {
+        width: 55px;
+        height: 55px;
+        background-color: #ff6700;
+    }
+
+    .logo,
+    .header_nav {
+        float: left;
+    }
+
+    .header_nav {
+        width: 850px;
+    }
+
+    .list>li {
+        float: left;
+    }
+
+    .list a {
+        color: #333;
+        font-size: 16px;
+    }
+
+    .list {
+        width: 1130px;
+        height: 88px;
+        font-size: 16px;
+        padding: 12px 0 0 30px;
+    }
+
+    .list>li>a {
+        padding: 26px 10px 38px;
+        display: block;
+    }
+
+    .item {
+        width: 127px;
+        height: 88px;
+        padding-right: 15px;
+    }
+
+    /* 输入框 */
+    .header_right {
+        width: 296px;
+        height: 50px;
+        margin-top: 25px;
+        float: right;
+        position: relative;
+    }
+
+    .header_right input {
+        width: 245px;
+        height: 50px;
+        padding: 0 10px;
+        border: 1px solid #b0b0b0;
+        box-sizing: border-box;
+        float: left;
+
+    }
+
+    button {
+        width: 52px;
+        height: 50px;
+        padding: 1px 6px;
+        border: 1px solid #b0b0b0;
+        float: right;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+
+    }
+
+    .icon-fangdajing {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #616161;
+    }
+
+    .head_text>a {
+
+        font-size: 12px;
+        color: #757575;
+        background-color: #eee;
+        margin: 0 0 0 5px;
+    }
+
+    .head_text {
+        position: absolute;
+        top: 14px;
+        right: 64px;
+    }
+
+    .list a:hover {
+        color: #ff6700;
+    }
+
+    .head_text>a:hover {
+        color: #fff;
+        background-color: #FF6700;
+    }
+
+    button:hover {
+        background-color: #FF6700;
+    }
+
+    button .icon-fangdajing:hover {
+        color: #fff;
+
+    }
+
+    .link_top_right:hover {
+        color: #fff;
+    }
+
+    .logo img:hover {
+        display: none;
+
+    }
+
+    /* lunbo */
+    .lunbo {
+        height: 460px;
+        background-image: url("image/lunbo.webp");
+        background-size: 100%;
+    }
+
+    .list_box {
+        width: 234px;
+        height: 460px;
+        background-color: rgba(105, 101, 101, 0.6);
+    }
+
+    .lunno_left {
+        padding: 20px 0;
+    }
+
+    .lunbo_left>li {
+        width: 234px;
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .lunbo_left>li>a {
+        height: 42px;
+        color: #fff;
+        display: block;
+        padding: 0 0 0 30px;
+    }
+
+    .icon-xiangyou {
+        margin-right: 15px;
+        float: right;
+    }
+
+    .lunbo_left>li:hover {
+        background-color: #ff6700;
+    }
+
+/* 向导框 */
+    .site-category-list .children-col-4 {
+    width: 992px;
+   
+   
+}
+.lunbo_left{
+    position: relative;
+}
+.children {
+    width: 992px;
+    display: none;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 24;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+ 
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+}
+.category-item:hover .children{
+    display: block;
+  
+}
+.children-col-4 .children-list-col {
+    width: 248px;
+}
+.children-list-col {
+    float: left;
+    /* width: 265px; */
+}
+.children-list {
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+    list-style-type: none;
+}
+ .children-list li {
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.children-list .link {
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+    height: 76px;
+    transition: color .2s;
+}
+.children-list .thumb {
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+.site-category-list .children-list .text {
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+    /* 
+    .box>img{
+        width: 1226px;
+        设置滤镜 100%全过滤 0不过滤
+        filter:grayscale(60%);
+    }
+    .box>img:hover{
+        filter:grayscale(0);
+    } */
+
+    /* 第四行 */
+    .fouth_title {
+        height: 170px;
+        margin-top: 14px;
+        background-color: #fff;
+    }
+
+    .fouth_left {
+        width: 234px;
+        height: 170px;
+        background-color: #5f5750;
+        float: left;
+    }
+
+    .pic_txt {
+        margin-left: 14px;
+    }
+
+    .pic_text {
+        float: right;
+        margin-left: 15px;
+    }
+
+    .fouth_list>li {
+        position: relative;
+        width: 70px;
+        height: 82px;
+        padding: 0 3px;
+        float: left;
+    }
+
+    .fouth_list a {
+        position: absolute;
+        padding-top: 18px;
+        color: #fff;
+        font-size: 12px;
+        opacity: 0.6;
+    }
+
+    .fouth_list>li img {
+
+        width: 24px;
+        height: 24px;
+        margin: 0 23px 10px;
+    }
+
+    .fouth_list>li span {
+
+        margin: 0 0 0 14px;
+    }
+
+    .fouth_list a:hover {
+        opacity: 1;
+    }
+
+    .shang::before {
+        top: -1px;
+        left: 6px;
+        width: 64px;
+        height: 1px;
+        position: absolute;
+        content: "";
+        background: #665e57;
+    }
+
+    .you::after {
+        top: 6px;
+        left: 0;
+        width: 1px;
+        height: 70px;
+        position: absolute;
+        content: "";
+        background: #665e57;
+    }
+
+    /* 弹性布局 */
+    .home-flashsale {
+        margin-top: 30px;
+        height: 398px;
+
+    }
+
+    .box-bd {
+        width: 1226px;
+        height: 340px;
+    }
+
+    .box-hd {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .xm-item {
+        width: 234px;
+        border-top-color: #e53935;
+        height: 300px;
+        padding-top: 39px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        background: #f1eded;
+        text-align: center;
+    }
+
+    .round {
+        font-size: 21px;
+        color: #ef3a3b;
+        padding-top: 15px;
+    }
+
+    .xm-item img {
+        margin: 25px auto;
+    }
+
+    .desc {
+        color: rgba(0, 0, 0, .54);
+        font-size: 15px;
+    }
+
+    .countdown {
+        width: 168px;
+        margin: 28px auto 0;
+    }
+
+    .countdown span {
+        width: 46px;
+        height: 46px;
+        background: #605751;
+        color: #fff;
+        font-size: 24px;
+        line-height: 46px;
+        float: left;
+    }
+
+    .countdown i {
+        width: 15px;
+        float: left;
+        height: 46px;
+        line-height: 46px;
+        color: #605751;
+        font-size: 28px;
+        font-style: normal;
+    }
+
+    .home-flashsale .swiper-flashsale-prev {
+        display: inline-block;
+        width: 24px;
+        height: 16px;
+        padding: 3px 5px;
+        margin-left: -1px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 16px;
+
+        transition: color .5s;
+
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .iconfont-arrow-left-big:before {
+        content: "\E628";
+    }
+
+    .iconfont-arrow-right-big:before {
+        content: "\E623";
+    }
+
+    .home-banner-box {
+
+        height: 120px;
+        margin: 22px auto;
+        overflow: hidden;
+    }
+
+    .box-hd {
+        height: 58px;
+    }
+
+    .span16 {
+        width: 978px;
+    }
+
+    .brick-list {
+        margin: 0 0 -14px 14px;
+        width: 900px;
+    }
+
+    .brick-item-m-2 {
+        height: 260px;
+        padding: 20px 0;
+    }
+
+    .brick-item {
+
+        z-index: 1;
+        /* float: left; */
+        width: 234px;
+        margin-left: 14px;
+        margin-bottom: 14px;
+        background: #fff;
+
+    }
+
+    .brick-item-m-2 .figure-img {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 18px;
+    }
+
+    .figure-img img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .title {
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .brick-item-m .desc {
+        margin: 0 10px 10px;
+        height: 18px;
+        font-size: 12px;
+        color: #b0b0b0;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .brick-item-m-2 .price {
+        margin: 0 10px 14px;
+        text-align: center;
+        color: #ff6700;
+    }
+    .page-main{
+        background: #f5f5f5;
+    }
+    .brick-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+</style>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav_top">
+            <a href="#" class="link_top">小米商城</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">MIUI</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">loT</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">云服务</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">金融</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">有品</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">小爱开放平台</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">企业团购</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">资质证照</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">协议规则</a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top app">下载app
+                <span class="appcode">
+                    <img src="image/app.png" alt="">
+                    小米商城APP
+                </span>
+                <div class="sanjiaoxing"></div>
+            </a>
+            <span class="sep">|</span>
+            <a href="#" class="link_top">Select Location</a>
+
+            <div class="nav_shopping">
+                <section class="gouwuche"><span class="iconfont icon-gouwuche"></span>购物车（0）</section>
+                <div class="xiala">
+                    <div class="xiala_contant">购物车中还没有商品！请赶紧勾选</div>
+                </div>
+            </div>
+            <div class="nav_right">
+
+                <a href="" class="link_top_right link_padding_one">登录</a>
+                <span class="sep_two">|</span>
+                <a href="" class="link_top_right link_padding_two">注册</a>
+                <span class="sep_two">|</span>
+                <a href="" class="link_top_right link_padding_there">消息通知</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 头部 -->
+    <header class="container header_top">
+        <div class="logo">
+            <img src="image/mi-logo.png" alt="">
+        </div>
+        <div class="header_nav">
+            <ul class="list">
+                <li class="item"></li>
+                <li><a href="#">小米手机</a></li>
+                <li><a href="#">Redmi 红米</a></li>
+                <li><a href="#">电视</a></li>
+                <li><a href="#">笔记本</a></li>
+                <li><a href="#">家电</a></li>
+                <li><a href="#">路由器</a></li>
+                <li><a href="#">智能硬件</a></li>
+                <li><a href="#">服务</a></li>
+                <li><a href="#">社区</a></li>
+            </ul>
+        </div>
+
+        <div class="header_right">
+            <input type="text">
+            <span class="head_text">
+                <a href="#">小米10</a>
+                <a href="#">Redmi K30 Pro</a>
+            </span>
+            <button><span class="iconfont icon-fangdajing"></span></button>
+        </div>
+    </header>
+
+    <div class="container lunbo ">
+        <div class="list_box">
+            <ul class="lunbo_left">
+                <li class="category-item">
+                    <a href="#">手机 电话卡<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                <li class="category-item"><a href="#">电视 盒子<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/9d649ec3d7d14da7090e396d56b7cc92.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">笔记本 显示器 平板<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">加电 插线板<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">出行 穿戴<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">智能 路由器<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">电源 配件<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">健康 儿童<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">耳机 音箱<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+                <li class="category-item"><a href="#">生活 箱包<span class="iconfont icon-xiangyou"></span></a>
+                    <div class="children clearfix children-col-4">
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="children-list children-list-col children-list-col-1">
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="link clearfix">
+                                    <img src="image/pro.webp" alt="" class="thumb">
+                                    <span class="text">Redmi K30 Pro</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <section class="container fouth_title">
+        <div class="fouth_left">
+            <ul class="fouth_list">
+                <li class="you"><a href=""><img src="image/4-1-1.png" alt=""><br><span>小米秒杀</span></a></li>
+                <li class="you"><a href=""><img src="image/4-1-2.png" alt=""><br><span>企业团购</span></a></li>
+                <li><a href=""><img src="image/4-1-3.png" alt=""><br><span>F码通道</span></a></li>
+                <li class="shang you"><a href=""><img src="image/4-1-4.png" alt=""><br><span>米粉卡</span></a></li>
+                <li class="shang you"><a href=""><img src="image/4-1-5.png" alt=""><br><span>以旧换新</span></a></li>
+                <li class="shang"><a href=""><img src="image/4-1-6.png" alt=""><br><span>话费充值</span></a></li>
+            </ul>
+        </div>
+        <img class="pic_txt" src="image/4-2.jpg" alt="2" width="316">
+        <img class="pic_text" src="image/4.3.jpg" alt="3" width="316">
+        <img class="pic_text" src="image/4.4.jpg" alt="4" width="316">
+    </section>
+
+    <div class="page-main">
+        <div class="home-flashsale xm-plain-box container">
+            <div class="box-hd">
+                <h2>小米闪购</h2>
+                <div class="swiper-controls">
+                    <span class="swiper-flashsale-prev">
+                        <i class="iconfont-arrow-left-big"></i>
+                    </span>
+                    <span class="swiper-flashsale-next">
+                        <i class="iconfont-arrow-right-big"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="box-bd">
+                <div class="row">
+                    <div class="xm-item">
+                        <div class="round">14:00场</div>
+                        <img src="image/1.png" alt="">
+                        <div class="desc">距离结束还有</div>
+                        <div class="countdown">
+                            <span>03</span>
+                            <i>:</i>
+                            <span>35</span>
+                            <i>:</i>
+                            <span>40</span>
+                        </div>
+                    </div>
+
+                    <div class="xm-item">
+                        <div class="round">14:00场</div>
+                        <img src="image/1.png" alt="">
+                        <div class="desc">距离结束还有</div>
+                        <div class="countdown">
+                            <span>03</span>
+                            <i>:</i>
+                            <span>35</span>
+                            <i>:</i>
+                            <span>40</span>
+                        </div>
+                    </div>
+                    <div class="xm-item">
+                        <div class="round">14:00场</div>
+                        <img src="image/1.png" alt="">
+                        <div class="desc">距离结束还有</div>
+                        <div class="countdown">
+                            <span>03</span>
+                            <i>:</i>
+                            <span>35</span>
+                            <i>:</i>
+                            <span>40</span>
+                        </div>
+                    </div>
+                    <div class="xm-item">
+                        <div class="round">14:00场</div>
+                        <img src="image/1.png" alt="">
+                        <div class="desc">距离结束还有</div>
+                        <div class="countdown">
+                            <span>03</span>
+                            <i>:</i>
+                            <span>35</span>
+                            <i>:</i>
+                            <span>40</span>
+                        </div>
+                    </div>
+                    <div class="xm-item">
+                        <div class="round">14:00场</div>
+                        <img src="image/1.png" alt="">
+                        <div class="desc">距离结束还有</div>
+                        <div class="countdown">
+                            <span>03</span>
+                            <i>:</i>
+                            <span>35</span>
+                            <i>:</i>
+                            <span>40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-banner-box container">
+            <a href="#">
+                <img src="image/er.webp" alt="">
+            </a>
+        </div>
+
+
+        <div class="home-flashsale xm-plain-box container">
+            <div class="box-hd">
+                <h2>手机</h2>
+            </div>
+            <div class="box-bd ">
+                <div class="row">
+                    <div class="span4">
+                        <ul class="brick-promo-list ">
+                            <li class=" brick-item brick-item-l">
+                                <a href="">
+                                    <img src="image/574c6643ab91c6618bfb2d0e2c761d0b.webp" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span16">
+                        <ul class="brick-list ">
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+
+                            <li class="brick-item brick-item-m brick-item-m-2">
+                                <div class="figure figure-img">
+                                    <img src="image/0099822e42b4428cb25c4cdebc6ca53d.webp" alt="">
+                                </div>
+                                <h3 class="title">小米10</h3>
+                                <p class="desc">骁龙865/1亿像素相机</p>
+                                <p class="price">
+                                    <span>3999元起</span>
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

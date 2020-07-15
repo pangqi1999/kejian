@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var arr4 = [1,2,3,4,5,6,7,8]
+        var resuit4 = arr4.reduce((acc,value,index,arr)=>{
+            console.log(acc)//5 6 8 11 15 20 26 33 
+            // acc是累加器，如果value有第二个参数，acc第一次执行时等于它(reduce)的第二个参数
+            return acc + value
+        },5)
+        console.log(resuit4)//41
+
+        //抗糖化和抗氧化一起做更加有利于抗老
+        //抗红外线 碧柔防晒
+        //烟酰胺和A醇联用，刺激大
+        //A醇和神经酰胺联用缓解干燥，与1069联用缓解刺激。
+        
+        
+        var arr4 = [1,2,3,4,5,6,7,8]
+        var p = {name:'zhangsan'}
+        // map每个数组中的元素都会执行函数并且返回执行后的结果
+        // 形成一个新的数组
+        var resuit3 = arr4.map(function(ele,index,arr){
+            console.log(this)//{name:'zhangsan'}
+            // 求ele的3次幂的值
+            return Math.pow(ele,3)
+        },p)
+        // 第二个函数，执行回调函数时this的指向 {name:'zhangsan'}
+        console.log(resuit3)// [1, 8, 27, 64, 125, 216, 343, 512]
+    </script>
+</body>
+</html>

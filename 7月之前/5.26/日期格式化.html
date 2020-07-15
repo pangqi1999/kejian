@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dataFormate(date){
+            var d = null;
+            //instanceof 判断引用类型
+            //typeof判断值的类型
+            if(date instanceof Date){
+                d = date
+            }else{
+                if(typeof date == 'number'||typeof date =='string'){
+                    d = new Date(date)   
+                }else{
+                    //throw抛出异常后下面的代码不在执行
+                    throw'你输入的参数有误，请重新输入'
+                }
+            }
+            var year =d.getFullYear()
+            var month = d.getMonth() +1
+            var day = d.getDate()
+
+            var hour = d.getHours()
+            var minute = d.getUTCMinutes()
+            var second = d.getSeconds()
+            //三目运算符
+            //判断语句？值1: 值2
+            //条件成立，获取值1: 不成立，获取值2
+            month = month<10?`0${month}`:`0${month}`
+            day = day<10?`0${day}`:`0${day}`
+            hour = hour<10?`0${hour}`:`0${hour}`
+            minute = minute<10?`0${minute}`:`0${minute}`
+            second = second<10?`0${second}`:`0${second}`
+lzz
+            return `${year}-${month}-${day} ${hour}:${minute}:${second}`
+            console.log(dateFormate(new date()))
+
+            con.log()
+        }
+    </script>
+</body>
+</html>

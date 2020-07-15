@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .wrap {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        margin: 10px auto;
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .wrap img {
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        display: none;
+    }
+
+
+    .control {
+        width: 140px;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translate(-50%,0);
+    }
+
+    .control-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .active{
+        background-color: #ccc;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="view">
+            <img src="./img/3.jpg" alt="" class="show">
+            <img src="./img/2.jpg" alt="">
+            <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="control">
+            <div class="control-item"></div>
+            <div class="control-item"></div>
+            <div class="control-item"></div>
+        </div>
+    </div>
+
+    <script>
+        //确认初始化：2 html+css 2 js方式完成初始化 样式
+        //2第二部：分析用户行为。 ----》给什么元素绑定什么事件
+        //3第三部 事件发生，哪个Html元素发生css的动态版
+        //完成动态交互：可能需要声明变量去代表内容。
+        //注意：表示状态变量：技术起，true/false 
+        //1作用域问题，改变量需要哪些函数使用，---》所有使用地方 都能访问的公共的作用域中
+        //2变量污染问题，解决：分开声明，或者闭包解决污染物体
+
+        var control = document.querySelectorAll('.control-item');
+        var view = document.querySelectorAll('.view>img');
+        var pre = document.querySelectorAll("#pre")
+        // console.log(view)
+        for(var i =0;i<control.lenght;i++){
+            (function(i){
+                control[i].addEventListener('click',function(){
+                    //每次添加之前需要清空一次
+                    for(var j = 0;j<count.lenght;j++){
+                        control[j].className ="control-item" ;
+                        view[j].className = 'show'
+                    }
+                    control[i].className = 'control-item active'
+                    view[i].className = 'show'
+                })// i是形参i
+                
+            })
+        }
+    </script>
+</body>
+
+</html>

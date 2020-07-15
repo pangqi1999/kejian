@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var name,age,isMale,height,weight,course;
+    name = 'xiaoming';
+    age = 20;
+    isMale = true;
+    height = 180;
+    weight = 100;
+    course = 40;
+
+    function showPerson(n,a,h,w,c){
+        console.log('姓名:' + n);
+        console.log('年龄:' + a);
+        console.log('身高:' + h);
+        console.log('体重:' + w);
+        console.log('成绩:' + c);
+    }
+    showPerson(name,age,height,weight,course)
+
+    //对象就相当于一个容器，可以包含数据和功能
+    //数据：可以通过对象属性获取和设置数据
+    //功能：通过对象的方法可以是使用对象提供的功能属性和方法
+
+    //创建对象的方式(1)，使用字面量
+    //{}字面量，不放任何属性和方法，这被称空对象
+    //对象：key属性，value(键值对)
+
+    var person1  = {
+        name :'zhangsan',
+        age : 20,
+        height : 180,
+        weight : 190,
+        showP:function(){
+            console.log(this.height );
+            console.log(this.age );
+        }
+      
+    }
+    person1.showP()
+
+    
+    
+    
+    
+    
+    //创建一个空对象
+    var person = {};
+    //在空对象中放入数据(name,age,height,weight)
+    person.name = 'list';
+    person.age = 30;
+    person.height = 180;
+    person.weight = 190;
+
+    var a= person.name;
+    //从对象中用点调用获取属性值。 对象.属性
+    console.log(a);//list
+
+    function showPerson1(){
+        //for...in...就是循环对象中的属性，取值[]
+        //person[key]获取Person中的Key属性的值
+        for(var key in person){
+            console.log(key + ':' + person[key])
+        }
+    }
+    //调用person
+    showPerson1()
+
+    //对象既是数据容器，也是功能容器
+    //实现这一点需要吧函数放到对象的内部
+
+    //放到对象内部的函数和属性类似，但他不等于一个值而是等于一个函数
+    //放到对象内部的函数通常叫做方法
+    person.show = function(){
+        //this是谁调用或应用就指向谁
+        console.log(this.name)
+    }
+    person.show();
+
+    //对象包含属性和方法
+    //属性的语法格式同css属性语法格式
+    //属性名称中如果包含-: 空格等非法字符时:需要使用双引号包裹，访问时使用[]
+    var p = {
+        name:'王宝强',
+        height:180,
+        "p-age":30,
+        sex:true,
+        sayHello:function(content){
+            return this.name + "说" +content
+        }
+    }
+    console.log(p['height']);//180
+    console.log(p.height);//180
+    console.log(p["p-age"]);//30
+    console.log(p.sayHello('今天休息'));//王宝强说今天休息
+    p.weight = 123;
+
+//创建对象方式(2)，使用object对象
+
+//js最顶层的对象是object,是js中所有对象的祖先
+var p1 = new Object({
+    name:"张三",
+    age:23
+
+})
+p1.height = 180;
+p1.run = function(){
+    return this.name + '每天上课'
+}
+console.log(p1.run());
+
+//创建对象方式(3)，使用构造函数的是一类对象
+//创建构造函数时 首字母 “必须” 大写
+function P4(name,age,height){
+    this.name = name
+    this.age = age
+    this.height = height
+    //方法不建议放在这里，会占用大量内存
+   
+}
+//把方法放到原型链上
+//原型链：对象可以找到父元素，父元素也可以往上找，一直找到object对象位置
+//每个函数都有prototype属性，指向父元素
+P4.prototype.run = function(){
+    return '我累了'
+}
+var p5 = new P4('wangsi','40','125')
+console.log(p5)
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        color:  rgb(95, 93, 93);
+    }
+    table{
+        border: rgb(207, 206, 206);
+    }
+    td{
+        height: 40px;
+        width: 300px;
+        border-bottom: 1px solid rgb(207, 206, 206);
+    }
+    td:hover{
+        background-color: rgb(231, 229, 229);
+    }
+  
+
+/* switch开关 */
+.switch-component {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ff4949;
+  border-radius: 30px;
+  border: none;
+
+  /* outline 简写属性在一个声明中设置所有的轮廓属性。 */
+  outline: none;
+  /* 去除浏览器默认样式 */
+  -webkit-appearance: none;
+  transition: all .2s ease;
+}
+
+
+.switch-component::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all .2s ease;
+ }
+
+
+.switch-component:checked {
+  background-color: #13ce66;
+}
+
+.switch-component:checked::after {
+  left: 50%;
+ }
+
+
+</style>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">日期</td>
+            <td>姓名</td>
+            <td>地址</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">2016-05-02</td>
+            <td>王小虎</td>
+            <td>上海市普陀区金沙江路 1518 弄</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">2016-05-04</td>
+            <td>王小虎</td>
+            <td>上海市普陀区金沙江路 1518 弄</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">2016-05-01</td>
+            <td>王小虎</td>
+            <td>上海市普陀区金沙江路 1518 弄</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">2016-05-03</td>
+            <td>王小虎</td>
+            <td>上海市普陀区金沙江路 1518 弄</td>
+            
+        </tr>
+    </table>
+    
+    <!-- <button></button> -->
+    <input class='switch-component' type='checkbox'> 
+
+
+</body>
+</html>

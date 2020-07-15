@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        width: 1000px;
+        margin: 0 auto;
+
+    }
+
+    body {
+        font: 400 1em/1.8 Microsoft Yahei, Avenir, Segoe UI, Hiragino Sans GB, STHeiti, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    }
+    li{
+        text-align: -webkit-match-parent;
+    }
+    
+
+
+    /* 头部 */
+    .header {
+        width: 1349px;
+        height: 80px;
+        margin-bottom: 35px;
+    }
+
+    .qq_navwarp {
+        width: 100%;
+        margin-bottom: 35px;
+        height: 79px;
+        background: #fff;
+        border-bottom: 1px solid #ebebeb;
+        box-shadow: 0 1px 2px hsla(0, 0%, 60%, .05);
+    }
+
+    .nav_logo {
+        width: 122px;
+        padding: 25px 15px 20px 30px;
+    }
+
+    img {
+        width: 122px;
+        height: 33px;
+        border-style: none;
+        border: 0;
+        vertical-align: middle;
+    }
+
+
+    .nav_logo,
+    .qq_nav {
+        float: left;
+    }
+
+    .main_list>li {
+        float: left;
+        line-height: 78px;
+        height: 78px;
+        padding: 0 15px;
+    }
+
+    .main_list {
+        height: 78px;
+        overflow: hidden;
+    }
+
+    .main_list>li>a {
+        padding: 26px 0 19px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .nav_more {
+        height: 80px;
+    }
+
+    .nav_more,
+    .main_list {
+        float: left;
+    }
+
+    .nav_more {
+        width: 96.39p;
+        height: 30px;
+        padding: 26px 15px 24px;
+    }
+
+    .more_icon {
+        display: inline-block;
+        padding: 0 14px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        font-size: 14px;
+        color: #3563d5;
+        cursor: pointer;
+        background: #e3f3fe;
+    }
+
+    .loginwrap {
+        width: 84px;
+        height: 36px;
+        display: block;
+        float: right;
+        margin: 13px 30px 0 0;
+    }
+
+    .login {
+        height: 36px;
+    }
+
+    .loginarea {
+        display: block;
+        float: left;
+        /* position: relative; */
+        line-height: 16px;
+
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .loginbtn {
+        width: 74px;
+        height: 26px;
+        display: inline-block;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .loginbtn em {
+        font: 400 1em/1.8 Microsoft Yahei, Avenir, Segoe UI, Hiragino Sans GB, STHeiti, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+
+        display: block;
+        width: 74px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        background: #e3f3fe;
+        border-radius: 12px;
+        color: #3563d5;
+    }
+
+    .top_ad {
+        width: 1349px;
+        height: 90px;
+    }
+
+    .guanggao {
+        position: relative;
+    }
+
+    .guanggao>img {
+        position: absolute;
+        width: 1000px;
+        height: 90px;
+        left: 0px;
+        top: 0px;
+        cursor: pointer;
+
+        background-color: #fff;
+
+
+    }
+
+
+    /* 内容 */
+    .qq_content {
+        padding: 16px 16px 0;
+        width: 1000px;
+        height: 800px;
+
+    }
+
+    .new_tit {
+
+
+        width: 1000px;
+        border-bottom: 1px solid #bfcce5;
+        height: 42px;
+        line-height: 42px;
+
+    }
+
+    .new_tit h2 {
+        height: 42px;
+        float: left;
+        color: #5184eb;
+        font-size: 20px;
+        line-height: 39px;
+
+    }
+
+    .fr {
+        width: 330px;
+        display: block;
+        float: right;
+        height: 43px;
+        line-height: 42px;
+    }
+
+    .day {
+        padding-right: 10px;
+        width: 180px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .weather {
+        font-size: 13px;
+        color: #141414;
+        height: 42px;
+    }
+
+    .weather>img {
+        height: 20px;
+        width: 20px;
+
+        vertical-align: middle;
+        margin-top: 12px;
+    }
+
+    .day,
+    .weather>img {
+        float: left;
+    }
+
+    .List {
+        width: 670px;
+        height: 298px;
+        /* margin-right: 0; */
+    }
+
+    .list {
+        height: 350px;
+        margin-top: 30px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #e6e6e6;
+        font: 400 1em/1.8 Microsoft Yahei, Avenir, Segoe UI, Hiragino Sans GB, STHeiti, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    }
+
+    .list>li {
+        height: 57px;
+        padding: 10px 0;
+    }
+    .List a{
+        color:#333;
+    }
+
+    .detail {
+        height: auto;
+    }
+
+    
+
+    .detail h3 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    h3.bold {
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .news_bar{
+        width: 300px;
+        height: 380px;
+        margin-top: 30px;
+        background-color: #f7f8f9;
+        margin-bottom: 30px;
+    }
+    .news_bar,.List{
+        float: left;
+    }
+    .news_bar a{
+        color: #333;
+        text-decoration:wavy;
+    }
+    .hd{
+        padding-top: 10px;
+    }
+    .hd h2{
+        padding-left: 12px;
+    }
+    .hd img{
+        width: 105px;
+        height: 28px;
+    }
+    .bd{
+        width: 300px;
+        height: 328px;
+        padding: 10px 10px 15px;
+    }
+    .item-pic{
+        line-height: 22px;
+        padding: 0 0 15px;
+    }
+    .list_right{
+      font-size: 14px;
+    }
+    .list_right li{
+        font-size: 14px;
+    line-height: 20px;
+    padding: 6px 0 6px 12px;
+    }
+    .txt{
+        width: 280px;
+        height: 90px;
+        font-size: 14px;
+    }
+    .pic{
+        float: left;
+    }
+    .pic img{
+        width: 120px;
+        height: 90px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="qq_navwarp">
+            <a href="" class="nav_logo">
+                <img src="pic/qq_logo.png" alt="">
+            </a>
+            <div class="qq_nav">
+                <div class="nav_list">
+                    <ul class="main_list">
+                        <li><a href="#" class="active">要闻</a></li>
+                        <li><a href="#">抗肺炎</a></li>
+                        <li><a href="#">北京</a></li>
+                        <li><a href="#">娱乐</a></li>
+                        <li><a href="#">体育</a></li>
+                        <li><a href="#">军事</a></li>
+                        <li><a href="#">NBA</a></li>
+                        <li><a href="#">国际</a></li>
+                        <li><a href="#">科技</a></li>
+                        <li><a href="#">财经</a></li>
+                        <li><a href="#">汽车</a></li>
+                    </ul>
+                    <div class="nav_more">
+                        <span class="more_icon">
+                            <em class="open">
+                                更多+
+                            </em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loginwrap">
+                <div class="login">
+                    <div class="loginarea">
+                        <div>
+                            <div class="loginbtn">
+                                <em>一键登录</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top_ad">
+        <div class="container guanggao">
+            <img src="pic/guanggao.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="qq_content container">
+
+        <div class="new_tit">
+            <h2>今日要闻</h2>
+
+            <div class="fr">
+                <span class="day">2020年4月20日 星期一</span>
+                <a href="#" class="weather">
+                    <img src="pic/duoyun.png" alt=""> 南京市 20° 多云
+                </a>
+            </div>
+        </div>
+
+        <div class="List">
+            <ul class="list">
+                <li>
+                    <div class="detail">
+                        <h3 class="bold "><a href="#">总书记来到秦岭，关注山清水秀有深意。</a></h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail">
+                        <h3 class="bold"><a href="#">时政微视频|你好 陕西 今天习近平走进这座大山考察</a></h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail">
+                        <h3><a href="#">习近平到秦岭考察生态环境 到基层考察脱贫攻坚</a></h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail">
+                        <h3><a href="#">世卫组织总干事：感谢20国集团对世卫组织的支持</a></h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="detail">
+                        <h3><a href="#">进博朋友圈再扩容 全球企业为中国经济投下“信心票”</a></h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="news_bar">
+            <div class="hd cf">
+                <h2>
+                    <a href=""><img src="pic/huati.png" alt=""></a>
+                </h2>
+            </div>
+            <div class="bd">
+                <ul class="list_right">
+                    <li class="item-pic">
+                        <div class="cf">
+                            <div class="pic">
+                                <a href="">
+                                    <img src="pic/0.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <a href="">2019年，正当防卫放开了吗？|特别企划(3)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">正当防卫判决稀少，本就是生活的常态 | 特别策划（二）</a>
+                    </li>
+                    <li>
+                        <a href="#">让正当防卫制度成为“活的法律”，且持久永恒 | 今日话题特别策划（一）</a>
+                    </li>
+                    <li>
+                        <a href="#">首日预售破1.3亿的春节档：除了热闹，能留下经典吗</a>
+                    </li>
+                    <li>
+                        <a href="#">百名中国游客泰国机场遭野蛮搜身？不必夸大其词</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- <div class="sideder">
+        <div class="Right">
+            
+        </div>
+    </div> -->
+</body>
+
+</html>

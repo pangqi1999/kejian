@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    fieldset{
+        width: 1200px;
+        margin: 50px auto;
+        padding: 30px 50px;
+        border-width:1px;
+    }
+    div{
+        margin: 20px 0; 
+    }
+    textarea{
+        resize: none;
+        /* 通过cols和rows可以定义文本区域的宽高，
+        可以更加常用的whith和height */
+        width: 220px;
+        height: 200px;
+        font-size: 2em;
+    }
+</style>
+<body>
+    <form action="#"></form>
+        <!-- fieldset将表单内的元素进行分组，会产生一个表框  -->
+        <fieldset>
+            <!-- legend 元素为fieldest 元素定义标题(caption)  -->
+            <legend>请选择</legend>
+            <div>
+                <!-- radio定义了单选框 -->
+                <!-- 多个input的name值设置为一样我们才能
+                    称之为一组单选框，单选框只能同时选中一个 -->
+                    <!-- checked 首次加载默认选中-->
+                <input type="radio" id="boy" name="gender" checked>
+                <label for="boy">男孩</label>
+                <input type="radio" id="girl" name="girl">
+                <label for="girl">女孩</label>
+            </div>
+            <div>
+                <!-- checkbox定义了复选框 -->
+                <!-- disabled禁用选项 -->
+                <input type="checkbox" id="html5" name="skills">
+                <label for="html5">HTML5</label>
+                <input type="checkbox" id="css33" name="skills" disabled>
+                <label for="css3">css3</label>
+                <input type="checkbox" id="javescript" name="skills">
+                <label for="javescript">javescript</label>
+            </div>
+        </fieldset>
+        <div>
+            <!-- select定义了单选或者多选菜单 -->
+            <!-- multiple可选择多个选项 -->
+            <select name="skill" id="skill" multiple>
+                
+                    <!--定义了选项组 -->
+                    <!-- label添加选项组的描述 -->
+                <optgroup label="技能">
+                    <!-- option定义了列表中的一个选项内容 -->
+                    <option value="1">HTML5</option>
+                    <option value="2">CSS3</option>
+                    <!-- selsected属性规定在页面加载时预先
+                    选定该选项 -->
+                    <option value="3" selected>JavaScript</option>
+                    <option value="4">PHP</option>
+                </optgroup>
+                <optgroup label="装备">
+                    <option value="1">animate.css</option>
+                    <option value="2">Jquery</option>
+                    <option value="3">BootStrap</option>
+                    <option value="4">Vue</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <select name="list" id="list">
+                <option value="0" selected>请选择</option>
+                <optiom value="1">百度</optiom>
+                <optiom value="2">网易</optiom>
+                <optiom value="3">腾讯</optiom>
+                <optiom value="4">阿里</optiom>
+                <optiom value="5">搜狐</optiom>
+            </select>
+        </div>
+
+        <!-- textarea定义了多行输入文本，文本区可以容纳无限量的文本 -->
+        <!-- name定义了文本区的名字 -->
+        <!-- cols定义了文本区的宽 -->
+        <!-- rows定义了文本区的高 -->
+        <textarea name="html_text" id="html_text" cols="30" rows="10">
+
+        </textarea>
+    </form>
+</body>
+</html>

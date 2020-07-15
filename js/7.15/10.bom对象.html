@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    BOM 窗口对象
+    window
+    ifram 是窗口
+    <!-- 
+        a:默认事件：跳转链接并进行页面刷新 
+        通过修改url 地址 完成链接跳转
+    -->
+    <a href="./a.html">跳转A</a>
+    <button>跳转</button>
+    <script>
+        //url  地址
+        //如何通过js 获取Url 地址信息？ localtion
+        console.log(location.href)
+        console.log(location.origin)
+        console.log(location.pathname)
+
+        document.querySelector('button').onclick =function(){
+            location.href = './a.html';//重订向 跳转链接
+        }
+
+        //window对象时最大的对象
+        //不能通过window 直接获取iframe 窗口中嵌入的页面
+    </script>
+</body>
+</html>

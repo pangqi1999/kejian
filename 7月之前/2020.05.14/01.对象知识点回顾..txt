@@ -1,0 +1,41 @@
+对象的创建
+1 字面量对象
+2 new Obejct()
+3 构造函数
+
+对象的访问
+person.name
+person['name']
+
+对象的属性创建
+{name:'aaa'}
+person.name = 'cccc'
+person['name'] = 'fff'
+Object.defineProperty(person,'isMale',{
+
+})
+对象的方法创建
+{sayHello:function(){}}
+person.sayHello = function(){}
+person.prototype.run = function(){}
+
+删除属性
+delete p.age
+对象的常用方法
+Object.defineProperty()
+Object.definproperties()
+Object.assign(target,soucre,...)
+Object.create()
+Object.isForzen()
+Object.freezen()
+Object.seal()
+Object.isSealed()
+Object.preventExtensions()
+Object.isExtensible()
+Object.keys()
+Object.entries()
+p.hasOwnProperty()
+p.toString()
+对象和JSON格式的字符串转换
+JSON.stringify() 把对象转换成JSON格式字符串
+JSON.parse() 把JSON格式字符串转换成对象

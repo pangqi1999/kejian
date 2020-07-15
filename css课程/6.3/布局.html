@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 400px;
+        height: 400px;
+        background-color: blue;
+    }
+    .size{
+        width: 100px;
+        height: 100px;
+    }
+    .left{
+        background-color: red;
+        /* margin-bottom: 10px; */
+        float: left;
+    }
+    .right{
+        background-color: chartreuse;
+        /* margin-top: -20px; */
+        float: left;
+        /* 外边距塌陷 */
+        /* margin-top: 20px; */
+    }
+</style>
+<body>
+    <!-- 布局 ：
+        盒子布局 margin padding box-shaow
+        position    static relative absolute
+        float   left right
+        弹性布局 display:flex
+        tranform translate
+
+        盒子布局可以和其他布局综合使用 其他布局只能单独使用
+
+        横向布局  ----- 所有      display:inline-xx
+        纵向布局  ----- 盒子布局  display:block; width:100%
+    -->
+    <div class="box">
+
+        <!--
+            盒子布局总结
+            1.margin-top  margin-bottom<0  大哥在下 小弟在上
+                margin- top/bottom/left/right 元素向 上下左右 移动
+                用途： 微调 拉开兄弟元素距离
+
+            2：padding 拉开 父子关系的距离
+            -->
+        <div class="left size"></div>
+        <div class="right size"></div>
+    </div>
+</body>
+</html>

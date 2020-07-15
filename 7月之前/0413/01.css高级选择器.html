@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+/* 选择页面中具有sx属性的div元素 */
+div[sx]{
+    background-color: greenyellow;
+}
+/* 选中具有sx属性值为123的div元素 */
+[sx="123"]{
+    color: darkred;
+}
+table,table td{
+    border:1px solid #000;
+    border-collapse:collapse ;
+}
+/* 选中元素中第一个td元素 */
+td:nth-of-type(1){
+background-color: yellow;
+}
+/* 每一个元素中倒数第一个td标签 */
+td:nth-last-of-type(1){
+    background-color: blue;
+}
+/* 选择第二个及之后的所有td元素 */
+td:nth-of-type(n+2){
+    font-size: 30px;
+}
+/* 选中所有子元素中第一个 */
+td:first-child{
+    color: aqua;
+}
+/* 选中所有子元素中最后一个 */
+td:last-child{
+    color: aqua;
+}
+/* 选中所有子元素td中第三个 */
+td:nth-child(3){
+    background-color: green;
+}
+
+td:nth-child(4){
+    /* 右边的边框 */
+    border-right-width:0;
+}
+</style>
+<body>
+    <div sx></div>
+    <div sx="123"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <table>
+        <tr>
+            <td>1111</td>
+            <td>2222</td>
+            <td>3333</td>
+            <td>4444</td>
+        </tr>
+        <tr>
+            <td>2211</td>
+            <td>2222</td>
+            <td>2233</td>
+            <td>2244</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 70px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        text-align:center;
+        line-height: 70pz;
+        font-style: 18px;
+        font-weight: 900;
+    }
+</style>
+<body>
+    <div class="box">开始点名</div>
+    <button id="start">开始</button>
+    <button id="stop">暂停</button>
+    <script>
+        var names = [
+            '丁龙飞', '季禹龙','唐依林','陈顺','李宇鑫','周超','刘昊'
+        ]
+        var box = document.querySelector('.box');
+        var strat = document.querySelector("#start");
+        var stop = document.querySelector("#stop");
+        var timer;
+        var flag = true;
+        strat.onclick = function(){
+            
+             timer = setInterval(function(){
+                var random = Math.floor(Math.random()*(names.length))
+                box.innerHTML = names[random]
+            },10)
+            console.log()
+        }
+        stop.onclick = function(){
+            clearInterva(timer)
+        }
+
+        // bug 点击多次不能清除timer
+        //网络性能优化
+        //防抖 残留
+        //防抖多次 
+        //多次点击按钮以第一次为主
+    </script>
+</body>
+</html>

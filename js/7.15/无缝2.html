@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box>ul {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box>ul>li {
+            flex: 1;
+            border: 2px solid red;
+            background: #f5f5f5;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .box>ul .active {
+            background: yellow;
+        }
+
+        .box>ol {
+            width: 3200px;
+            height: 540px;
+            font-size: 200px;
+            text-align: center;
+            line-height: 540px;
+        }
+
+        .box>ol>li {
+            flex: 1;
+            width: 800px;
+            height: 100%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="ul">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ol class="ol">
+            <li class="active" style="background:red;">1</li>
+            <li style="background:orange;">2</li>
+            <li style="background:yellow;">3</li>
+            <li style="background:greenyellow;">4</li>
+        </ol>
+    </div>
+</body>
+<script>
+
+    let ul = document.querySelector(".ul");
+    let liList = ul.getElementsByTagName("li");
+
+    let ol = document.querySelector(".ol");
+    let olList = ol.getElementsByTagName("li");
+
+    let box = document.querySelector(".box");
+
+   /*-----------------切换效果----------------无缝轮播效果往下-----------*/
+    //给ul中的li绑定点击事件 
+    for (let i = 0; i < liList.length; i++) {
+
+        liList[i].onclick = function () {
+            //点击之后先删除所有元素的class   防止干扰
+            for (var j = 0; j < liList.length; j++) {
+                liList[j].className = "";
+            }
+            //当前是谁 就给谁新增class
+            liList[i].className = "active";
+            //切换图片 与当前数值一一对应
+            ol.style.transform = `translateX(-${parseInt(getStyle(olList[0], "width")) * i}px)`
+            //n为当前i值，与自动轮播相对应
+            n = i;
+        }
+    }
+
+
+    /*----------------------原生js无缝轮播-----------------------------------------------*/
+    //getStyle(ele, attr)  封装获取非行内样式   
+    //兼容写法 
+    function getStyle(ele, attr) {
+        if (window.getComputedStyle) {  // 存在即为  常规浏览器（高版本IE）  
+            return window.getComputedStyle(ele)[attr];
+        } else {                        //  低版本 ie(8↓)
+            return ele.currentStyle[attr];
+        }
+    }
+
+    let n = 0;
+    let timer = null;
+
+    //克隆第一张轮播图片  或者直接页面建立也可以 但循环只能是轮播图片.length-1 
+    // 无缝轮播图 此步为关键   
+    //因为最后一张显示的同时会被第一张给覆盖，从而达到无缝轮播的效果
+    let clone = olList[0].cloneNode(true);
+    ol.appendChild(clone);
+
+    ol.style.width = parseInt(getStyle(olList[0], "width")) * olList.length + "px";
+
+    function autoplay() {
+        timer = setInterval(function () {
+            n++;
+            // n = n % 4;  // 写在这里最后一张图片不可能显示，显示不了无缝轮播图的效果
+            ol.style.transition = "transform 1s ease";
+            ol.style.transform = `translateX(-${parseInt(getStyle(olList[0], "width")) * n}px)`
+
+            n = n % 4;   // 写在这里为了让最后一张图片显示 然后在事件监听下被第一张覆盖
+            for (var j = 0; j < liList.length; j++) {
+                liList[j].className = "";
+            }
+            liList[n].className = "active";
+           // console.log(n);
+        }, 3000)
+    }
+
+    autoplay();
+
+    //监听transitionend  当transition 效果结束后执行该事件
+    ol.addEventListener("transitionend", function () {
+        ol.style.transition = "none";
+        ol.style.transform = `translateX(-${parseInt(getStyle(olList[0], "width")) * n}px)`
+    })
+
+
+    // 鼠标划入  清除自动轮播图
+    box.onmouseenter = function () {
+        clearInterval(timer);
+    }
+    // 鼠标划出  启动自动轮播图
+    box.onmouseleave = function () {
+        autoplay();
+    }
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="form1" action="" method="get">
+        <select name="province" onChange="set_city(this, this.form.city);">
+            <option value="0">选择省</option>
+            <option value="河北省">江苏省</option>
+            <option value="山西省">安徽省</option>
+        </select>
+        <select name="city" id="citys">
+            <option value="0">选择城市</option>
+        </select>
+        <script>
+            cities = new Object();
+            cities['河北省'] = new Array('南京市', '苏州市', '无锡市', '常州市', '盐城市', '淮安市', '徐州市', '镇江市', '连云港市');
+            cities['山西省'] = new Array('合肥市', '芜湖市', '马鞍山市', '六安市', '安庆市', '黄山市', '滁州市', '宿州市', '毫州市');
+
+            function set_city(province, city) {
+                var pv, cv;
+                var i, ii;
+
+                pv = province.value;
+                cv = city.value;
+
+                city.length = 1;
+
+                if (pv == '0') return;
+                if (typeof (cities[pv]) == 'undefined') return;
+
+                for (i = 0; i < cities[pv].length; i++) {
+                    ii = i + 1;
+                    console.log(cities[pv][i])
+                    city.options[ii] = new Option();
+                    city.options[ii].text = cities[pv][i];
+                    // city.options[ii].value = cities[pv][i];
+                }
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>

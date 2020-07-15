@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动及清除浮动</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* 清理浮动方式一:手动给父元素添加高度,但是父元素高度固定,如果浮动元素高度不统一,那么就会破坏下面的布局,所以推荐只在高度统一的区域使用(例如:导航栏) */
+    
+    /* 清理浮动方式二:通过添加一个空标签来达到清理浮动的目的，增加了多余的空标签，建议少量使用 */
+    section{
+        background-color: red;
+    }
+    main{
+        height: 200px;
+        background-color: green;
+    }
+    .item{
+        line-height: 40px;
+        /* float设置浮动  left左浮动  right右浮动 */
+        float: left;
+        /* 注意：用到浮动一定要清理浮动 */
+    }
+    /* 清理浮动方式一 */
+    /* 通过增加一个空标签，来清理浮动，让父元素自动获取高度 */
+    /* 优点:代码量少，好理解 */
+    /* 缺点：增加多余的空标签 */
+    /* 建议：少量使用 */
+    /* .clear{
+        clear: both;
+    } */
+
+    /* 清理浮动方式二 */
+    /* 手动给父元素添加高度，达到清理浮动的目的 */
+    /* 优点：简单明了，比较直接 */
+    /* 缺点：父元素高度固定，如果浮动元素高度不统一，那么就会影响后面的布局 */
+    /* 建议：只在高度统一的区域使用(例如：导航栏) */
+    /* section{
+        height: 40px;
+    } */
+
+
+    /*  清理浮动方式三 */
+    /* 优点：几乎没有任何缺点，是比较常用的一种清理浮动的方式 */
+    /* 缺点：代码量大，不好记忆 */
+    section::after{
+        content: "";
+        display: block;
+        height: 0;
+        /* 元素不可见 */
+        visibility: hidden;
+        clear: both;
+    }
+    section{
+        zoom: 1;
+    }
+</style>
+<body>
+    <section>
+        <div class="item">天气不错!</div>
+        <div class="item">大家好!</div>
+        <div class="item">下午好!</div>
+        <!-- <div class="clear"></div> -->
+    </section>
+    <main></main>
+</body>
+</html>

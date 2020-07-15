@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>瓷砖</button>
+    <script>
+        var obj = {
+            musiclist:[
+                '少年','从撒娇困难','点击'
+            ],
+            name :'但是当回事'
+        }
+
+        //localStorage
+
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            for(var x in obj){
+                localStorage.setItem(x,obj[x])
+            }
+            localStorage.href = './d.html'
+        }
+    </script>
+
+</body>
+</html>

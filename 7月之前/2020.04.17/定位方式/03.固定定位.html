@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定定位</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    nav{
+        width: 100%;
+        height: 40px;
+        background-color: #333;
+        /* fixed 固定定位 */
+        /* 元素设置固定定位后，会脱离文档流，不在参与流式布局，不在随页面滚动而滚动 ,参照html文档定向定位*/
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    section{
+        width: 1226px;
+        margin: 0 auto;
+        height: 40px;
+        background-color: red;
+        color: #fff;
+
+    }
+    div{
+        height: 1000px;
+        background-color: greenyellow;
+        /* 解决固定导航栏在顶部是遮盖下面内容的情况 */
+        /* 方式一：给下面的元素设置padding-top值与导航栏高度一致 */
+        padding-top: 40px;
+    }
+    /* 解决固定导航栏在顶部是遮盖下面内容的情况 */
+    /*方式二 ：在导航栏下加一个空的块元素，高度设置和导航栏高度一致，把下面的元素顶出导航栏下面 */
+    /* header{
+        height: 40px;
+    } */
+</style>
+<body>
+    <!-- nav固定在页面顶部 -->
+    <nav>
+        <section>
+             固定定位
+        </section>
+    </nav>
+    <!-- <header></header> -->
+    <div>撑开页面</div>
+</body>
+</html>

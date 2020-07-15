@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css过度动画</title>
+</head>
+<style>
+    html,body{
+        height: 100%;
+    }
+    body{
+        margin: 0;
+        background-color: #eee;
+    }
+    section{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: greenyellow;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        /* 过度动画：将样式的改变展现出来，产生过度效果 */
+        /* transition是令一个或多个可以有数值表示的css样式属性值发生改变 */
+
+        /* 一些基本的外观样式都是可以过度的，但是有些是过度不了的例如：text-align:center;就不可以过度 */
+
+        /* 设置过度属性 */
+        /* 单个的过度属性 */
+        /* 过度的样式  all表示过度所有可以过度的样式 */
+        /* transition-property: all; */
+        /* 过度所花费的时间 */
+        /* transition-duration: 2s; */
+        /* 过度延时多久开始执行 */
+        /* transition-delay: 1s; */
+        /* 缓动函数：指定动画效果在执行时的速度 */
+        /* 匀速 */
+        /* transition-timing-function: linear; */
+        /* 参数：
+            1.ease默认值，逐渐减速
+            2.ease-in 加速
+            3.ease-out 减速
+            4.ease-in-out 先加速在减速
+            5.linear匀速
+        */
+
+        /* 过度动画简写 */
+        /* 最少有2个参数，一个样式一个时间，如果有2个时间,前面的是动画时间，后面的是延时时间 */
+        transition:all 2s linear;
+    }
+    section:active{
+        left: 800px;
+        background-color: red;
+        color: tomato;
+        border: 1px solid #000;
+        box-shadow: 5px 10px 10px #999;
+        border-radius: 0;
+        opacity: 0.5;''
+    }
+   
+</style>
+<body>
+    <section></section>
+</body>
+</html>

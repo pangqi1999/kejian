@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css样式表</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+    /* *为通配符，表示选择 */
+    * {
+        /* 外边距 */
+        margin: 0;
+        /* 内边距 */
+        padding: 0;
+    }
+
+    /* style标签中存放的是css样式 */
+    /* div为标签选择器，选中页面中的所有div标签 */
+    div {
+        /* 字体大小 */
+        font-size: 36px !important;
+        /* 字体颜色 */
+        color: coral;
+    }
+
+    /* .name为类名选择器，选中页面中所有的类名叫name的标签 */
+    .name {
+        font-size: 24px;
+        color: green;
+        /* 背景颜色 */
+        background-color: #eee;
+    }
+
+    .txt{
+        font-size: 30px;
+    }
+    #title{
+        font-size: 50px;
+    }
+
+    /* *<标签选择器<类名选择器<id选择器<行内样式<!important */
+    /* css格式：
+            选择器表示选择规则中的样式是为哪些元素添加的选择器（选择
+            器选择的页面元素）
+            
+            选择器{
+                样式名1：样式值1；
+                样式名2：样式值2；
+                样式名3：样式值3；
+                。。。。
+            }
+            以上的一个整体就是一个完整的css层叠样式表
+            一个样式名+一个样式值=一条样式
+            一个css样式表中可以有n条样式
+             */
+            
+</style>
+
+<body>
+    <!-- 所以可见的元素都可以通过style来添加css样式，通过这种方式添加的样式叫做行内样式
+    行内样式，也叫内联样式 -->
+    <!-- 使用行内样式有很多的限制，不适合大量的使用，所以用的少，
+    设置css样式更加方便的方式是使用css层叠样式表 -->
+    <div>下午好</div>
+    <div>2020奋斗</div>
+    <p class="txt">大家下午好！</p>
+    <div class="name">今天心情不错</div>
+    <p class="txt" id="title">hi!</p>
+    <section>很开心</section>
+</body>
+
+</html>

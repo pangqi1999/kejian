@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <!-- emmet输入法,快速实现html文本的书写 -->
+   <!-- 标签名+tab，实现输入一个标签 -->
+   <section></section>
+   <!-- 标签名+.类名，实现输入一个带类名的标签 -->
+   <!-- div.ss -->
+   <div class="ss"></div>
+   <!-- 如果是div的话可以省去标签名 -->
+   <div class="aa"></div>
+   <!-- 标签名*n，实现连续输入n个相同的标签 -->
+   <!-- p*5 -->
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+
+   <!-- 标签名+.类名+.类名+.类名 ，可以实现包含n个类名的标签 -->
+   <!-- nav.aa.bb.cc -->
+   <nav class="aa bb cc"></nav>
+
+   <!-- 标签名+#ID名，实现输入带有id的标签 -->
+   <!-- span#b -->
+   <span id="b"></span>
+
+   <!-- 标签名+[属性名]+tab或者回车，实现带有属性的标签 -->
+   <!-- div[style="color:red"] -->
+   <div style="color:red"></div>
+
+   <!-- 标签名[属性名1 属性名2]，实现带有n个属性的标签 -->
+   <!-- h1[a1=b1 a2=b2] -->
+   <h1 a1="b1" a2="b2"></h1>
+
+   <!-- 标签名[属性名]{内容}*n，连续实现n个带有属性和内容的标签 -->
+   <!-- section[style="color:blue"]{我在上课了！}*4 -->
+   <section style="color:blue">我在上课了！</section>
+   <section style="color:blue">我在上课了！</section>
+   <section style="color:blue">我在上课了！</section>
+   <section style="color:blue">我在上课了！</section>
+
+   <!-- 父标签名>子标签名 ，实现父标签包裹子标签-->
+   <!-- nav>div.dd#ss[pp=aa]{内容}*4 -->
+   <nav>
+       <div class="dd" id="ss" pp="aa">内容</div>
+       <div class="dd" id="ss" pp="aa">内容</div>
+       <div class="dd" id="ss" pp="aa">内容</div>
+       <div class="dd" id="ss" pp="aa">内容</div>
+   </nav>
+
+   <!-- ul>li{第$行}*4 -->
+   <ul>
+       <li>第1行</li>
+       <li>第2行</li>
+       <li>第3行</li>
+       <li>第4行</li>
+   </ul>
+
+   <!-- img[src={pic/$.jpg} alt="图片已损坏"]*5 -->
+   <img src="pic/1.jpg" alt="图片已损坏">
+   <img src="pic/2.jpg" alt="图片已损坏">
+   <img src="pic/3.jpg" alt="图片已损坏">
+   <img src="pic/4.jpg" alt="图片已损坏">
+   <img src="pic/5.jpg" alt="图片已损坏">
+
+   <!-- table.a#b>tr*4>td[rowspan=2]{第$列}*3 -->
+   <table class="a" id="b">
+       <tr>
+           <td rowspan="2">第1列</td>
+           <td rowspan="2">第2列</td>
+           <td rowspan="2">第3列</td>
+       </tr>
+       <tr>
+           <td rowspan="2">第1列</td>
+           <td rowspan="2">第2列</td>
+           <td rowspan="2">第3列</td>
+       </tr>
+       <tr>
+           <td rowspan="2">第1列</td>
+           <td rowspan="2">第2列</td>
+           <td rowspan="2">第3列</td>
+       </tr>
+       <tr>
+           <td rowspan="2">第1列</td>
+           <td rowspan="2">第2列</td>
+           <td rowspan="2">第3列</td>
+       </tr>
+   </table>
+
+   <!-- div+div>p -->
+   <div></div>
+   <div>
+       <p></p>
+   </div>
+
+   <!--div+div>p>span+em^^bq -->
+   <div></div>
+   <div>
+       <p><span></span><em></em></p>
+   </div>
+   <blockquote></blockquote>
+
+
+</body>
+</html>

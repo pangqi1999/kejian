@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 定义动画 */
+    @keyframes ani{
+        from{
+            background-color: burlywood;
+        }
+        to{
+            background-color: black;
+        }
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* visibility: hidden; 、*/
+    }
+    .wrap{
+        
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+        /* background-color: burlywood; */
+        animation: ani 0.5s  ease-in infinite;
+    }
+
+    
+</style>
+<body>
+    <!-- 
+        设置一个元素隐藏有几种
+        非动画：display:none visibility:hidden
+        区别是什么？ 面试题
+        display:none不占位置
+        visibility:hidden占位置
+
+        有动画：
+        1：高度为0 overFlow:hidden
+        2:3D 旋转 90 度
+        3；缩放到0
+        4.透明度 
+     -->
+     <!-- 动画分1定义2使用 -->
+     <div class="box"></div>
+     <div class="wrap"></div>
+</body>
+</html>

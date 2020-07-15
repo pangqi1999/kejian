@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>循环</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 判断语句
+    // if(判断条件){}
+    var a = 70;
+    // 条件成立 才执行方法
+    if(a > 70){
+        // 在控制台上打印日志 控制台上输出一句话
+        console.log('成绩优秀')
+        // alert('成绩优秀')
+        // alert 弹出框 会阻断js代码的运行
+    }else if(a = 70){
+        console.log('棒')
+    }
+    // else if(...){
+    //     ...
+    // }
+    else{
+        console.log('好好加油')
+    }
+
+    // if.....else...语句  互斥条件时运行
+
+    // switch 切换 case状况  判断时一定要注意类型相等
+    // default 默认 其他状况 所有case条件都不成立时 执行default
+    // break中断 中断当前的分支
+    var week = 0;
+    switch(week){
+        case 0:
+        week = '星期日';
+        break;
+
+        case 1:
+        week = '星期一';
+        break;
+
+        case 2:
+        week = '星期二';
+        break;
+
+        case 3:
+        week = '星期三';
+        break;
+
+        case 4:
+        week = '星期四';
+        break;
+
+        case 5:
+        week = '星期五';
+        break;
+
+        case 6:
+        week = '星期六';
+        break;
+
+        default:
+        week = '输入错误'
+        break;
+    }
+    console.log(week)
+    
+    // 多个分支可以共用一段代码
+    var week1 = 88;
+    switch(week1){
+        case 100:
+        case 99:
+        case 98:
+        case 97:
+        case 96:
+        case 95:
+        console.log('牛');
+        break;
+
+        case 94:
+        case 93:
+        case 92:
+        case 91:
+        case 90:
+        console.log('优秀');
+        break;
+
+        default:
+        console.log('继续加油')
+        break;
+    }
+
+    
+    // while循环和for循环是实现循环的两种手段，二者可以相互转换
+    var j = 4;
+    while(j < 6){
+        console.log(j)// 4   5
+        // 累加语句一般放到函数体的最下面，一般建议先写 防止忘记
+        j++//每次自增1
+    }
+    console.log(j)//6
+
+
+    // var sum = 0;
+    // for(var i = 1;i<=100;i++){
+    //     sum+=i;
+    // }
+    // console.log("从0到100的和是:" + sum)
+
+    // do....while...
+    // 先执行do 再执行判断条件 所以它至少执行一次
+    // 而 while有可能一次也不执行
+    var y = 5;
+    do{
+        console.log(y);//5
+        y++;
+    }while(y < 3)
+    console.log(y);//6
+
+    // for(初始条件，判定条件，自增或自减){}
+    // 1.先执行初始条件
+    // 2.执行判定条件
+            // 满足----3
+            // 不满足----5
+    // 3.执行函数体
+    // 4.自增 ==》  2
+    // 5.跳出for循环
+    for(var a = 1;a<8;a++){
+        if(a == 3){
+            console.log('你好')
+            // break;  //中断，下面的代码不在执行
+            //continue; //用于立即结束循环体，准备下次循环(结束本次循环)
+        }
+        console.log(a)
+    }
+
+
+    // 判断奇数
+    //  %求余
+    //  /求商
+    for(var a = 1;a<=20;a++){
+        if(a%2 ==  1){
+            // 输入到页面
+            document.write(a)
+        }
+    }
+
+
+    var sorce = true;
+    // true == 1 ; flase == 0
+    // 一个复杂的分支语句
+    if(sorce === 1){
+        alert('星期一')
+    }else{
+        if(sorce == 2){
+            alert('星期二')
+        }else{
+            if(sorce == 3){
+                alert('星期三')
+            }else{
+                if(sorce == 4){
+                    alert('星期四')
+                }else{
+                    if(sorce == 5){
+                        alert('星期五')
+                    }else{
+                        if(sorce == 6){
+                            alert('星期六')
+                        }else{
+                            if(sorce == 7){
+                                alert('星期日')
+                            }else{
+                                alert('输入错误')
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 在js中 = 用于赋值  把右边的值赋给左边的变量
+    // ==用于判断是否相等(比较运算符)，它会尽可能的倾向于相等的结果,即会自动类型转换(隐式转换)
+    // === 用于严格的判断是否相等，不会转换类型
+    // switch相当于 ===
+    // alert()弹出对话框
+
+    // confirm 确认框 会返回一个布尔值 点击确定返回true 点击取消返回false
+    var result = confirm('可以给支烟吗？')
+    // console.log(result)
+    if(result == true){
+        console.log("可以给你")
+    }else{
+        console.log("禁止吸烟")
+    }
+
+
+    // prompt带有输入框的提示框  以字符串的形式返回输入的框的内容
+    //   2个参数：1.提示文字  2.默认的输入文本
+    var income = prompt('你月薪多少','10000')
+    // typeof用于检测一个变量的类型
+    console.log(typeof income)//string
+    // Number(income)把income从string转换为number类型
+    // income = Number(income)
+    // parseInt() 函数可解析一个字符串，并返回一个整数。
+    income = parseInt(income)//把文本类型转换为int类型
+    console.log(typeof income)//number
+    if(income > 10000){
+        alert('小伙子，要交税了')
+    }
+
+
+
+
+
+</script>

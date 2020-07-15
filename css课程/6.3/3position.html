@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wraper{
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        /*相对定位
+         想对自身位置定位
+        不脱离文档流‘只适合于微调  元素本质不变* /
+        position: relative;
+        left: 200px;
+    }
+    .one{
+        width: 100px;
+        height: 100px;
+        background-color: chocolate;
+        /* 
+            绝对定位：
+            相对于最近的祖籍元素中：具有position 且值不是static 的元素 进行定位
+            定位后脱离文档流 原来位置被其他元素所占
+            元素display值变为inline-block
+            
+            
+            
+            一个没有高度的容器 ：高度是由子元素和内边距撑起来
+            脱离文档流-----》父元素高度变小
+         */
+    }
+    .control{
+        width: 50px;
+        height: 50px;
+        background-color: coral;
+        /* 固定定位：
+        相对 浏览器窗口 
+        脱离文档流
+        display值变成 online-block */
+        position: fixed;
+        right: 10px;
+        bottom: 100px;
+        
+    }
+</style>
+<body>
+    <!--  -->
+    <div class="wraper">
+        <div class="box"></div>
+        <div class="one"></div>
+    </div>
+    <div class="control"></div>
+</body>
+</html>

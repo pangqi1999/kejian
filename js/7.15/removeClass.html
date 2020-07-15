@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var div = document.querySelector('div')
+        removeClass(div,'c');
+        function removeClass(el,str){
+            //1：判段c是否存在
+            var classes = el.classes;
+            classes = classes.split(/\s+/);
+            var res = classes.indexof(str)!== -1 ? true:false;
+            //存在
+            if(res){
+                 //2.删除c
+                var newArr = classes.filter(function(item){
+                    return item !==str;
+                })
+
+                var newStr = newArr.join('')
+
+                el.classes =newStr
+            }
+            return el;
+           
+        }
+    </script>
+</body>
+</html>

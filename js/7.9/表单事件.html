@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="用户名">
+            <input type="text">
+        </label>
+        <label for="密码">
+            <input type="text">
+        </label>
+        <button>提交</button>
+    </form>
+<div>
+    <input type="text" id="ipt">
+    <h1></h1>
+</div>
+<div>
+    <input type="checkbox" id='check'>
+</div>
+    <script>
+        // //form input
+        // //提交 change
+        // var form = document.querySelector('form')
+        // form.onsubmit = function(e){
+        //     //阻止浏览器默认行为
+        //     e.preventDefault()
+        //     console.log(e,'提交了')
+
+        //     //获取表单输入内容进行提交处理
+        //     console.log(form[0].value);
+        // }
+        // var btn =document.querySelector('button');
+        // btn.onclick = function(){
+        //     e.preventDefault()
+        //     console.log('111111')
+        // }
+
+        //input事件
+        // var ipt = document.querySelector('#ipt')
+        // var h1 =document.getElementsByTagName('h1')
+        // //input事件 可以实时监听input输入框的动态
+        // ipt.oninput = function(){
+        //     console.log(ipt.value);
+        //     h1.innerHTML = ipt.value;
+        // }
+
+        //内容变化：并且失去焦点时触发
+        //给输入框绑定chang事件
+        var ipt = document.querySelector('#ipt')
+        ipt.onchange = function(){
+            console.log(e.target.value)
+        }
+
+        // //change事件；当Input发生变化触发
+        // var check = document.querySelector('#check');
+        // check.onchange = function(e){
+        //     console.log('check发生改变');
+        //     console.log(e.target.checked);
+        // }
+
+        //焦点事件
+        var ipt = document.querySelector('#ipt')
+        ipt.onfocus = function(){
+            console.log('获取焦点了')
+        }
+        ipt.onblur = function(){
+            console.log('失去焦点了')
+        }
+    </script>
+</body>
+</html>

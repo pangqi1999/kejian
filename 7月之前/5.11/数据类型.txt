@@ -1,0 +1,10 @@
+js的数据类型:
+string字符串类型 number数字类型 boolean布尔类型 
+array数组类型 object对象 null空 undefined未定义 funtion函数
+
+基本(值)类型：string字符串类型 number数字类型 boolean布尔类型 
+null空 undefined未定义
+
+引用类型（对象类型）:array数组类型 funtion函数 object对象
+
+基本类型和引用类型的区别：基本类型存于栈，引用类型存于堆。

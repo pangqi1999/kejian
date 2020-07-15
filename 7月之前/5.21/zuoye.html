@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+       var year = prompt("请输入年份，判断是否是闰年：");
+       year = parseInt(year);
+       var isLeapYear = (year%4==0 && year%100 !=0) ||(year%400 ==0);
+       console.log('请输入的年份是闰年吗? '+isLeapYear);
+
+
+  //2    
+var a = [2,3,5];
+for (var i=7; i<1000; i+=2) {
+    if (check(i)) a.push(i);
+}
+console.log(a);
+function check(n){
+    for (var i=0; i<a.length; i++) {
+        if (a[i] * a[i] > n) return true;
+        if (n % a[i] === 0) return false;
+    }
+}
+
+//2
+var s='jhdaeoiweesfgadds';
+    var n=(s.split('a')).length-1;
+    console.log(n);
+
+
+//3
+function func(str,char){
+  var str=str;
+  var num=(str.split(char)).length-1;
+  return num
+}
+console.log(func("abcdefga","a"));
+
+//4
+var arr=[1,2,3,4,5,6,7,8,9,10]
+var resuit2 = arr.filter(function(ele,index,arr){
+            return ele %2 == 0
+        })
+console.log(resuit2)
+
+//5
+var d = ['王晓','袁飞','马博文','王翰'];
+var find ='王';
+var result = new Array();
+for(var i=0;i<d.length;i++){
+  if(d[i].indexOf(find)===0){
+   result.push(d[i]);
+  }
+}
+console.log(result);
+
+
+
+//6
+var strs = "asdasdadd";
+        function getmaxstr(str){
+            if(str.length == 1){return str;}
+            var newarr = [];
+            for(var i = 0 ; ss= str.length, i<ss; i++ ){
+                if(!newarr[str.charAt(i)]){
+                    newarr[str.charAt(i)] = 1;
+                }else{
+                    newarr[str.charAt(i)] +=1;
+                }
+            }
+            console.log(newarr);
+            var maxkey='';
+            var maxvalue=1;
+            for(var k in newarr){
+                if(newarr[k]> maxvalue){
+                    maxvalue = newarr[k];
+                    maxkey = k;
+                }
+            }
+            console.log(maxkey);
+            return maxkey;   
+        }
+    getmaxstr(strs);
+
+
+
+ //7
+ var arr1=[6,1,1,2,3,4,5,3,7,9,];
+for(var index=0;index<arr1.length;index++){
+  if(arr1[index]%2==0){
+    arr1.splice(index,1)
+    index--;
+  }
+}
+console.log(arr1)
+
+
+//8
+
+
+
+//9
+var arr2 = [10,20,30,56,89];
+    function avg(array) {
+        var len = arr2.length;
+        var sum = 0;
+        for(var i = 0;i<len;i++){
+            sum +=array[i];
+        }
+        return sum/len;
+    }
+    console.log(avg(arr2));
+
+//10
+Array.prototype.distinct = function (){
+var arr3 = this,
+i,
+j,
+len = arr3.length;
+for(i = 0; i < len; i++){ for(j=i + 1; j < len; j++){ 
+    if(arr3[i]==arr3[j]){ 
+        arr3.splice(j,1); len--; j--; 
+        } } } 
+        return arr3;
+    }; 
+    var e=[1,2,3,4,5,6,5,3,2,4,56,4,1,2,1,1,1]; 
+    var f=e.distinct(); 
+    console.log(f.toString());
+
+
+
+//11
+
+
+
+
+//12
+
+ 
+</script>
+</body>
+</html>

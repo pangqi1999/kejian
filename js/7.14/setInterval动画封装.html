@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+    <script>
+        //获取el 元素 
+        function getStyle(el, str) {
+            var res;
+            if (el.currentStyle) {
+                res = elcurrentStyle[str];
+            } else {
+                res = getComputedStyle(el, null)[str];
+            }
+            return res;
+        }
+        var box = document.querySelector('.box');
+
+        ani(box, 'width', 200, 0.5);
+
+         // 一步一步实现的 增加条件的问题如下：
+      //1 实现了 s>0  动画赋值 有单位
+
+    //   function ani1(el, str, end, time) {
+    //     var start = getStyle(el, str);//获得对象属性值 (width)
+    //     start = parseInt(start);//取整
+    //     console.log(str, start);
+    //     var s = end - start; // 求过度值
+    //     time = time * 1000;//单位换算 s-->ms
+    //     var timer = setInterval(function () {  //js动画都用setInterval
+    //       //   time/16.7 ----> fun 执行的次数
+    //       // s / time/16.7   每16.7ms 的值变化量 （平均值 ）
+    //       start += s / (time / 16.7);   //动画过程 每次移动的距离相加
+    //       el.style[str] = start + "px";
+    //     }, 16.7); // 浏览器刷新时间是16.7ms
+    //   }
+
+
+
+    //   //问题二： 赋值有条件 有的有单位 有的没单位
+    //   function ani2(el, str, end, time) {
+    //     var start = getStyle(el, str);
+    //     start = parseInt(start);
+    //     console.log(str, start);
+    //     var s = end - start; // 求过度值
+    //     time = time * 1000;
+    //     var timer = setInterval(function () {
+    //       start += s / (time / 16.7)
+
+    //       // 普通的赋值 区分 哪些属性需要单位
+    //       // 处理【没有单位 css 属性】
+    //       if (str == "opacity" || str === "zIndex") {
+    //         el.style[str] = start;
+    //       } else {
+    //         el.style[str] = start + "px";
+    //       }
+    //     }, 16.7); // 浏览器刷新时间是16.7ms
+    //   }
+
+      //问题三  出口条件也变化了  s>0 可能 s<0 影响到  出口 赋值条件
+      // ---> 案例  1——0.3  100px---200px
+      function ani(el, str, end, time) {
+        var start = getStyle(el, str);
+        start = parseInt(start);
+        console.log(str, start);
+        var s = end - start; // 求过度值
+        time = time * 1000;
+        var timer = setInterval(function () {
+  
+          start += s / (time / 16.7);
+          // s 不同出口条件不同
+          if (s > 0) {
+            if (start >= end) {
+              // 出口前；也需要 el 的str 属性赋值 ；
+              // ---> 区分；哪些str 需要px 哪些不需要px
+              str == "opacity" || str === "zIndex"
+                ? (el.style[str] = end)
+                : (el.style[str] = end + "px");
+              clearInterval(timer);
+            }
+          } else {
+            if (start <= end) {
+              str == "opacity" || str === "zIndex"
+                ? (el.style[str] = end)
+                : (el.style[str] = end + "px");
+              clearInterval(timer);
+            }
+          }
+
+          if (str == "opacity" || str === "zIndex") {
+            el.style[str] = start;
+          } else {
+            el.style[str] = start + "px";
+          }
+        }, 16.7); // 浏览器刷新时间是16.7ms
+      }
+        //1 实现s>0 动画赋值 有单位
+        //2 赋值有条件 有的有单位 有的没单位
+        //3 出口条件也变化了  s>0 和s<0 可能影响到出口 
+    </script>
+</body>
+
+</html>

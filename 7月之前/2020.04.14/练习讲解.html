@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="icon/font_tpk652a54gq/iconfont.css">
+   
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul,ol{
+        list-style: none;
+    }
+    .container{
+        width: 1226px;
+        margin: 0 auto;
+    }
+    body{
+        font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+        color: #333;
+    }
+
+    /* 导航栏 */
+    nav{
+        height: 40px;
+        background-color: #333;
+    }
+    .nav_top{
+        height: 40px;
+        background-color: red;
+    }
+
+
+    /* 头部 */
+     .header_top{
+        height: 100px;
+        /* background-color: green; */
+    }
+    .logo,.list{
+        float: left;
+    }
+    .header_right{
+        float: right;
+    }
+    .list li{
+        float: left;
+    }
+    .list{
+        width: 850px;
+        height: 100px;
+        padding: 12px 0 0 30px;
+        box-sizing: border-box;
+    }
+    .header_right{
+        width: 296px;
+        height: 50px;
+        margin-top: 25px;
+        position: relative;
+    }
+    .logo{
+        width: 55px;
+        height: 55px;
+        background-color: #ff6700;
+        margin: 22px 7px 0 0;
+    }
+    .logo>img{
+        width: 55px;
+    }
+    .item{
+        width: 142px;
+        height: 88px;
+        padding: 0 15px 0 0;
+        box-sizing: border-box;
+    }
+    /* .list>li>a{
+        font-size: 16px;
+        color: #333;
+        display: block;
+        padding: 26px 10px 38px;
+    } */
+    input{
+        width: 223px;
+        height: 48px;
+        padding: 0 10px;
+        border:1px solid #b0b0b0;
+    }
+    .txt_phone>a{
+        color: #757575;
+        font-size: 12px;
+        background-color: #eee;
+        margin-left: 5px;
+        padding: 0 5px;
+    }
+    .txt_phone{
+        position: absolute;
+        top: 14px;
+        right: 62px;
+    }
+    button{
+        width: 52px;
+        height: 50px;
+        padding: 1px 6px;
+        border:1px solid #b0b0b0;
+        background-color: #fff;
+        position: absolute;
+        border-left-color: transparent;
+    }
+    .icon-fangdajing{
+        font-size: 24px;
+        color: #616161;
+        font-weight: 700;
+        line-height: 24px;
+    }
+    /* 触发样式 */
+    .list>li>a:hover{
+        color: #ff6700;
+    }
+    .txt_phone>a:hover{
+        background-color: #ff6700;
+        color: #fff;
+    }
+    button:hover{
+        background-color: #ff6700;
+    }
+    button:hover .icon-fangdajing{
+        color: #fff;
+    }
+
+
+    /* lunbo */
+    .section_lunbo{
+        height: 460px;
+        background-image: url("images/lunbo.webp");
+        background-size: 100%;
+    }
+    .section_left{
+        width: 234px;
+        height: 460px;
+        background-color: rgba(105,101,101,0.6);
+    }
+    .items_list{
+        padding: 20px 0;
+    }
+    .items_list>li{
+        height: 42px;
+        line-height: 42px;
+        padding-left: 30px;
+        color: #fff;
+    }
+    .icon-xiangyou{
+        font-size: 16px;
+        line-height: 16px;
+        color: #e0e0e0;
+        margin-right: 15px;
+        float: right;
+        line-height: 42px;
+    } 
+</style>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav_top">
+
+        </div>
+    </nav>
+
+    <!-- 头部 -->
+    <header class="container header_top">
+        <div class="logo">
+            <img src="./images/mi-logo.png" alt="">
+        </div>
+        <ul class="list">
+            <li class="item"></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">Redmi 红米</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">笔记本</a></li>
+            <li><a href="#">家电</a></li>
+            <li><a href="#">路由器</a></li>
+            <li><a href="#">智能硬件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+        <div class="header_right">
+            <input type="text">
+            <span class="txt_phone">
+                <a href="#">小米10</a>
+                <a href="#">Redmi K30 Pro</a>
+            </span>
+            <button><span class="iconfont icon-fangdajing"></span></button>
+        </div>
+    </header>
+
+    <!-- 轮播 -->
+    <section class="container section_lunbo">
+        <div class="section_left">
+            <ul class="items_list">
+                <li>手机 电话卡<em class="iconfont icon-xiangyou"></em></li>
+                <li>电视 盒子<em class="iconfont icon-xiangyou"></em></li>
+                <li>笔记本 显示器 平板<em class="iconfont icon-xiangyou"></em></li>
+                <li>家电 插线排<em class="iconfont icon-xiangyou"></em></li>
+                <li>出行 穿戴<em class="iconfont icon-xiangyou"></em></li>
+                <li>智能 路由器<em class="iconfont icon-xiangyou"></em></li>
+                <li>电源 配件<em class="iconfont icon-xiangyou"></em></li>
+                <li>健康 儿童<em class="iconfont icon-xiangyou"></em></li>
+                <li>耳机 音箱<em class="iconfont icon-xiangyou"></em></li>
+                <li>生活 箱包<em class="iconfont icon-xiangyou"></em></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

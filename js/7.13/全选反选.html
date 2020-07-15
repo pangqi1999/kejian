@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="checkbox" class="all" class="allMsg">全选
+            <input type="checkbox" name="" id="">反选
+        </div>
+        <div><input type="checkbox" class="check" class="one"><span > 选项内容</span></div>
+        <div><input type="checkbox" class="check"><span>选项内容</span></div>
+        <div><input type="checkbox" class="check"><span>选项内容</span></div>
+        <div><input type="checkbox" class="check"><span>选项内容</span></div>
+        <div><input type="checkbox" class="check"><span>选项内容</span></div>
+    </form>
+    <script>
+        var ipts = document.querySelectorAll('.check');
+        var all = document.querySelector('.all');
+        var allMsg = document.querySelector('.allMsg');
+        var one = document.querySelector('.one')
+        ipts = Array.from(ipts);
+        ipts.forEach(function(item){
+            //item表示当前选中元素
+            item.addEventListener('change',function(){
+                var span = item.nextElementSibling
+                if(item.checked){//选中
+                    span.style.color = 'blue';
+
+                }else{
+                    span.style.color = ''
+                }
+
+                for(var i=0;i<ipts.length;i++){
+                    if(ipts[i].checked==false){
+
+                    }else{
+                        all.checked = true;
+                        allMsg.innerHTML = "全不选";
+                    }
+                }
+            });
+        });
+        all.addEventListener('change',function(){
+            // console.log(all.checked)
+            //如股票选中全选；选择项目 全部被选中；文字变为 全部选
+            if(all.checked){
+                ipts.forEach(function(item){
+                    item.checked = true;
+                    item.nextSibling.style.color = 'blue';
+                    allMsg.innerHTML = '全不选';
+                })
+            }else{
+                ipts.forEach(function(item){
+                    item.checked = false;
+                    item.style.color = '';
+                    allMsg.innerHTML = '全选';
+                   
+                })
+            }
+        })
+ 
+       function isAll
+    </script>
+</body>
+</html>

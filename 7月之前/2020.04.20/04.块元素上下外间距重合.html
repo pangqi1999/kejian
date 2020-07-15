@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块元素上下外间距重合</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+    }
+    .d1{
+        background-color: pink;
+        margin: 50px 0;
+    }
+    .d2{
+        background-color: aqua;
+        margin: 100px 0;
+    }
+
+    section{
+        height: 200px;
+        background-color: red;
+        /* border: 1px solid red; */
+        padding: 1px;
+        box-sizing: border-box;
+    }
+    nav{
+        width: 500px;
+        height: 100px;
+        background-color: green;
+        margin: 49px 0;
+    }
+</style>
+<body>
+    <!-- 2个块元素上下相邻时他们之间的外边距谁的值大去的 -->
+    <div class="d1"></div>
+    <div class="d2"></div>
+
+    <br>
+    <br>
+    <hr>
+    <!-- 2个块元素嵌套时，里面的块元素设置margin-top时父元素也会下移 -->
+    <section>
+        <nav></nav>
+    </section>
+    <!-- 解决方法：
+        1.给父元素设置边框
+        2.给父元素设置padding: 1px;
+     -->
+</body>
+</html>

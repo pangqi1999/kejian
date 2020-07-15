@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #blue{
+        color: blue;
+    }
+    .red{
+        color: red;
+    }
+    /* css选择器优先级：*<> */
+    div{
+        color: green ;
+    }
+    div{
+        color: yellow !important;
+    }
+    /* 同级别的选择器，谁在下面谁的谁的优先级高 */
+    .a{
+        color: aquamarine;
+    }
+    .a{
+        color: chartreuse;
+    }
+    /* css选择器优先级：*<标签选择器<类名选择器<id选择器<行内样式<!important */
+    /* 多个选择器连写时他们之间的和也就是权值的和，谁的大，谁的优先级高。 */
+    /* 
+        *通配符权重为1
+        标签名选择器10
+        类名选择器100
+        id选择器1000
+        行内样式10000
+        加了！important最大
+     */
+     /* 10+1000=1010 */
+     div#nb{
+         color: orange;
+     }
+
+     div#nb.red{
+         color:darkgreen;
+     }
+</style>
+<body>
+    <div id=和"blue" class="red" style="color: pink;">到底是谁的颜色</div>
+    <br>
+    <hr>
+    <div id="nb" class="a">是我的颜色</div>
+</body>
+</html>

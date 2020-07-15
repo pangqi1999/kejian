@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math.random()随机数，返回0~1之间的随机数
+        console.log(Math.random())
+
+        //3~7
+        console.log(Math.random()*3+4)
+        console.log(Math.ceil(3.281))//4 向上取整
+        
+        console.log(Math.floor(3.281))//3 向下取整
+
+
+        // var a = 14.5;
+        // var b = 24.5;
+        // console.log(Math.ceil(14.))
+        // console.log(Math.floor(b))
+
+        //console.log(Math.random()*15+24)
+        var a =Math.random()*9+14
+        console.log(Math.ceil(a))
+
+        
+        console.log(Math.round(3.281))//3 四舍五入
+
+        console.log(Math.pow(4,3))//64 4的3次方
+
+        console.log(Math.sqrt(9))//2 平方根
+
+        console.log(Math.abs(-9))//9 绝对值
+
+         console.log(Math.cos(3))//返回角的余弦
+         console.log(Math.sin(3))//返回角的正弦
+         console.log(Math.tan(3))//返回角的正切
+
+        //创建一个元素节点
+        var div = document.createElement('div')
+        div.style.width = '300px'
+        div.style.height = '300px'
+        div.style.backgroundColor = 'red'
+        //添加到父元素上
+        document.body.appendChild(div)
+
+
+        var a= 1, b = 2;
+        console.log(!!(a+b))//true
+        //!取反(凡是不是布尔值一次取反一律得到False)
+        console.log(!!true)//true
+        console.log(!('cc'))//false
+
+        var p = {};
+        var p1 = new Object();
+        console.log(p)//{}
+        console.log(p1)//{}
+        console.log(!p)//false
+        console.log(p1)//false
+        var c= new Boolean(222)
+        console.log(c)//Boolean {true}字符串不为空时返回true，为空返回false
+        //数字为0时返回false,其他返回true
+        //c是一个包含Boolean的对象，而不是一个值
+        //c是包含true值的对象
+        //0 -0 '' null unjdefined NaN都会被认为false
+
+        //true 表示数字1, false表示0
+
+        if(new Boolean('')){
+            console.log('dddd')//布尔dddd
+        }
+
+        //不管这个布尔对象，这个盒子装的事false还是true
+        //一个布尔对象都会被认为是true，因为布尔对象就是一个对象
+
+        var b = new Boolean('false');
+        var b1 = new Boolean(null);//返回的是布尔值
+
+        var str = true.toString()
+        console.log(str)//true
+        
+        
+
+
+    </script>
+</body>
+</html>
