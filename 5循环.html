@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+            v-for='i in 3' 循环  i 从 1 开始 村还 3次
+         -->
+        <h3 v-for="i in 5">我是内容{{i}}</h3>
+        <h3 v-for="i in count">循环次数为变量{{i}}</h3>
+        <!-- vue -->
+        <div v-for="i in 3">
+            <span v-for="x in 4">{{'i='+'    '+i+'x='+x}}</span>
+        </div>
+
+        <!-- 99 乘法表 -->
+        <div v-for="x in 9">
+            <!-- 问题：需要条件控制 span 输出的个数 -->
+            <span v-for="y in x">
+                {{ x+"X"+y+'='+x*y }}
+            </span>
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                count:3
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+           
+         -->
+        <input type="text" :value="ipt" @input="input">
+        <h1>{{ipt}}</h1>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var app  = new Vue({
+            el:'#app',
+            data:{
+                ipt:''
+            },
+            methods: {
+               input(e){
+                   this.ipt = e.target.value;
+               }
+            }
+        })
+
+    </script>   
+</body>
+</html>

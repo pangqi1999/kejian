@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1 @click="changColor" :class="{active:flag}">{{wangyuhang}}</h1>
+      <xwj></xwj>
+      <wyh></wyh>
+      <wyh></wyh>
+      <wyh></wyh>
+      <wyh></wyh>
+      <wyh></wyh>
+      <wyh></wyh>
+
+    </div>
+
+    <!-- <div class="duoyu"></div> -->
+    <!-- uniapp mapvue 
+    weex -->
+    <script src="./vue.js"></script>
+    <script>
+
+
+      Vue.component("xwj", {
+        data: function () {
+          return {
+            count: 0,
+          };
+        },
+        template:
+          '<button v-on:click="count++">You clicked me {{ count }} times.</button>',
+      });
+      Vue.component("wyh", {
+        template: `
+        <div>
+            <button @click="add">+</button>
+    <span>{{count}}</span>
+    <button @click="reduce">-</button>
+    </div>
+            `,
+        data: function () {
+          return {
+            count: 0,
+          };
+        },
+        methods: {
+          add() {
+            ++this.count;
+          },
+          reduce() {
+            --this.count;
+          },
+        },
+      });
+
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          wangyuhang: "王宇航",
+          flag: false,
+        },
+        methods: {
+          changColor() {
+            this.flag = !this.flag;
+          },
+        },
+      });
+      console.log(app);
+    </script>
+  </body>
+</html>

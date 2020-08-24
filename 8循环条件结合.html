@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 注意： true flase 不是变量 而是boolean 的true false -->
+        <h1 v-if="true">内容</h1>
+        <h1 v-if="'false'">内容</h1>
+        <!-- wyh 是变量 -->
+        <!-- <h1 v-if="wyh">内容</h1> -->
+
+        <!-- <h2>{{true}}</h2> -->
+        <dd>
+            <!-- 需求渲染age>20的 -->
+            <!-- 
+                注意：在标签上声明的变量；作用域；为该元素内部或者子集
+                在vue 对象声明的的变量 作用域 为  整个 app 模板
+                  - data
+                  - methods
+                  - computed
+                  - watcher
+                  - ...
+             -->
+             <!-- 可以通过v-if v-for 控制循环次数 -->
+            <dt v-for="(item,index) in list" v-if="item.age>20">
+               姓名： {{item.name}}  年龄: {{item.age}}
+            </dt>
+
+        </dd>
+
+        <div>
+            <!--
+                 如何增加 index 的作用域；不会影响htmml解构 
+                 template vue 的组件；空标签；目的 增大元素内部声明变量的作用域
+
+                 注意：template 在vue-cli 中不能使用了。用transition 标签代替
+            -->
+            <template v-for="(item,index) in arr">
+                <span >{{index}}</span>
+                <span >{{item}}</span>
+            </template>
+         
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {name:'aa',age:22},
+                    {name:'aa',age:12},
+                    {name:'aa',age:21},
+                    {name:'aa',age:10},
+                    {name:'aa',age:32},
+
+                ],
+                arr:['aaa','ddd','ccc']
+
+            },
+        })
+    </script>
+</body>
+</html>
