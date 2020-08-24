@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="toggle">{{txt}}</button>
+      <!-- 
+          当 flag == true  给 class 添加box  false  不添加
+       -->
+      <div :class="{box:flag,aa:true,bb:true}"></div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      // vue 是 数据驱动视图
+      var app = new Vue({
+        el: "#app",
+        data: {
+          txt: "隐藏",
+          flag: true,
+        },
+        methods: {
+          toggle: function () {
+            // console.log('1111')
+
+            if (this.flag) {
+              this.txt = "显示";
+            } else {
+              this.txt = "隐藏";
+            }
+            this.flag = !this.flag;
+          },
+
+          // 1: 在实现某一个效果之前；data 声明变量；代表dom元素；
+          // 2: 通过修改data 中数据 间接 实现 视图变化
+          // 3：如何获取  data 中数据 并进行修改呢？ t
+          //    this.xxx  获取  vue 中所有的变量-
+        },
+      });
+    </script>
+  </body>
+</html>

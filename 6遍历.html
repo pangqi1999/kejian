@@ -1,0 +1,60 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+     <div id="app">
+         <!-- 
+             v-for 遍历数组
+             item 数组元素
+             index 数组索引值
+             list 变量 赋值数组 
+          -->
+         <ul>
+             <li v-for="(item,index) in list">{{index}}:{{item}}</li>
+         </ul>
+         <!--
+              遍历对象 
+              v-for 
+              x 对象的属性
+              item 属性的赋值
+              persons 变量 并赋值对象
+        -->
+         <div v-for="(item,x) in persons">
+             {{x}}：{{item}}
+         </div>
+
+         <!-- 遍历列表 -->
+         <dd>
+             <dl v-for="(item,index) in student">
+                 姓名： {{item.name}}
+                 年龄:  {{item.age}}
+             </dl>
+         </dd>
+     </div>
+    <script src="./vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                list:[1,2,'ss'],
+                persons:{
+                    name:'王宇航',
+                    age:'21',
+                    school:'清华大学',
+                    dec:"清华大学姚班"
+                },
+                student:[
+                    {name:'aa',age:'12'},
+                    {name:'aa',age:'12'},
+                    {name:'aa',age:'12'},
+
+                ]
+            }
+        })
+    </script>
+   </body>
+   </html>

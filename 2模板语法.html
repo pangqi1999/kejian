@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wyh">
+        <!-- 1：渲染data 数据 -->
+        <h1>{{msg}}</h1>
+        <!-- 2: 可以写表达式 -->
+        <h1>{{1+1}}</h1>
+        <!-- 3  模板语法可以进行计算 -->
+        <h1>{{flag ? '陈顺你叼啊':'王宇航是个...'}}</h1>
+        <!-- 4：可以写函数执行 -->
+        <h2>{{init()}}</h2>
+        
+        <h2>{{'刘玉才'}}</h2>
+        <!-- 插入html元素
+            v-html 指令
+        -->
+        <div v-html="text"></div>
+    </div>
+ 
+    <script src="./vue.js"></script>
+    <script>
+        // 实例化vue 对象
+        var app = new Vue({
+            el:"#wyh",  // 指定 app vue 对象的跟模板
+            data:{ // 整个html 标签中数据 都在data 中；
+                msg:'hwllow word',
+                flag:true,
+                text:`<em>我是一个html</em>`
+            },
+            methods:{  // 这里写定义的函数；
+                init(){
+                    return '你好我来了'
+                }                
+            }
+        })
+
+    
+    </script>
+</body>
+</html>
